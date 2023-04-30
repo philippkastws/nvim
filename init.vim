@@ -153,6 +153,8 @@ map K <C-u>
 
 lua <<EOF
 
+pcall(function()
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "help" },
@@ -192,9 +194,13 @@ require'nvim-treesitter.configs'.setup {
   indent = { enable = true, disable = { "yaml" } },
 }
 
+end)
+
 EOF
 
 lua <<EOF
+
+pcall(function()
 
 local tab_number = 2
 vim.opt.showtabline = tab_number                -- always show tabs
@@ -204,11 +210,16 @@ vim.opt.expandtab = true                        -- convert tabs to spaces
 vim.opt.shiftwidth = tab_number                 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = tab_number                    -- insert 2 spaces for a tab
 
+end)
+
 EOF
 
 " Setup bufferline
 "set termguicolors
 lua << EOF
+
+pcall(function()
+
 require "bufferline".setup {
   options = {
 --    numbers = "none",
@@ -242,10 +253,16 @@ require "bufferline".setup {
 --    sort_by = "id",
   }
 }
+
+end)
+
 EOF
 
 " Fix copilot tab to accept suggestion
 lua <<EOF
+
+pcall(function()
+
 -- Disable copilot by default for now
 vim.g.copilot_enabled = false -- true
 vim.g.copilot_no_tab_map = true
@@ -272,6 +289,9 @@ cmp.setup({
         end,
     },
 })
+
+end)
+
 EOF
 
 let g:VM_theme = 'neon'
