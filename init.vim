@@ -7,9 +7,6 @@
 
 " General Settings
 source $HOME/.config/nvim/vim-plug/plugins.vim
-"source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/functions.vim
-"source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 
 " Themes
@@ -47,7 +44,6 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 "source $HOME/.config/nvim/plug-config/window-swap.vim
 "source $HOME/.config/nvim/plug-config/markdown-preview.vim
 " source $HOME/.config/nvim/plug-config/vimspector.vim " Uncomment if you want to use Vimspector
-" source $HOME/.config/nvim/plug-config/ale.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 
 " No lua for me
