@@ -55,7 +55,7 @@ let g:which_key_map['e'] = [ ':NvimTreeToggle', 'nvim tree toggle' ]
 "let g:which_key_map['Q'] = [ '<c-q>', 'unlock screen (ctrl+q)' ]
 let g:which_key_map['U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
 let g:which_key_map['I'] = [ ':Git', 'Git Fugitive (:Git)' ]
-let g:which_key_map['X'] = [ ':GitGutterNextHunk', 'Next hunk (:GitGutterNextHunk)' ]
+let g:which_key_map['x'] = [ ':GitGutterNextHunk', 'Next hunk (:GitGutterNextHunk)' ]
 let g:which_key_map['Y'] = [ ':GitGutterPrevHunk', 'Prev hunk (:GitGutterPrevHunk)' ]
 let g:which_key_map['l'] = [ ':Telescope', 'Telescope' ]
 let g:which_key_map['M'] = [ ':Magit', 'Magit' ]
@@ -365,7 +365,7 @@ let g:which_key_map.n = {
       \ 'J' : [':AnyJump', 'any jump (leader j)'],
       \ }
 
-let g:which_key_map.x = {
+let g:which_key_map.X = {
       \ 'name' : '+utils' ,
       \ 'c' : ['YP', 'copy line (YP)'],
       \ 'd' : ['dd', 'delete line'],
