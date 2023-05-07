@@ -244,3 +244,7 @@ vnoremap d "_d
 " copy selected block
 vmap <leader>b y'>p
 
+" Navigate buffers
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprevious<CR>
+
