@@ -94,6 +94,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'nvim-tree/nvim-tree.lua'
 
+  Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 lua <<EOF
