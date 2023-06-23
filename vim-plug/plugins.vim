@@ -98,6 +98,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'RRethy/vim-illuminate'
 
+  Plug 'sindrets/diffview.nvim'
+
 call plug#end()
 
 lua <<EOF
@@ -300,6 +302,14 @@ lua << EOF
         -- min_count_to_highlight: minimum number of matches required to perform highlighting
         min_count_to_highlight = 1,
     })
+  end)
+
+EOF
+
+lua << EOF
+
+  pcall(function()
+    require("diffview").setup()
   end)
 
 EOF
