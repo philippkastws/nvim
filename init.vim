@@ -212,7 +212,7 @@ let g:VM_theme = 'neon'
 " Disable gutter keys, otherwise they show up in which-key
 let g:gitgutter_map_keys = 0
 
-let mapleader = "," " map leader to comma
+let mapleader = " " " map leader to space
 " Remove search results
 map <leader>h :noh<CR>
 
