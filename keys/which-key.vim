@@ -376,6 +376,8 @@ let g:which_key_map.X = {
       \ 'i' : [':BLines', 'find in buffer (:BLines)'],
       \ 'w' : [':ciw', 'change word (ciw)'],
       \ 'o' : ["y'>p", "copy selected block (y'>p)"],
+      \ 'm' : ["<c-w>_", "maximize window (c+w m)"],
+      \ 'e' : ["<c-w>=", "resize window (c+w ="],
       \ }
 
 let g:which_key_map.W = {
