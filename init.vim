@@ -236,10 +236,9 @@ imap <silent> <C-,> <Plug>(copilot-previous)
 imap <silent> <C-ö> <Plug>(copilot-previous)
 
 set backspace=indent,eol,start
+" Commands to not save to clipboard
 nnoremap <BS> "_X
 nnoremap <C-BS> "_x
-nnoremap d "_d
-vnoremap d "_d
 
 " copy selected block
 vmap <leader>b y'>p
