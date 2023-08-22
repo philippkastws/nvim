@@ -254,3 +254,7 @@ nnoremap <C-k> kzz
 
 "let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " case insensitive
+
+" easymotion over window
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
