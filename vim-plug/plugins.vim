@@ -107,6 +107,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'AckslD/nvim-neoclip.lua'
 
+  Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 
 lua <<EOF
