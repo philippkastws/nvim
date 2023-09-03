@@ -69,6 +69,8 @@ let g:which_key_map['C'] = [ '<C-w>c', 'Close window (ctrl-w c)' ]
 let g:which_key_map['c'] = [ ':bd', 'Close buffer (:bd)' ]
 let g:which_key_map['nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
 let g:which_key_map['ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
+let g:which_key_map['kk'] = [ ' k', 'LSP hoover (<leader>k)' ]
+let g:which_key_map['ii'] = [ 'gl', 'LSP diagnostic (gl)' ]
 
 "let g:which_key_map['x'] = [ 'YP' , 'copy line (Y P)' ]
 
