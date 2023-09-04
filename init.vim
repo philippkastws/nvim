@@ -50,6 +50,31 @@ let g:onedark_config = {
     "\ 'style': 'warmer',
     \ 'transparent': 'true',
 \}
+
+lua <<EOF
+pcall(function()
+require("tokyonight").setup({
+  transparent = true
+});
+end)
+EOF
+
+lua <<EOF
+pcall(function()
+require('kanagawa').setup({
+    transparent = true
+});
+end)
+EOF
+
+lua <<EOF
+pcall(function()
+require("catppuccin").setup({
+    transparent_background = true
+});
+end)
+EOF
+
 colorscheme catppuccin
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
