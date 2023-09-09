@@ -74,6 +74,7 @@ require("catppuccin").setup({
 });
 end)
 EOF
+let g:airline_theme='catppuccin'
 
 colorscheme catppuccin
 
