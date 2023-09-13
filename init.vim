@@ -76,7 +76,7 @@ end)
 EOF
 let g:airline_theme='catppuccin'
 
-colorscheme catppuccin
+colorscheme catppuccin-macchiato
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
