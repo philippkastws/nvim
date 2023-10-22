@@ -283,6 +283,7 @@ set backspace=indent,eol,start
 nnoremap <BS> "_X
 nnoremap <C-BS> "_x
 nnoremap d "_d
+nnoremap C "_C
 vnoremap d "_d
 
 " copy selected block
