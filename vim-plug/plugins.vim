@@ -114,6 +114,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'kevinhwang91/nvim-bqf'
 
+  Plug 'lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
 lua <<EOF
@@ -591,6 +593,12 @@ lua << EOF
   pcall(function()
     require('neoclip').setup()
     require('telescope').load_extension('neoclip')
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("ibl").setup()
   end)
 EOF
 
