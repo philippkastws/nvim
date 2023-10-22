@@ -116,6 +116,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'lukas-reineke/indent-blankline.nvim'
 
+  " Better comments
+  Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 lua <<EOF
