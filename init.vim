@@ -84,6 +84,8 @@ colorscheme catppuccin-macchiato
 nmap <buffer> <C-¨> <C-]>
 nmap <buffer> <C-ü> <C-[>
 
+" Map J to ctrl-j
+nnoremap <A-j> J
 " For quicker navigation map these
 map J <C-d>
 map K <C-u>
