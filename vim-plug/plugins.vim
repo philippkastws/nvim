@@ -603,7 +603,7 @@ EOF
 
 lua << EOF
   pcall(function()
-    require("ibl").setup()
+    require("ibl").setup({ enabled = true })
   end)
 EOF
 
