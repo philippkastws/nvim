@@ -584,7 +584,9 @@ EOF
 lua << EOF
 
   pcall(function()
-    require("diffview").setup()
+    require("diffview").setup({
+      enhanced_diff_hl = false
+    })
   end)
 
 EOF
