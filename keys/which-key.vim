@@ -193,13 +193,13 @@ let g:which_key_map.S = {
       \ }
 
 " i is for git
-let g:which_key_map.i = {
+let g:which_key_map.git = {
       \ 'name' : '+git' ,
       \ 'e' : [':Gedit HEAD'                       , 'inspect history (:Gedit HEAD)'],
       "\ 'a' : [':Git add .'                        , 'add all'],
       "\ 'A' : [':Git add %'                        , 'add current'],
       \ 'b' : [':Git blame'                        , 'blame (:Git blame)'],
-      \ 'q' : [':Git blame gq'                     , 'blame (:Git blame gq)'],
+      \ 'q' : [':Git blame gq'                     , 'blame close (:Git blame gq)'],
       "\ 'B' : [':GBrowse'                          , 'browse'],
       "\ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
