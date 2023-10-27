@@ -254,6 +254,16 @@ inoremap <C-ä> <C-]>
 inoremap <C-ü> <C-[>
 inoremap <C-é> <C-]>
 
+map! ö [
+map! ä ]
+map! é {
+map! à }
+
+map ö [
+map ä ]
+map é {
+map à }
+
 nmap ö [
 nmap ä ]
 nmap é {
@@ -269,10 +279,21 @@ xmap ä ]
 xmap é {
 xmap à }
 
-inoremap ö [
-inoremap ä ]
-inoremap é {
-inoremap à }
+" Map in find string as well
+cmap ö [
+cmap ä ]
+cmap é {
+cmap à }
+
+smap ö [
+smap ä ]
+smap é {
+smap à }
+
+imap ö [
+imap ä ]
+imap é {
+imap à }
 
 " github copilot mappings
 imap <silent> <C-.> <Plug>(copilot-next)
