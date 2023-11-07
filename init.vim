@@ -324,3 +324,6 @@ let g:sneak#use_ic_scs = 1 " case insensitive
 " easymotion over window
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
+" create undo group after 4 seconds wait in insert mode
+au CursorHoldI * let &undolevels = &undolevels
+
