@@ -326,4 +326,14 @@ nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
 " create undo group after 4 seconds wait in insert mode
 au CursorHoldI * let &undolevels = &undolevels
+" create undo points when typing these keys
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ( (<c-g>u
+inoremap [ [<c-g>u
+inoremap = =<c-g>u
+inoremap <space> <space><c-g>u
+inoremap <CR> <CR><c-g>u
+" c-u in insert mode undoes to the last undo point
+inoremap <c-u> <C-O>u
 
