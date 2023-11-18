@@ -129,6 +129,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'windwp/nvim-autopairs'
 
+  Plug 'tpope/vim-sleuth'
+
 call plug#end()
 
 lua <<EOF
