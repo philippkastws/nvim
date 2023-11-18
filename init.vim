@@ -339,3 +339,12 @@ inoremap <CR> <CR><c-g>u
 " c-u in insert mode undoes to the last undo point
 inoremap <c-u> <C-O>u
 
+lua <<EOF
+
+-- vim.o.completeopt = 'menuone,noselect'
+
+-- Enable break indent
+vim.o.breakindent = true
+
+EOF
+
