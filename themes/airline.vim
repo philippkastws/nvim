@@ -40,7 +40,7 @@ let g:airline_section_c = airline#section#create([''])
 " let g:airline_theme = 'onedark'
 
 " Always show tabs
-set showtabline=2
+"set showtabline=2
 
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode

@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Git
   "Plug 'airblade/vim-gitgutter'
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'romgrk/barbar.nvim'
   Plug 'tpope/vim-fugitive'
   " Terminal
   Plug 'voldikss/vim-floaterm'
