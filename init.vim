@@ -363,3 +363,10 @@ augroup cmdline
     autocmd CmdlineLeave : echo ''
 augroup end
 
+" Exit insert mode without moving the cursor inappropriately
+inoremap <silent> <Esc> <Esc>`^
+
+" keep cursor position when yanking in visual mode
+xnoremap <silent> y ygv<Esc>
+
+
