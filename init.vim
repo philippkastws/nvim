@@ -376,3 +376,6 @@ xnoremap <silent> y ygv<Esc>
 " add all places that you've stayed at for a longer time ('updatetime'; default is 4 seconds)
 autocmd CursorHold * normal! m'
 
+" Terminal
+tnoremap <Esc> <C-\><C-n>
+
