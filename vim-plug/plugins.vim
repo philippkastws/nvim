@@ -132,6 +132,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'tpope/vim-sleuth'
 
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+
 call plug#end()
 
 lua <<EOF
@@ -1016,6 +1018,14 @@ lua << EOF
     require("nvim-autopairs").setup(
       { map_cr = true }
     )
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("toggleterm").setup({
+      open_mapping = [[<c-t>]]
+    })
   end)
 EOF
 
