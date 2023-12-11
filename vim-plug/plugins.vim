@@ -134,6 +134,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
+  Plug 'projekt0n/github-nvim-theme'
+
+  Plug 'EdenEast/nightfox.nvim'
+
 call plug#end()
 
 lua <<EOF
