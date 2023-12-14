@@ -138,6 +138,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'EdenEast/nightfox.nvim'
 
+  Plug 'folke/twilight.nvim'
+
+  Plug 'folke/zen-mode.nvim'
+
 call plug#end()
 
 lua <<EOF
