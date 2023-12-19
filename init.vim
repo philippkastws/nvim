@@ -87,7 +87,7 @@ colorscheme tokyonight-moon
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
 " Set selected line number color
-:hi CursorLineNr term=bold ctermfg=11 gui=bold guifg=Yellow
+:hi CursorLineNr ctermfg=11 guifg=Yellow
 
 " Map the jump sequences
 nmap <buffer> <C-¨> <C-]>
