@@ -50,7 +50,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 
 "  Plug 'rmagatti/auto-session'
 "  Plug 'rmagatti/session-lens'
@@ -111,6 +111,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'kdheepak/lazygit.nvim'
 
+  Plug 'kkharji/sqlite.lua'
   Plug 'AckslD/nvim-neoclip.lua'
 
   Plug 'tpope/vim-unimpaired'
@@ -663,7 +664,14 @@ EOF
 
 lua << EOF
   pcall(function()
-    require('neoclip').setup()
+    require('neoclip').setup({
+      history = 10000,
+      enable_persistent_history = true,
+      on_select = {
+        move_to_front = true,
+        close_telescope = true,
+      },
+    })
     require('telescope').load_extension('neoclip')
   end)
 EOF
