@@ -327,6 +327,9 @@ vnoremap d "_d
 vmap <leader>b y'>p
 " max window
 nmap <leader>m <C-W>_
+" map paste what has been yanked
+map <leader>p "0p
+map <leader>P "0P
 
 " Navigate buffers
 nnoremap <S-l> :bnext<CR>
@@ -389,4 +392,5 @@ autocmd CursorHold * normal! m'
 
 " Terminal
 tnoremap <Esc> <C-\><C-n>
+
 
