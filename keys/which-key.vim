@@ -327,7 +327,7 @@ let g:which_key_map.git = {
 "      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
 "      \ }
 
-let g:which_key_map.P = {
+let g:which_key_map.sp = {
       \ 'name' : '+spell' ,
       \ 'o' : [':set spell | set spelloptions=camel | :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224', 'on'],
       \ 'x' : [':set nospell', 'off'],
