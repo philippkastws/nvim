@@ -1072,7 +1072,9 @@ EOF
 
 lua << EOF
   pcall(function()
-    require'marks'.setup {}
+    require'marks'.setup {
+      builtin_marks = { ".", "<", ">", "^" },
+    }
   end)
 EOF
 
