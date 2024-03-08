@@ -674,7 +674,18 @@ lua << EOF
         close_telescope = true,
       },
     })
-    require('telescope').load_extension('neoclip')
+    telsescope = require('telescope')
+    telsescope.setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-Down>"] = require('telescope.actions').cycle_history_next,
+            ["<C-Up>"] = require('telescope.actions').cycle_history_prev,
+          }
+        }
+      }
+    })
+    telrequire('telescope')sescope.load_extension('neoclip')
   end)
 EOF
 
