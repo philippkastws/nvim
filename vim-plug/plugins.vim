@@ -150,7 +150,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kevinhwang91/nvim-hlslens'
     Plug 'petertriho/nvim-scrollbar'
 
-    Plug 'chentoast/marks.nvim'
+    " Plug 'chentoast/marks.nvim'
+    "
   endif
 
 call plug#end()
@@ -1083,13 +1084,13 @@ lua << EOF
   end)
 EOF
 
-lua << EOF
-  pcall(function()
-    require'marks'.setup {
-      builtin_marks = { ".", "<", ">", "^" },
-    }
-  end)
-EOF
+" lua << EOF
+"   pcall(function()
+"     require'marks'.setup {
+"       builtin_marks = { ".", "<", ">", "^" },
+"     }
+"   end)
+" EOF
 
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
