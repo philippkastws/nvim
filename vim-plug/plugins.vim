@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Git
   "Plug 'airblade/vim-gitgutter'
   Plug 'lewis6991/gitsigns.nvim'
-  Plug 'romgrk/barbar.nvim'
+  " Plug 'romgrk/barbar.nvim'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   " Terminal
@@ -1092,6 +1092,13 @@ lua << EOF
       builtin_marks = { ".", "<", ">", "^" },
       signs = false,
     }
+  end)
+EOF
+
+set termguicolors
+lua << EOF
+  pcall(function()
+    require("bufferline").setup{}
   end)
 EOF
 
