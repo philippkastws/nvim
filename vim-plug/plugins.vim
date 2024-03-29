@@ -1091,6 +1091,12 @@ lua << EOF
     require'marks'.setup {
       builtin_marks = { ".", "<", ">", "^" },
       signs = false,
+      sign_priority = {
+        lower = 13,
+        upper = 14,
+        builtin = 11,
+        bookmark = 12,
+      }
     }
   end)
 EOF
