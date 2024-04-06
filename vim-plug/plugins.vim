@@ -158,8 +158,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
-" Do not ignore ignored directories for any jump
-let g:any_jump_disable_vcs_ignore = 1
+" Optionally do not ignore ignored directories for any jump
+let g:any_jump_disable_vcs_ignore = 0
+
+function! AllAnyJumpToggle()
+    if g:any_jump_disable_vcs_ignore
+        let g:any_jump_disable_vcs_ignore = 0
+        echo "Any Jump: Ignoring VCS ignore files"
+    else
+        let g:any_jump_disable_vcs_ignore = 1
+        echo "Any Jump: NOT ignoring VCS ignore files"
+    endif
+endfunction
 
 lua <<EOF
   -- Set up nvim-cmp.
