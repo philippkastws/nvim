@@ -391,8 +391,9 @@ inoremap <silent> <Esc> <Esc>`^
 " keep cursor position when yanking in visual mode
 xnoremap <silent> y ygv<Esc>
 
-" add all places that you've stayed at for a longer time ('updatetime'; default is 4 seconds)
-autocmd CursorHold * normal! m'
+" set updatetime 60000
+" " add all places that you've stayed at for a longer time ('updatetime'; default is 4 seconds)
+" autocmd CursorHold * normal! m'
 
 " Terminal
 tnoremap <Esc> <C-\><C-n>
