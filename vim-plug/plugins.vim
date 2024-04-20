@@ -61,7 +61,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Themes
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-  Plug 'navarasu/onedark.nvim'
+  Plug 'joshdick/onedark.vim'
   Plug 'rebelot/kanagawa.nvim'
 
   Plug 'sudormrfbin/cheatsheet.nvim'
