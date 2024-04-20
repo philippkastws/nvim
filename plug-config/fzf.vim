@@ -66,7 +66,7 @@ command! -bang -nargs=* RgHidden
 "let g:fzf_preview_window = ['hidden,right,50%,<70(up,40%)', 'ctrl--']
 "let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true, 'yoffset': 1.0 } }
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true, 'yoffset': 1.0 } }
 
 "" Ripgrep advanced
 "function! RipgrepFzf(query, fullscreen)
