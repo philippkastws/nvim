@@ -160,6 +160,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'romgrk/doom-one.vim'
 
+  " ollama plugin
+  Plug 'David-Kunz/gen.nvim'
+
 call plug#end()
 
 " setup tabby
@@ -1120,6 +1123,14 @@ lua << EOF
         bookmark = 12,
       }
     }
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require('gen').setup({
+      model = "codellama:7b", -- The default model to use.
+    })
   end)
 EOF
 
