@@ -150,7 +150,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'petertriho/nvim-scrollbar'
 
     Plug 'chentoast/marks.nvim'
-    "
+
+    " Run on console
+    " tabby serve --device metal --model StarCoder-1B
+    Plug 'TabbyML/vim-tabby'
+    let g:tabby_keybinding_accept = '<Tab>'
+
   endif
 
   Plug 'romgrk/doom-one.vim'
