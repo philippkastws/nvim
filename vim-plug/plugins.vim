@@ -163,6 +163,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " ollama plugin
   Plug 'David-Kunz/gen.nvim'
+  
+  Plug 'nvim-pack/nvim-spectre'
 
 call plug#end()
 
