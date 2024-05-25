@@ -167,6 +167,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   
   Plug 'nvim-pack/nvim-spectre'
 
+  Plug 'tiagovla/tokyodark.nvim'
+
 call plug#end()
 
 " setup tabby
@@ -1144,6 +1146,13 @@ lua << EOF
     require("bufferline").setup{
     }
     require("scope").setup({})
+  end)
+EOF
+
+lua <<EOF
+  -- Set up nvim-cmp.
+  pcall(function()
+    require("tokyodark").setup({})
   end)
 EOF
 
