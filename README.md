@@ -1,47 +1,60 @@
 # Nvim Mach 2 On Diet
 
-Neovim configuration focusing on quick file viewing
+Neovim configuration focusing on quick file viewing, code inspection and editing
 
-Hard slimmed down version of [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim)
+Started one day off [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim)
 
 ## Install
 
-- On Mac
+### Instal dependencies
 
-  ```
-  brew install neovim ranger fzf ripgrep bat the_silver_searcher lazygit
-  ```
-
-- Ubuntu
-
-  ```
-  sudo apt install ...
-  ```
-
-- Arch
-
-  ```
-  sudo pacman -S ...
-  ```
-
-## Clone this repo into your config
-
+On Mac:
 ```
-git clone https://github.com/.../nvim.git ~/.config/nvim
+brew install neovim ranger fzf ripgrep bat the_silver_searcher lazygit
 ```
 
-## List of programs you should install
+### Clone this config
 
-- ranger
-- fzf
-- ripgrep
-- bat
+```
+git clone https://github.com/philippkastws/nvim.git ~/.config/nvim
+```
+
+### First run
+
+First run will install plugins, needs a restart after that.
 
 ## Nice fonts
 
-You need a nerd font (and make sure you use them in terminal, e. g. iTerm 2):
+Best with a nerd font (and make sure you use them in terminal, e. g. iTerm 2):
 ```
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 ```
+
+Space opens menu with commands.
+
+Most important keybindings:
+<space>: Open menu
+<space>e: Toggle file manager side panel
+<space>f: Fuzzy find files
+<space>F: Like above, but include hidden files
+<space>g: Fuzzy find in files
+<space>G: Like above, but include hidden files
+<space>c: Close buffer
+<space>w: Jump to next window
+<space>I: Open git fugitive
+<space>C: Close window
+<space>q: Quit
+<space>o: Open recent files
+<space>o: Open recent files
+<space>o: Open recent files
+<space>n: Clear find highlighting
+<space>o: Open recent files
+<space>O: Open start page
+<space>h: Show command history
+<space>b: show open files
+<space>s: Easy motion, type character and jump
+<space>j: Any jump, jump to definition or reference of element under cursor
+:SSave: Save session
+
 
