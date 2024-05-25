@@ -70,6 +70,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'ryanoasis/vim-devicons' Icons without colours
   "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
   Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
+  Plug 'tiagovla/scope.nvim'
 
   " Completion
   "Plug 'neovim/nvim-lspconfig'
@@ -1142,6 +1143,7 @@ lua << EOF
   pcall(function()
     require("bufferline").setup{
     }
+    require("scope").setup({})
   end)
 EOF
 
