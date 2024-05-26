@@ -1143,7 +1143,11 @@ EOF
 set termguicolors
 lua << EOF
   pcall(function()
-    require("bufferline").setup{
+    local bufferline = require("bufferline")
+    bufferline.setup{
+      options = {
+        style_preset = bufferline.style_preset.no_italic
+      }
     }
     require("scope").setup({})
   end)
