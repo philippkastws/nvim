@@ -1165,6 +1165,8 @@ EOF
 
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
+colorscheme tokyonight-night
+
 " Automatically install missing plugins on startup
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
