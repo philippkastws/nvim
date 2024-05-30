@@ -1148,7 +1148,8 @@ lua << EOF
     local bufferline = require("bufferline")
     bufferline.setup{
       options = {
-        style_preset = bufferline.style_preset.no_italic
+        style_preset = bufferline.style_preset.no_italic,
+        color_icons = true
       }
     }
     require("scope").setup({})
