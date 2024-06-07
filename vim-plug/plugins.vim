@@ -183,7 +183,9 @@ call plug#end()
 
 " setup tabby
 "let g:copilot_enabled = 0
-let g:tabby_trigger_mode = 'manual'
+if exists('g:use_github_copilot')
+  let g:tabby_trigger_mode = 'manual'
+endif
 "let g:tabby_keybinding_accept = '<Tab>'
 let g:tabby_keybinding_trigger_or_dismiss = '<C-a>'
 
