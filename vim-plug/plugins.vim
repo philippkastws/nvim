@@ -1157,17 +1157,20 @@ lua << EOF
 
     llm.setup({
       backend = "ollama",
-      model = "codellama:7b",
+      --model = "starcoder2:3b",
+      --model = "codellama:7b",
+      model = "codellama:7b-code",
       accept_keymap = "<S-CR>",
       dismiss_keymap = "<CR>",
       url = "http://localhost:11434/api/generate",
-      request_body = {
-        options = {
-          temperature = 0.8, --0.2,
-          top_p = 0.95,
-        },
-      },
+      -- request_body = {
+      --   options = {
+      --     temperature = 0.8, --0.2,
+      --     top_p = 0.95,
+      --   },
+      -- },
       enable_suggestions_on_startup = false,
+      --enable_suggestions_on_startup = true,
       -- MasonInstall llm-ls
       lsp = {
         bin_path = vim.api.nvim_call_function("stdpath", { "data" }) .. "/mason/bin/llm-ls",
