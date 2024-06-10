@@ -1148,8 +1148,8 @@ EOF
 lua << EOF
   pcall(function()
     require('gen').setup({
-      --model = "codellama:7b", -- The default model to use.
-      model = "mistral", -- The default model to use.
+      model = "codellama:7b", -- The default model to use.
+      --model = "mistral", -- The default model to use.
     })
   end)
 EOF
