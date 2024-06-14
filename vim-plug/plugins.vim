@@ -1165,6 +1165,13 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "deepseek-coder:latest",
     }
+    gen.prompts['Enhance_Code_No_Replace_CodeGemma'] = {
+      name = "Enhance_Code_No_Replace_CodeGemma",
+      prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+      replace = false,
+      extract = "```$filetype\n(.-)```",
+      model = "codegemma:7b",
+    }
   end)
 EOF
 
