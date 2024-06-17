@@ -164,6 +164,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " you define in the local http server
     if !exists('g:use_github_copilot')
       Plug 'TabbyML/vim-tabby'
+      filetype plugin on
     endif
 
   endif
