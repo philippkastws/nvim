@@ -1195,6 +1195,13 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "codegemma:7b",
     }
+    gen.prompts['Enhance_Code_No_Replace_Mistral'] = {
+      name = "Enhance_Code_No_Replace_Mistral",
+      prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+      replace = false,
+      extract = "```$filetype\n(.-)```",
+      model = "mistral",
+    }
   end)
 EOF
 
