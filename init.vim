@@ -295,6 +295,9 @@ map <leader>P "0P
 nnoremap <S-l> :bnext<CR>
 nnoremap <S-h> :bprevious<CR>
 
+" Repeat last command
+nnoremap <leader>B @:
+
 "let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " case insensitive
 
