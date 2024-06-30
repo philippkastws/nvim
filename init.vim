@@ -325,7 +325,10 @@ lua <<EOF
 -- vim.o.completeopt = 'menuone,noselect'
 
 -- Enable break indent
-vim.o.breakindent = true
+vim.opt.breakindent = true
+
+-- Save undo history
+vim.opt.undofile = true
 
 EOF
 
