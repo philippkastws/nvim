@@ -94,8 +94,10 @@ colorscheme tokyonight-moon
 nmap <buffer> <C-¨> <C-]>
 nmap <buffer> <C-ü> <C-[>
 
-" Map J to ctrl-j
+" Map J to alt-j
 nnoremap <A-j> gJ
+" Map K to alt-k
+nnoremap <A-k> <cmd>:lua vim.lsp.buf.hover()<CR>
 " For quicker navigation map these
 map J <C-d>
 map K <C-u>
