@@ -335,6 +335,9 @@ vim.opt.undofile = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Search for selected text
+vim.keymap.set('v', '/', "\"fy/\\V<C-R>f<CR>" )
+
 EOF
 
 " Allow to move in insert mode
