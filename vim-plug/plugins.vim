@@ -1325,9 +1325,9 @@ lua << EOF
       prompt = "$input",
       model = "deepseek-coder:latest",
     }
-    gen.prompts['Chat_With_CodeGemma'] = {
+    gen.prompts['Chat_With_Llama3'] = {
       prompt = "$input",
-      model = "codegemma:7b",
+      model = "Llama3",
     }
     gen.prompts['Chat_With_Mistral'] = {
       prompt = "$input",
@@ -1336,6 +1336,21 @@ lua << EOF
     gen.prompts['Chat_With_Codestral'] = {
       prompt = "$input",
       model = "codestral",
+    }
+    gen.prompts['Enhance_Grammar_Spelling_with_Mistral'] = {
+      prompt = "Modify the following text to improve grammar and spelling, just output the final text without additional quotes around it:\n$text",
+      replace = false,
+      model = "mistral",
+    }
+    gen.prompts['Enhance_Grammar_Spelling_with_Mistral_Deutsch'] = {
+      prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
+      replace = false,
+      model = "mistral",
+    }
+    gen.prompts['Enhance_Grammar_Spelling_with_Llama3_Deutsch'] = {
+      prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
+      replace = false,
+      model = "llama3",
     }
   end)
 EOF
