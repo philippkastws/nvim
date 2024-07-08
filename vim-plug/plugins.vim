@@ -1321,6 +1321,13 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "codestral",
     }
+    gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder_V2'] = {
+      name = "Enhance_Code_No_Replace_DeepSeek_Coder_V2",
+      prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+      replace = false,
+      extract = "```$filetype\n(.-)```",
+      model = "deepseek-coder-v2",
+    }
     gen.prompts['Chat_With_DeepSeek_Coder'] = {
       prompt = "$input",
       model = "deepseek-coder:latest",
