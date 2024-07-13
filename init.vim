@@ -220,6 +220,9 @@ let mapleader = " " " map leader to space
 nmap <leader>n :noh<CR>
 lua vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+" Preview substitutions live, as you type!
+lua vim.opt.inccommand = 'split'
+
 " add key mapping for swiss german keyboard
 nnoremap <C-ö> <C-[>
 nnoremap <C-ä> <C-]>
