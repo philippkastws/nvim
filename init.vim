@@ -291,8 +291,8 @@ vnoremap c "_c
 
 " copy selected block
 vmap <leader>b y'>p
-" max window
-nmap <leader>m <C-W>_
+" max/only window
+nmap <leader>m <C-W>o
 " map paste what has been yanked
 map <leader>p "0p
 map <leader>P "0P
