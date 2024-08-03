@@ -190,6 +190,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'nvim-telescope/telescope-ui-select.nvim'
     Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
+
+    Plug 'hedyhli/outline.nvim'
   endif
 
 call plug#end()
@@ -1450,6 +1452,13 @@ lua <<EOF
   -- Set up nvim-cmp.
   pcall(function()
     require("tokyodark").setup({})
+  end)
+EOF
+
+lua <<EOF
+  -- Set up nvim-cmp.
+  pcall(function()
+    require("outline").setup({})
   end)
 EOF
 
