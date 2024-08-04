@@ -119,11 +119,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'tpope/vim-unimpaired'
 
-
-  if !exists('g:vscode')
-    Plug 'github/copilot.vim'
-  endif
-
   Plug 'kevinhwang91/nvim-bqf'
 
   Plug 'lukas-reineke/indent-blankline.nvim'
@@ -170,6 +165,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       Plug 'TabbyML/vim-tabby'
       filetype plugin on
     endif
+
+    Plug 'github/copilot.vim'
 
   endif
 
