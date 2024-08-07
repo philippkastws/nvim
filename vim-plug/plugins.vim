@@ -129,9 +129,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Find helper, but is slow on some files
   " Plug 'folke/flash.nvim'
 
-  " Vim Script
-  Plug 'gbprod/yanky.nvim'
-
   Plug 'windwp/nvim-autopairs'
 
   Plug 'tpope/vim-sleuth'
@@ -147,6 +144,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/twilight.nvim'
 
   if !exists('g:vscode')
+    Plug 'gbprod/yanky.nvim'
+
     Plug 'folke/zen-mode.nvim'
 
     Plug 'kevinhwang91/nvim-hlslens'
