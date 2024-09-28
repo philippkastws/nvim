@@ -1244,7 +1244,7 @@ EOF
 lua << EOF
   pcall(function()
     require("toggleterm").setup({
-      open_mapping = [[<c-t>]]
+      open_mapping = [[<leader-t>]]
     })
   end)
 EOF
