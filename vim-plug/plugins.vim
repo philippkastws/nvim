@@ -144,12 +144,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'folke/twilight.nvim'
 
-  Plug 'folke/zen-mode.nvim'
+  if !exists('g:vscode')
+    Plug 'folke/zen-mode.nvim'
 
-  Plug 'kevinhwang91/nvim-hlslens'
-  Plug 'petertriho/nvim-scrollbar'
+    Plug 'kevinhwang91/nvim-hlslens'
+    Plug 'petertriho/nvim-scrollbar'
 
-  Plug 'chentoast/marks.nvim'
+    Plug 'chentoast/marks.nvim'
+  endif
 
 call plug#end()
 
