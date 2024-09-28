@@ -226,6 +226,21 @@ inoremap <C-ä> <C-]>
 inoremap <C-ü> <C-[>
 inoremap <C-é> <C-]>
 
+nmap ö [
+nmap ä ]
+nmap é {
+nmap à }
+
+omap ö [
+omap ä ]
+omap é {
+omap à }
+
+xmap ö [
+xmap ä ]
+xmap é {
+xmap à }
+
 inoremap ö [
 inoremap ä ]
 inoremap é {
