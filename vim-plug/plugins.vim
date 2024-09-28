@@ -5,6 +5,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:use_github_copilot = 1
+
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'ryanoasis/vim-devicons'
@@ -158,7 +160,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Including chat
     " tabby serve --device metal --model StarCoder-1B --chat-model WizardCoder-3B
     " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
-    Plug 'TabbyML/vim-tabby'
+    " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
+    " you define in the local http server
+    if !exists('g:use_github_copilot')
+      Plug 'TabbyML/vim-tabby'
+    endif
 
   endif
 
