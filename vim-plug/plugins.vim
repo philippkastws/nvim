@@ -189,9 +189,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
 
     Plug 'hedyhli/outline.nvim'
-  endif
 
+    Plug 'nomnivore/ollama.nvim'
+  endif
 call plug#end()
+
+lua <<EOF
+  -- Set up nvim-cmp.
+  pcall(function()
+    require('ollama').setup()
+  end)
+EOF
 
 " setup tabby
 "let g:copilot_enabled = 0
