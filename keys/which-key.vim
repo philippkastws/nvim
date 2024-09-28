@@ -338,7 +338,10 @@ let g:which_key_map.sp = {
 let g:which_key_map.ma = {
       \ 'name' : '+marks' ,
       \ 't' : [':MarksToggleSigns', 'toggle mark sings'],
-      \ 'd' : [':delmarks! | :wshada!', 'delete marks'],
+      \ 'd' : ['dm ', 'delete all lowercase marks (dm<space>)'],
+      \ 'D' : ['dm-', 'delete all marks on line'],
+      \ 's' : [':Telescope marks', 'show all marks'],
+      "\ 'd' : [':delmarks! | :wshada!', 'delete marks'],
       \ }
 
 "let g:which_key_map.p = {
