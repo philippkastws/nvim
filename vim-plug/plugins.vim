@@ -1382,6 +1382,11 @@ lua << EOF
       replace = false,
       model = "llama3",
     }
+    gen.prompts['Generate_Commit_Message_with_Llama3_For_Changes'] = {
+      prompt = "Generate a commit message for the following changes:\n$text",
+      replace = false,
+      model = "llama3",
+    }
   end)
 EOF
 
