@@ -16,7 +16,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf.vim'
   " Git
   "Plug 'airblade/vim-gitgutter'
-  Plug 'lewis6991/gitsigns.nvim'
+  if !exists('g:vscode')
+    Plug 'lewis6991/gitsigns.nvim'
+  endif
   " Plug 'romgrk/barbar.nvim'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
