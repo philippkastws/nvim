@@ -1138,7 +1138,8 @@ EOF
 set termguicolors
 lua << EOF
   pcall(function()
-    require("bufferline").setup{}
+    require("bufferline").setup{
+    }
   end)
 EOF
 
