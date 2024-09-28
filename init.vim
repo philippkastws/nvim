@@ -243,6 +243,8 @@ vnoremap d "_d
 
 " copy selected block
 vmap <leader>b y'>p
+" max window
+nmap <leader>m <C-W>_
 
 " Navigate buffers
 nnoremap <S-l> :bnext<CR>
