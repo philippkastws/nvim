@@ -156,7 +156,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Run on console
     " tabby serve --device metal --model StarCoder-1B
     Plug 'TabbyML/vim-tabby'
-    let g:tabby_keybinding_accept = '<Tab>'
 
   endif
 
@@ -172,8 +171,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 call plug#end()
 
 " setup tabby
+"let g:copilot_enabled = 0
 let g:tabby_trigger_mode = 'manual'
-let g:tabby_keybinding_accept = '<Tab>'
+"let g:tabby_keybinding_accept = '<Tab>'
 let g:tabby_keybinding_trigger_or_dismiss = '<C-a>'
 
 " Optionally do not ignore ignored directories for any jump
