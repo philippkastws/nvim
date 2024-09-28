@@ -400,4 +400,7 @@ tnoremap <Esc> <C-\><C-n>
 " Stop yanking on past in selection
 vnoremap p P
 
+" Stop yanking with single x, this makes only sense with selections
+nnoremap x "_x
+nnoremap X "_X
 
