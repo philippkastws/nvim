@@ -43,18 +43,18 @@ Most important keybindings:
 - \<space>G: Like above, but include hidden files
 - \<space>c: Close buffer
 - \<space>w: Jump to next window
-- \<space>I: Open git fugitive
+- \<space>i: Open git fugitive
 - \<space>C: Close window
 - \<space>q: Quit
 - \<space>o: Open recent files
-- \<space>o: Open recent files
-- \<space>o: Open recent files
+- \<space>O: Start page
 - \<space>n: Clear find highlighting
 - \<space>o: Open recent files
 - \<space>O: Open start page
 - \<space>h: Show command history
-- \<space>b: show open files
-- \<space>s: Easy motion, type character and jump
+- \<space>b: Show open files
+- \<space>B: Fuzzy find current buffer
+- \<space>s/s: Easy motion, type character and jump
 - \<space>j: Any jump, jump to definition or reference of element under cursor
 - \:SSave: Save session
 
