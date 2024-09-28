@@ -50,7 +50,7 @@ let g:onedark_config = {
     "\ 'style': 'warmer',
     \ 'transparent': 'true',
 \}
-colorscheme onedark
+colorscheme catppuccin
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
