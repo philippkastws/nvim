@@ -138,6 +138,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'EdenEast/nightfox.nvim'
 
+  Plug 'rose-pine/neovim'
+
   Plug 'folke/twilight.nvim'
 
   Plug 'folke/zen-mode.nvim'
