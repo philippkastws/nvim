@@ -207,6 +207,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/trouble.nvim'
 
   Plug 'phaazon/hop.nvim'
+
+  Plug 'nvim-tree/nvim-tree.lua'
+
 call plug#end()
 
 lua <<EOF
@@ -339,6 +342,15 @@ lua << EOF
     end, {remap=true})
   end)
 EOF
+
+lua << EOF
+
+  pcall(function()
+    require("nvim-tree").setup()
+  end)
+
+EOF
+
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *
