@@ -49,7 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 
 "  Plug 'rmagatti/auto-session'
 "  Plug 'rmagatti/session-lens'
