@@ -73,6 +73,7 @@ let g:which_key_map['ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
 let g:which_key_map['kk'] = [ ' k', 'LSP hoover (<leader>k)' ]
 let g:which_key_map['ii'] = [ 'gl', 'LSP diagnostic (gl)' ]
 let g:which_key_map['VV'] = [ ':BqfToggle', 'Quick view preview toggle (:BqfToggle)' ]
+let g:which_key_map['fb'] = [ ':Telescope current_buffer_fuzzy_find', 'Find in current buffer' ]
 
 "let g:which_key_map['x'] = [ 'YP' , 'copy line (Y P)' ]
 
