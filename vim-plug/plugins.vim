@@ -144,6 +144,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'folke/zen-mode.nvim'
 
+  Plug 'petertriho/nvim-scrollbar'
+
 call plug#end()
 
 lua <<EOF
@@ -1038,6 +1040,8 @@ lua << EOF
     })
   end)
 EOF
+
+lua require("scrollbar").setup()
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *
