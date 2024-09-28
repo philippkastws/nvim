@@ -95,6 +95,7 @@ map K <C-u>
 
 " show whitespaces by default
 :set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:⏎ | :set list
+":set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:↵ | :set list
 
 lua <<EOF
 
