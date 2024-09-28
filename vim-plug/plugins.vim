@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'romgrk/barbar.nvim'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   " Terminal
   Plug 'voldikss/vim-floaterm'
   " Start Screen
@@ -1058,6 +1059,8 @@ lua << EOF
   })
   end)
 EOF
+
+let g:github_enterprise_urls = ['https://git.autodesk.com']
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *
