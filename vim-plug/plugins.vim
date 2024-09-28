@@ -93,6 +93,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'phaazon/hop.nvim'
 
+  Plug 'easymotion/vim-easymotion'
+
   Plug 'nvim-tree/nvim-tree.lua'
 
   Plug 'justinmk/vim-sneak'
