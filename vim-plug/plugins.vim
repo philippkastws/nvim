@@ -158,6 +158,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
+" Do not ignore ignored directories for any jump
+let g:any_jump_disable_vcs_ignore = 1
+
 lua <<EOF
   -- Set up nvim-cmp.
   pcall(function()
