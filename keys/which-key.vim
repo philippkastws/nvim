@@ -372,6 +372,7 @@ let g:which_key_map.X = {
       \ 'l' : ['yyp', 'duplicate line (yyp)'],
       \ 'g' : ['gf', 'go to file under curser (gf)'],
       \ 'b' : ['C-o', 'jump back (ctrl+o)'],
+      \ 'f' : ['C-i', 'jump forward (ctrl+i)'],
       \ 'r' : [':Rg', 'find everywhere (:Rg)'],
       \ 'i' : [':BLines', 'find in buffer (:BLines)'],
       \ 'w' : [':ciw', 'change word (ciw)'],
