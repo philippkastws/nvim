@@ -150,7 +150,7 @@ let g:which_key_map.a = {
 "      " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 "
 " s is for search
-let g:which_key_map.s = {
+let g:which_key_map.se = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'              , 'history'],
       \ ';' : [':Commands'              , 'commands'],
@@ -186,7 +186,7 @@ let g:which_key_map.H = {
       \ 'c' : [':HopChar1'              , ':HopChar1 (f)'],
       \ }
 
-let g:which_key_map.S = {
+let g:which_key_map.ss = {
       \ 'name' : '+Session' ,
       \ 'c' : [':SClose'          , 'Close Session']  ,
       \ 'd' : [':SDelete'         , 'Delete Session'] ,
@@ -329,7 +329,7 @@ let g:which_key_map.git = {
 "      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
 "      \ }
 
-let g:which_key_map.sp = {
+let g:which_key_map.S = {
       \ 'name' : '+spell' ,
       \ 'o' : [':set spell | set spelloptions=camel | :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224', 'on'],
       \ 'x' : [':set nospell', 'off'],
