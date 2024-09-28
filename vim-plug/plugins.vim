@@ -1344,6 +1344,10 @@ lua << EOF
       prompt = "$input",
       model = "deepseek-coder:latest",
     }
+    gen.prompts['Chat_With_DeepSeek_Coder_V2'] = {
+      prompt = "$input",
+      model = "deepseek-coder-v2",
+    }
     gen.prompts['Chat_With_Llama3'] = {
       prompt = "$input",
       model = "Llama3",
