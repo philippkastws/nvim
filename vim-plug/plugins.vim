@@ -1162,6 +1162,7 @@ lua << EOF
       --model = "starcoder2:3b",
       --model = "codellama:7b",
       model = "codellama:7b-code",
+      --model = "stable-code:latest",
       accept_keymap = "<S-CR>",
       dismiss_keymap = "<CR>",
       url = "http://localhost:11434/api/generate",
