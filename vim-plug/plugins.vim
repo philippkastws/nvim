@@ -185,6 +185,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter-context'
 
     Plug 'nvim-telescope/telescope-ui-select.nvim'
+    Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
   endif
 
 call plug#end()
@@ -307,6 +308,66 @@ lua <<EOF
       })
     })
 
+  end)
+EOF
+
+lua <<EOF
+  -- Set up nvim-cmp.
+  pcall(function()
+    require("screenkey").setup({
+      -- win_opts = {
+      --     row = vim.o.lines - vim.o.cmdheight - 1,
+      --     col = vim.o.columns - 1,
+      --     relative = "editor",
+      --     anchor = "SE",
+      --     width = 40,
+      --     height = 3,
+      --     border = "single",
+      -- },
+      -- compress_after = 3,
+      clear_after = 30,
+      -- disable = {
+      --     filetypes = {},
+      --     buftypes = {},
+      -- },
+      -- show_leader = true,
+      -- group_mappings = false,
+      -- display_infront = {},
+      -- display_behind = {},
+      -- keys = {
+      --     ["<TAB>"] = "󰌒",
+      --     ["<CR>"] = "󰌑",
+      --     ["<ESC>"] = "Esc",
+      --     ["<SPACE>"] = "␣",
+      --     ["<BS>"] = "󰌥",
+      --     ["<DEL>"] = "Del",
+      --     ["<LEFT>"] = "",
+      --     ["<RIGHT>"] = "",
+      --     ["<UP>"] = "",
+      --     ["<DOWN>"] = "",
+      --     ["<HOME>"] = "Home",
+      --     ["<END>"] = "End",
+      --     ["<PAGEUP>"] = "PgUp",
+      --     ["<PAGEDOWN>"] = "PgDn",
+      --     ["<INSERT>"] = "Ins",
+      --     ["<F1>"] = "󱊫",
+      --     ["<F2>"] = "󱊬",
+      --     ["<F3>"] = "󱊭",
+      --     ["<F4>"] = "󱊮",
+      --     ["<F5>"] = "󱊯",
+      --     ["<F6>"] = "󱊰",
+      --     ["<F7>"] = "󱊱",
+      --     ["<F8>"] = "󱊲",
+      --     ["<F9>"] = "󱊳",
+      --     ["<F10>"] = "󱊴",
+      --     ["<F11>"] = "󱊵",
+      --     ["<F12>"] = "󱊶",
+      --     ["CTRL"] = "Ctrl",
+      --     ["ALT"] = "Alt",
+      --     ["SUPER"] = "󰘳",
+      --     ["<leader>"] = "<leader>",
+      --},
+    })
   end)
 EOF
 
