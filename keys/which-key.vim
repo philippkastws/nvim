@@ -62,6 +62,7 @@ let g:which_key_map['M'] = [ ':Magit', 'Magit' ]
 let g:which_key_map['L'] = [ ':FloatermNew lazygit', 'Lazy git' ]
 let g:which_key_map['UU'] = [ ':GitGutterUndoHunk', 'Undo hunk' ]
 let g:which_key_map['GG'] = [ ':Telescope git_status', 'Git status' ]
+let g:which_key_map['B'] = [ ':Telescope buffers', 'Show buffers' ]
 
 "let g:which_key_map['x'] = [ 'YP' , 'copy line (Y P)' ]
 
