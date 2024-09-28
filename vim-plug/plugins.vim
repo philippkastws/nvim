@@ -162,6 +162,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
+" setup tabby
+let g:tabby_trigger_mode = 'manual'
+let g:tabby_keybinding_accept = '<Tab>'
+let g:tabby_keybinding_trigger_or_dismiss = '<C-a>'
+
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
 
