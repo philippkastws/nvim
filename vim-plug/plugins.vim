@@ -196,7 +196,15 @@ lua <<EOF
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({ '/', '?' }, {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline{
+        ['<cr>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.confirm()
+            else
+                fallback()
+            end
+        end, { 'c' }),
+      },
       sources = {
         { name = 'buffer' }
       }
@@ -204,7 +212,15 @@ lua <<EOF
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline{
+        ['<cr>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.confirm()
+            else
+                fallback()
+            end
+        end, { 'c' }),
+      },
       sources = cmp.config.sources({
         { name = 'path' }
       }, {
