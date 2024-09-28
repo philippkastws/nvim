@@ -179,6 +179,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'huggingface/llm.nvim'
 
+  " Plug 'wellle/context.vim'
+  Plug 'nvim-treesitter/nvim-treesitter-context'
+
 call plug#end()
 
 " setup tabby
@@ -299,6 +302,15 @@ lua <<EOF
       })
     })
 
+  end)
+EOF
+
+lua <<EOF
+  -- Set up nvim-cmp.
+  pcall(function()
+    vim.keymap.set("n", "[c", function()
+      require("treesitter-context").go_to_context(vim.v.count1)
+    end, { silent = true })
   end)
 EOF
 
