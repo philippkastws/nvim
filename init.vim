@@ -358,6 +358,7 @@ EOF
 
 " Open telescope with selected text in visual mode
 vnoremap <leader>g y<Esc>:Telescope live_grep<CR><C-r>"
+vnoremap <leader>f y<Esc>:Telescope find_files<CR><C-r>"
 
 " Clear command line
 augroup cmdline
