@@ -199,12 +199,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'mbbill/undotree'
 
+  Plug 'stevearc/oil.nvim'
+
 call plug#end()
 
 lua <<EOF
-  -- Set up nvim-cmp.
   pcall(function()
     require('ollama').setup()
+  end)
+EOF
+
+lua <<EOF
+  pcall(function()
+    require("oil").setup()
+    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
   end)
 EOF
 
