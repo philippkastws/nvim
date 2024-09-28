@@ -322,7 +322,10 @@ nnoremap <BS> "_X
 nnoremap <C-BS> "_x
 nnoremap d "_d
 nnoremap C "_C
+nnoremap c "_c
 vnoremap d "_d
+vnoremap C "_C
+vnoremap c "_c
 
 " copy selected block
 vmap <leader>b y'>p
