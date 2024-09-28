@@ -248,3 +248,6 @@ vmap <leader>b y'>p
 nnoremap <S-l> :bnext<CR>
 nnoremap <S-h> :bprevious<CR>
 
+nnoremap <C-j> jzz
+nnoremap <C-k> kzz
+
