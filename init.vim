@@ -251,3 +251,5 @@ nnoremap <S-h> :bprevious<CR>
 nnoremap <C-j> jzz
 nnoremap <C-k> kzz
 
+"let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1 " case insensitive
