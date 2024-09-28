@@ -1202,6 +1202,18 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "mistral",
     }
+    gen.prompts['Chat_With_DeepSeek_Coder'] = {
+      prompt = "$input",
+      model = "deepseek-coder:latest",
+    }
+    gen.prompts['Chat_With_CodeGemma'] = {
+      prompt = "$input",
+      model = "codegemma:7b",
+    }
+    gen.prompts['Chat_With_Mistral'] = {
+      prompt = "$input",
+      model = "mistral",
+    }
   end)
 EOF
 
