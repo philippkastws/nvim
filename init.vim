@@ -74,12 +74,13 @@ require("catppuccin").setup({
 });
 end)
 EOF
-let g:airline_theme='catppuccin'
-" let g:airline_theme='onedark'
+" let g:airline_theme='catppuccin'
+let g:airline_theme='onedark'
 
 " colorscheme onedark
-colorscheme catppuccin-macchiato
+" colorscheme catppuccin-macchiato
 " colorscheme tokyonight
+colorscheme tokyonight-moon
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
