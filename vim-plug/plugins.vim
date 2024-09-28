@@ -240,7 +240,7 @@ lua << EOF
   pcall(function()
     require("mason").setup()
     require("mason-lspconfig").setup {
-      ensure_installed = { "tsserver", "eslint" },
+      ensure_installed = { "tsserver", "eslint", "cssls" },
     }
   end)
 
