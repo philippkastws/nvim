@@ -368,6 +368,7 @@ lua <<EOF
       --     ["<leader>"] = "<leader>",
       --},
     })
+    require("screenkey").toggle()
   end)
 EOF
 
