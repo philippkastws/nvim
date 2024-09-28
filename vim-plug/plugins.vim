@@ -124,6 +124,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'folke/flash.nvim'
 
+  " Vim Script
+  Plug 'gbprod/yanky.nvim'
+
 call plug#end()
 
 lua <<EOF
@@ -938,6 +941,16 @@ lua <<EOF
         },
       },
     }
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("yanky").setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
   end)
 EOF
 
