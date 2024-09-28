@@ -46,6 +46,8 @@ let g:auto_session_enabled = v:false
 
 let g:onedark_config = {
     \ 'style': 'dark',
+    "\ 'style': 'darker',
+    "\ 'style': 'warmer',
     \ 'transparent': 'true',
 \}
 colorscheme onedark
