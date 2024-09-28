@@ -5,7 +5,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:use_github_copilot = 1
+"let g:use_github_copilot = 1
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
@@ -200,9 +200,12 @@ call plug#end()
 "let g:copilot_enabled = 0
 if exists('g:use_github_copilot')
   let g:tabby_trigger_mode = 'manual'
+  let g:tabby_keybinding_trigger_or_dismiss = '<C-\>'
+  let g:tabby_keybinding_accept = '<Tab>'
+   
+else
+  let g:tabby_keybinding_accept = '<Tab>'
 endif
-"let g:tabby_keybinding_accept = '<Tab>'
-let g:tabby_keybinding_trigger_or_dismiss = '<C-a>'
 
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
