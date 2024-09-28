@@ -16,7 +16,7 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 :set mouse=a
 :set ignorecase
 :set smartcase
-:set timeoutlen=500
+:set timeoutlen=1000
 :set list
 :set cursorline
 :set spelllang=en,en_us,de
