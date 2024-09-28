@@ -127,6 +127,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Vim Script
   Plug 'gbprod/yanky.nvim'
 
+  Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 lua <<EOF
@@ -951,6 +953,14 @@ lua << EOF
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     })
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("nvim-autopairs").setup(
+      { map_cr = true }
+    )
   end)
 EOF
 
