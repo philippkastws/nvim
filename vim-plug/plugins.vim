@@ -1049,6 +1049,16 @@ lua << EOF
   end)
 EOF
 
+lua << EOF
+  pcall(function()
+  require('twilight').setup({
+    dimming = {
+      alpha = 0.5,
+    }
+  })
+  end)
+EOF
+
 " Automatically install missing plugins on startup
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
