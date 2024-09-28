@@ -56,7 +56,7 @@ let g:which_key_map['G'] = [ ':Telescope live_grep hidden=true glob_pattern=*', 
 let g:which_key_map['e'] = [ ':NvimTreeToggle', 'nvim tree toggle' ]
 "let g:which_key_map['Q'] = [ '<c-q>', 'unlock screen (ctrl+q)' ]
 let g:which_key_map['U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
-let g:which_key_map['I'] = [ ':Git', 'Git Fugitive (:Git)' ]
+let g:which_key_map['i'] = [ ':Git', 'Git Fugitive (:Git)' ]
 let g:which_key_map['x'] = [ ':Gitsigns next_hunk', 'Next hunk (:Gitsigns next_hunk)' ]
 let g:which_key_map['y'] = [ ':Gitsigns prev_hunk', 'Prev hunk (:Gitsigns prev_hunk)' ]
 let g:which_key_map['l'] = [ ':Telescope', 'Telescope' ]
