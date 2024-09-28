@@ -66,7 +66,7 @@ let g:which_key_map['b'] = [ ':Telescope buffers', 'Show buffers' ]
 let g:which_key_map['c'] = [ '<C-w>c', 'Close window (ctrl-w c)' ]
 let g:which_key_map['C'] = [ ':bd', 'Close buffer (:bd)' ]
 let g:which_key_map['nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
-let g:which_key_map['ff'] = [ ':BLines', 'Filter buffer' ]
+let g:which_key_map['ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
 
 "let g:which_key_map['x'] = [ 'YP' , 'copy line (Y P)' ]
 
