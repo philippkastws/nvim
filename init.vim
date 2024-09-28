@@ -44,10 +44,11 @@ let g:better_escape_shortcut = ['jk', 'jj', 'kj']
 
 let g:auto_session_enabled = v:false
 
+" 'style': 'dark',
+" 'style': 'darker',
+" 'style': 'warmer',
 let g:onedark_config = {
     \ 'style': 'dark',
-    "\ 'style': 'darker',
-    "\ 'style': 'warmer',
     \ 'transparent': 'true',
 \}
 
