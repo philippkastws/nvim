@@ -144,6 +144,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'folke/zen-mode.nvim'
 
+  Plug 'kevinhwang91/nvim-hlslens'
   Plug 'petertriho/nvim-scrollbar'
 
 call plug#end()
@@ -1041,7 +1042,12 @@ lua << EOF
   end)
 EOF
 
-lua require("scrollbar").setup()
+lua << EOF
+  pcall(function()
+    require('hlslens').setup()
+    require("scrollbar").setup()
+  end)
+EOF
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *
