@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " See what keys do like in emacs
   if !exists('g:vscode')
     Plug 'liuchengxu/vim-which-key'
+    " Plug 'folke/which-key.nvim'
   endif
   " Smooth scroll
   Plug 'psliwka/vim-smoothie'
@@ -1497,6 +1498,53 @@ lua <<EOF
     require("outline").setup({})
   end)
 EOF
+
+" lua <<EOF
+"   pcall(function()
+"     local wk = require("which-key")
+"     wk.add({
+"       { "<leader>f", "<cmd>:Telescope find_files<cr>", desc = "Find File", mode = "n" },
+"       { "<leader>g", "<cmd>:Telescope live_grep<cr>", desc = "Grep Text", mode = "n" },
+"       { "<leader>h", "<cmd>:Telescope command_history<cr>", desc = "Command history (:Telescope command_history)", mode = "n" },
+"       { "<leader>ww", "<cmd>:Windows<cr>", desc = "search windows", mode = "n" },
+"       --" { "<leader>w'] = [ '<C-W>w', 'next window']
+"       --" { "<leader>f'] = [ ':Telescope find_files', 'search files' ] " [ ':Files', 'search files' ]
+"       --" { "<leader>F'] = [ ':Telescope find_files hidden=true no_ignore=true', 'search files (incl hidden)' ]
+"       --" { "<leader>q'] = [ ':qall' , 'quit' ]
+"       --" { "<leader>r'] = [ ':Ranger' , 'ranger (Q to quit)' ]
+"       --" { "<leader>E'] = [ ':Explore' , 'explore' ]
+"       --" { "<leader>?'] = [ ':Cheat40' , 'cheat sheet' ]
+"       --" { "<leader>??'] = [ ':Cheatsheet' , 'cheat' ]
+"       --" { "<leader>T'] = [ ':FloatermToggle' , 'terminal toggle' ]
+"       --" { "<leader>g'] = [ ':Telescope live_grep', 'grep text' ] "[ ':Rg', 'grep text' ]
+"       --" { "<leader>rg'] = [ ':Rg', 'grep text with rg' ]
+"       --" { "<leader>o'] = [ ':Telescope oldfiles', 'recent files' ]
+"       --" { "<leader>O'] = [ ':Startify', 'start page' ]
+"       --" { "<leader>G'] = [ ':Telescope live_grep hidden=true glob_pattern=*', 'grep text (incl hidden)' ]
+"       --" { "<leader>e'] = [ ':NvimTreeToggle', 'nvim tree toggle' ]
+"       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
+"       --" { "<leader>i'] = [ ':Git', 'Git Fugitive (:Git)' ]
+"       --" { "<leader>x'] = [ ':Gitsigns next_hunk', 'Next hunk (:Gitsigns next_hunk)' ]
+"       --" { "<leader>y'] = [ ':Gitsigns prev_hunk', 'Prev hunk (:Gitsigns prev_hunk)' ]
+"       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
+"       --" { "<leader>M'] = [ ':Magit', 'Magit' ]
+"       --" { "<leader>L'] = [ ':LazyGit', 'Lazy git' ]
+"       --" { "<leader>XX'] = [ ':Gitsigns reset_hunk', 'Undo hunk' ]
+"       --" { "<leader>PP'] = [ ':Gitsigns preview_hunk', 'Previgitsigns.preview_hunkew hunk (<leader>hp)' ]
+"       --" { "<leader>b'] = [ ':Telescope buffers', 'Show buffers' ]
+"       --" { "<leader>B'] = [ ':Telescope current_buffer_fuzzy_find', 'Buffer fuzzy find' ]
+"       --" { "<leader>C'] = [ '<C-w>c', 'Close window (ctrl-w c)' ]
+"       --" { "<leader>c'] = [ ':bd', 'Close buffer (:bd)' ]
+"       --" { "<leader>nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
+"       --" { "<leader>ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
+"       --" { "<leader>kk'] = [ ' k', 'LSP hoover (<leader>k)' ]
+"       --" { "<leader>ii'] = [ 'gl', 'LSP diagnostic (gl)' ]
+"       --" { "<leader>VV'] = [ ':BqfToggle', 'Quick view preview toggle (:BqfToggle)' ]
+"       --" { "<leader>fb'] = [ ':Telescope current_buffer_fuzzy_find', 'Find in current buffer' ]
+"       --" { "<leader>R'] = [ '@:', 'Repeat last command' ]
+"     })
+"   end)
+" EOF
 
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
