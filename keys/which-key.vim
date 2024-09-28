@@ -374,7 +374,7 @@ let g:which_key_map.X = {
       \ 'name' : '+utils' ,
       \ 'c' : ['YP', 'copy line (YP)'],
       \ 'd' : ['dd', 'delete line'],
-      \ 'p' : ['<c-g>', 'file path (1 ctrl+g)'],
+      \ 'p' : ['<c-g>', 'file path (ctrl+g)'],
       \ 'l' : ['yyp', 'duplicate line (yyp)'],
       \ 'g' : ['gf', 'go to file under curser (gf)'],
       \ 'b' : ['C-o', 'jump back (ctrl+o)'],
