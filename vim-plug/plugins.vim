@@ -630,7 +630,20 @@ EOF
 
 lua << EOF
   pcall(function()
-    require("ibl").setup({ enabled = true })
+    --require("ibl").setup({ enabled = true })
+    local highlight = {
+        "CursorColumn",
+        "Whitespace",
+    }
+    require("ibl").setup {
+        enabled = true,
+        indent = { highlight = highlight, char = "" },
+        whitespace = {
+            highlight = highlight,
+            remove_blankline_trail = false,
+        },
+        --scope = { enabled = false },
+    }
   end)
 EOF
 
