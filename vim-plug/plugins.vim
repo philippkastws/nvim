@@ -318,15 +318,15 @@ lua <<EOF
   -- Set up nvim-cmp.
   pcall(function()
     require("screenkey").setup({
-      -- win_opts = {
+      win_opts = {
       --     row = vim.o.lines - vim.o.cmdheight - 1,
       --     col = vim.o.columns - 1,
       --     relative = "editor",
       --     anchor = "SE",
       --     width = 40,
-      --     height = 3,
+          height = 1,
       --     border = "single",
-      -- },
+      },
       -- compress_after = 3,
       clear_after = 30,
       -- disable = {
