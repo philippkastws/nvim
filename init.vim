@@ -179,7 +179,7 @@ lua <<EOF
 pcall(function()
 
 -- Disable copilot by default for now
-vim.g.copilot_enabled = false -- true
+vim.g.copilot_enabled = true -- true
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""

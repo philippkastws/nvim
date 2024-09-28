@@ -109,6 +109,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'tpope/vim-unimpaired'
 
+  Plug 'github/copilot.vim'
+
 call plug#end()
 
 lua <<EOF
