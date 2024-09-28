@@ -94,6 +94,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'phaazon/hop.nvim'
 
+  Plug 'mfussenegger/nvim-treehopper'
+
   Plug 'easymotion/vim-easymotion'
 
   Plug 'nvim-tree/nvim-tree.lua'
@@ -605,6 +607,16 @@ lua << EOF
     require("ibl").setup({ enabled = true })
   end)
 EOF
+
+lua << EOF
+ -- jump to the begin of scope, uses hop, starting with a for nearest scope if not visible in buffer
+ vim.keymap.set("n", "<space>i", function()
+   require('tsht').move({ side = "start" })
+ end)
+EOF
+" select in visual mode entire function using hop
+omap     <silent> m :<C-U>lua require('tsht').nodes()<CR>
+xnoremap <silent> m :lua require('tsht').nodes()<CR>
 
 lua << EOF
   pcall(function()
