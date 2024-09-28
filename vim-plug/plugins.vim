@@ -60,6 +60,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'navarasu/onedark.nvim'
+  Plug 'rebelot/kanagawa.nvim'
 
   Plug 'sudormrfbin/cheatsheet.nvim'
 
