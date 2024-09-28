@@ -335,6 +335,12 @@ let g:which_key_map.sp = {
       \ 'a' : ['zg', 'add to dict (zg)'],
       \ }
 
+let g:which_key_map.ma = {
+      \ 'name' : '+marks' ,
+      \ 't' : [':MarksToggleSigns', 'toggle mark sings'],
+      \ 'd' : [':delmarks! | :wshada!', 'delete marks'],
+      \ }
+
 "let g:which_key_map.p = {
 "      \ 'name' : '+spellunker' ,
 "      \ 't' : ['ZT', 'toggle'],
