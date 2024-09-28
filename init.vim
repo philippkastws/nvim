@@ -357,3 +357,9 @@ EOF
 :imap <C-k> <C-o>k
 :imap <C-l> <C-o>l
 
+" Clear command line
+augroup cmdline
+    autocmd!
+    autocmd CmdlineLeave : echo ''
+augroup end
+
