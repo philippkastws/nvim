@@ -385,6 +385,8 @@ vnoremap p P
 nnoremap x "_x
 nnoremap X "_X
 
+nnoremap WW :w<cr>
+
 " Workaround strange flickering on easymotion with LSP
 " https://github.com/easymotion/vim-easymotion/issues/402#issuecomment-1808644737
 if !exists('g:vscode')
