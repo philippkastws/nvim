@@ -180,10 +180,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'huggingface/llm.nvim'
 
-  " Plug 'wellle/context.vim'
-  Plug 'nvim-treesitter/nvim-treesitter-context'
+  if !exists('g:vscode')
+    " Plug 'wellle/context.vim'
+    Plug 'nvim-treesitter/nvim-treesitter-context'
 
-  Plug 'nvim-telescope/telescope-ui-select.nvim'
+    Plug 'nvim-telescope/telescope-ui-select.nvim'
+  endif
 
 call plug#end()
 
