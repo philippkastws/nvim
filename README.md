@@ -1,27 +1,25 @@
 # Nvim Mach 2 On Diet
 
-Neovim configuration focusing on file viewing, slimmed down version of
-[Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim)
-keeping the file navigation and search capabilities (by ranger, fzf and ripgrep).
+Neovim configuration focusing on file viewing, slimmed down version of [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim) keeping the file navigation and search capabilities (by ranger, fzf, ripgrep, etc) and most useful plugins.
 
 ## Install
 
 - On Mac
 
   ```
-  brew install neovim ranger fzf ripgrep bat
+  brew install neovim ranger fzf ripgrep bat the_silver_searcher lazygit
   ```
 
 - Ubuntu
 
   ```
-  sudo apt install neovim ranger fzf ripgrep bat
+  sudo apt install ...
   ```
 
 - Arch
 
   ```
-  sudo pacman -S neovim ranger fzf ripgrep bat
+  sudo pacman -S ...
   ```
 
 ## Clone this repo into your config
@@ -36,10 +34,6 @@ git clone https://github.com/.../nvim.git ~/.config/nvim
 - fzf
 - ripgrep
 - bat
-
-## Basic
-
-Use the `basic-init.vim` if you don't want to mess with additional fonts: `rm init.vim && mv basic-init.vim init.vim`. 
 
 ## Nice fonts
 
