@@ -196,6 +196,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'nomnivore/ollama.nvim'
   endif
+
+  Plug 'mbbill/undotree'
+
 call plug#end()
 
 lua <<EOF
