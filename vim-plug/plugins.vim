@@ -1147,10 +1147,17 @@ EOF
 
 lua << EOF
   pcall(function()
-    require('gen').setup({
+    local gen = require('gen')
+    gen.setup({
       model = "codellama:7b", -- The default model to use.
       --model = "mistral", -- The default model to use.
     })
+    gen.prompts['Enhance_Code_No_Replace'] = {
+      name = "Enhance_Code_No_Replace",
+      prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+      replace = false,
+      extract = "```$filetype\n(.-)```",
+    }
   end)
 EOF
 
