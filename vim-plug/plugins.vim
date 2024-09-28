@@ -202,7 +202,6 @@ if exists('g:use_github_copilot')
   let g:tabby_trigger_mode = 'manual'
   let g:tabby_keybinding_trigger_or_dismiss = '<C-\>'
   let g:tabby_keybinding_accept = '<Tab>'
-   
 else
   let g:tabby_keybinding_accept = '<Tab>'
 endif
