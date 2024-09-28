@@ -93,6 +93,8 @@ map K <C-u>
 " show line numbers
 :set number
 
+" show whitespaces by default
+:set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:⏎ | :set list
 
 lua <<EOF
 
