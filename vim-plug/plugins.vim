@@ -1329,11 +1329,18 @@ lua << EOF
       model = "mistral",
     }
     gen.prompts['Enhance_Code_No_Replace_Codestral'] = {
-      name = "Enhance_Code_No_Replace_Mistral",
+      name = "Enhance_Code_No_Replace_Codestral",
       prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
       replace = false,
       extract = "```$filetype\n(.-)```",
       model = "codestral",
+    }
+    gen.prompts['Enhance_Code_No_Replace_Gemma2'] = {
+      name = "Enhance_Code_No_Replace_Gemma2",
+      prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+      replace = false,
+      extract = "```$filetype\n(.-)```",
+      model = "gemma2",
     }
     gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder_V2'] = {
       name = "Enhance_Code_No_Replace_DeepSeek_Coder_V2",
@@ -1386,6 +1393,11 @@ lua << EOF
       prompt = "Generate a commit message for the following changes:\n$text",
       replace = false,
       model = "llama3",
+    }
+    gen.prompts['Generate_Commit_Message_with_Deep_Seek_Coder_For_Changes'] = {
+      prompt = "Generate a commit message for the following changes:\n$text",
+      replace = false,
+      model = "deepseek-coder-v2",
     }
   end)
 EOF
