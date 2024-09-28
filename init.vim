@@ -255,7 +255,7 @@ let g:gitgutter_map_keys = 0
 
 let mapleader = " " " map leader to space
 " Remove search results
-map <leader>n :noh<CR>
+nmap <leader>n :noh<CR>
 
 " add key mapping for swiss german keyboard
 nnoremap <C-ö> <C-[>
@@ -363,6 +363,9 @@ EOF
 :imap <C-j> <C-o>j
 :imap <C-k> <C-o>k
 :imap <C-l> <C-o>l
+
+" Open telescope with selected text in visual mode
+vnoremap <leader>g y<Esc>:Telescope live_grep<CR><C-r>"
 
 " Clear command line
 augroup cmdline
