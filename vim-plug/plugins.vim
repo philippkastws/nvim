@@ -213,6 +213,10 @@ lua <<EOF
     for _, sign in ipairs(signs) do
       vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
     end
+    lsp.on_attach(function(client, bufnr)
+      local opts = {buffer = bufnr}
+      vim.keymap.set('n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+    end)
   end)
 EOF
 
