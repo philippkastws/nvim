@@ -155,6 +155,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Run on console
     " tabby serve --device metal --model StarCoder-1B
+    " Including chat
+    " tabby serve --device metal --model StarCoder-1B --chat-model WizardCoder-3B --webserver
     Plug 'TabbyML/vim-tabby'
 
   endif
