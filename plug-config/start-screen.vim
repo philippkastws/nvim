@@ -11,12 +11,6 @@ let g:startify_custom_header = [
         \ '   *------------------------------------------------------*',
         \ '   | Hit the space bar to get started with short cuts! 😳 |',
         \ '   *------------------------------------------------------*',
-        \ '          o',
-        \ '           o   ^__^',
-        \ '            o  (oo)\_______',
-        \ '               (__)\       )\/\',
-        \ '                   ||----w |',
-        \ '                   ||     ||',
         \]
 
 " returns all modified files of the current git repo
