@@ -35,7 +35,7 @@ source $HOME/.config/nvim/plug-config/start-screen.vim
 "source $HOME/.config/nvim/plug-config/gitgutter.vim
 "source $HOME/.config/nvim/plug-config/git-messenger.vim
 "source $HOME/.config/nvim/plug-config/closetags.vim
-"source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
 "source $HOME/.config/nvim/plug-config/vista.vim
 "source $HOME/.config/nvim/plug-config/xtabline.vim
 "source $HOME/.config/nvim/plug-config/polyglot.vim

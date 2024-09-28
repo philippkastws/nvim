@@ -61,6 +61,7 @@ let g:which_key_map['X'] = [ ':GitGutterNextHunk', 'Next hunk (:GitGutterNextHun
 let g:which_key_map['Y'] = [ ':GitGutterPrevHunk', 'Prev hunk (:GitGutterPrevHunk)' ]
 let g:which_key_map['l'] = [ ':Telescope', 'Telescope' ]
 let g:which_key_map['M'] = [ ':Magit', 'Magit' ]
+let g:which_key_map['L'] = [ ':FloatermNew lazygit', 'Lazy git' ]
 
 "let g:which_key_map['x'] = [ 'YP' , 'copy line (Y P)' ]
 
