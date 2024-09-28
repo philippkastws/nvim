@@ -1,6 +1,8 @@
 # Nvim Mach 2 On Diet
 
-Neovim configuration focusing on file viewing, slimmed down version of [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim) keeping the file navigation and search capabilities (by ranger, fzf, ripgrep, etc) and most useful plugins.
+Neovim configuration focusing on quick file viewing
+
+Hard slimmed down version of [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim)
 
 ## Install
 
