@@ -45,7 +45,7 @@ let g:startify_session_autoload = 1
 "let g:startify_change_to_vcs_root = 1
 "let g:startify_fortune_use_unicode = 1
 let g:startify_session_persistence = 1
-let g:startify_session_before_save = [ 'silent! tabdo NvimTreeClose', 'silent! tabdo TroubleClose' ]
+let g:startify_session_before_save = [ 'silent! tabdo DiffviewClose', 'silent! tabdo NvimTreeClose', 'silent! tabdo TroubleClose' ]
 "
 let g:webdevicons_enable_startify = 1
 "
