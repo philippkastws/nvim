@@ -100,6 +100,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'sindrets/diffview.nvim'
 
+  Plug 'kdheepak/lazygit.nvim'
+
 call plug#end()
 
 lua <<EOF
