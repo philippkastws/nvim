@@ -83,7 +83,7 @@ let g:airline_theme='onedark'
 " colorscheme tokyonight
 colorscheme tokyonight-moon
 " colorscheme github_dark
-colorscheme doom-one
+" colorscheme doom-one
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
