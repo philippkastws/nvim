@@ -149,6 +149,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kevinhwang91/nvim-hlslens'
   Plug 'petertriho/nvim-scrollbar'
 
+  Plug 'chentoast/marks.nvim'
+
 call plug#end()
 
 lua <<EOF
@@ -1065,6 +1067,12 @@ lua << EOF
       alpha = 0.5,
     }
   })
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require'marks'.setup {}
   end)
 EOF
 
