@@ -154,6 +154,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "
   endif
 
+  Plug 'romgrk/doom-one.vim'
+
 call plug#end()
 
 lua <<EOF
