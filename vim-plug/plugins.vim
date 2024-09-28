@@ -183,6 +183,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'wellle/context.vim'
   Plug 'nvim-treesitter/nvim-treesitter-context'
 
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
+
 call plug#end()
 
 " setup tabby
@@ -736,8 +738,15 @@ lua << EOF
         close_telescope = true,
       },
     })
-    telsescope = require('telescope')
-    telsescope.setup({
+    local telescope = require('telescope')
+    telescope.setup({
+      extensions = {
+        ["ui-select"] = {
+          require("telescope.themes").get_dropdown {
+            -- even more opts
+          }
+        }
+      },
       defaults = {
         mappings = {
           i = {
@@ -747,7 +756,8 @@ lua << EOF
         }
       }
     })
-    telrequire('telescope')sescope.load_extension('neoclip')
+    telescope.load_extension('neoclip')
+    telescope.load_extension("ui-select")
   end)
 EOF
 
