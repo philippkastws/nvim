@@ -95,7 +95,7 @@ nmap <buffer> <C-¨> <C-]>
 nmap <buffer> <C-ü> <C-[>
 
 " Map J to ctrl-j
-nnoremap <A-j> J
+nnoremap <A-j> gJ
 " For quicker navigation map these
 map J <C-d>
 map K <C-u>
