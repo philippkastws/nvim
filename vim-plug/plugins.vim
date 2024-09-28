@@ -103,6 +103,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'kdheepak/lazygit.nvim'
 
+  Plug 'AckslD/nvim-neoclip.lua'
+
 call plug#end()
 
 lua <<EOF
@@ -320,6 +322,13 @@ EOF
 lua << EOF
   pcall(function()
     require('gitsigns').setup()
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require('neoclip').setup()
+    require('telescope').load_extension('neoclip')
   end)
 EOF
 
