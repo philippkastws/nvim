@@ -56,12 +56,13 @@ let g:which_key_map['e'] = [ ':NvimTreeToggle', 'nvim tree toggle' ]
 "let g:which_key_map['Q'] = [ '<c-q>', 'unlock screen (ctrl+q)' ]
 let g:which_key_map['U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
 let g:which_key_map['I'] = [ ':Git', 'Git Fugitive (:Git)' ]
-let g:which_key_map['x'] = [ ':GitGutterNextHunk', 'Next hunk (:GitGutterNextHunk)' ]
-let g:which_key_map['y'] = [ ':GitGutterPrevHunk', 'Prev hunk (:GitGutterPrevHunk)' ]
+let g:which_key_map['x'] = [ ':Gitsigns next_hunk', 'Next hunk (:Gitsigns next_hunk)' ]
+let g:which_key_map['y'] = [ ':Gitsigns prev_hunk', 'Prev hunk (:Gitsigns prev_hunk)' ]
 let g:which_key_map['l'] = [ ':Telescope', 'Telescope' ]
 let g:which_key_map['M'] = [ ':Magit', 'Magit' ]
-let g:which_key_map['L'] = [ ':FloatermNew lazygit', 'Lazy git' ]
-let g:which_key_map['UU'] = [ ':GitGutterUndoHunk', 'Undo hunk' ]
+let g:which_key_map['L'] = [ ':LazyGit', 'Lazy git' ]
+let g:which_key_map['UU'] = [ ':Gitsigns reset_hunk', 'Undo hunk' ]
+let g:which_key_map['PP'] = [ ':Gitsigns preview_hunk', 'Preview hunk (:Gitsigns preview_hunk)' ]
 let g:which_key_map['GG'] = [ ':Telescope git_status', 'Git status' ]
 let g:which_key_map['b'] = [ ':Telescope buffers', 'Show buffers' ]
 let g:which_key_map['C'] = [ '<C-w>c', 'Close window (ctrl-w c)' ]
@@ -200,21 +201,14 @@ let g:which_key_map.i = {
       \ 'D' : [':Gdiffsplit'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
       "\ 's' : [':Git status'                          , 'status'],
-      "\ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
-      \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
       "\ 'i' : [':Gist -b'                          , 'post gist'],
-      \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
-      \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
       \ 'l' : [':Git log'                          , 'log'],
       \ 'G' : [':Git'                              , 'fugitive'],
       "\ 'm' : ['<Plug>(git-messenger)'             , 'message'],
       "\ 'p' : [':Git push'                         , 'push'],
       "\ 'P' : [':Git pull'                         , 'pull'],
       "\ 'r' : [':GRemove'                          , 'remove'],
-      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
       "\ 'S' : [':!git status'                      , 'status'],
-      "\ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
-      \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       "\ 'v' : [':GV'                               , 'view commits'],
       "\ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }

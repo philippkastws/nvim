@@ -14,7 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   " Git
-  Plug 'airblade/vim-gitgutter'
+  "Plug 'airblade/vim-gitgutter'
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'tpope/vim-fugitive'
   " Terminal
   Plug 'voldikss/vim-floaterm'
@@ -314,6 +315,12 @@ lua << EOF
     require("diffview").setup()
   end)
 
+EOF
+
+lua << EOF
+  pcall(function()
+    require('gitsigns').setup()
+  end)
 EOF
 
 " Automatically install missing plugins on startup
