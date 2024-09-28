@@ -27,7 +27,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Start Screen
   Plug 'mhinz/vim-startify'
   " See what keys do like in emacs
-  Plug 'liuchengxu/vim-which-key'
+  if !exists('g:vscode')
+    Plug 'liuchengxu/vim-which-key'
+  endif
   " Smooth scroll
   Plug 'psliwka/vim-smoothie'
 

@@ -6,7 +6,10 @@
 
 
 source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/keys/which-key.vim
+
+if !exists('g:vscode')
+  source $HOME/.config/nvim/keys/which-key.vim
+endif
 
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
