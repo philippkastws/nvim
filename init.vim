@@ -218,6 +218,7 @@ let g:gitgutter_map_keys = 0
 let mapleader = " " " map leader to space
 " Remove search results
 nmap <leader>n :noh<CR>
+lua vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 " add key mapping for swiss german keyboard
 nnoremap <C-ö> <C-[>
