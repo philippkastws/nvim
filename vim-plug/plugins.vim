@@ -1377,6 +1377,11 @@ lua << EOF
       replace = false,
       model = "llama3",
     }
+    gen.prompts['Translate_with_Llama3_Deutsch_German_to_Englisch'] = {
+      prompt = "Translate the following text to English:\n$text",
+      replace = false,
+      model = "llama3",
+    }
   end)
 EOF
 
