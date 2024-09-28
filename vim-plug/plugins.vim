@@ -112,6 +112,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'github/copilot.vim'
 
+  Plug 'kevinhwang91/nvim-bqf'
+
 call plug#end()
 
 lua <<EOF
