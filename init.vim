@@ -397,4 +397,7 @@ autocmd CursorHold * normal! m'
 " Terminal
 tnoremap <Esc> <C-\><C-n>
 
+" Stop yanking on past in selection
+vnoremap p P
+
 
