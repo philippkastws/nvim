@@ -131,7 +131,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Better comments
   Plug 'tpope/vim-commentary'
 
-  Plug 'folke/flash.nvim'
+  " Find helper, but is slow on some files
+  " Plug 'folke/flash.nvim'
 
   " Vim Script
   Plug 'gbprod/yanky.nvim'
