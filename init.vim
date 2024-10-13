@@ -234,46 +234,48 @@ inoremap <C-ä> <C-]>
 inoremap <C-ü> <C-[>
 inoremap <C-é> <C-]>
 
-map! ö [
-map! ä ]
-map! é {
-map! à }
+set langmap=öäéà;[]{}
 
-map ö [
-map ä ]
-map é {
-map à }
+" map! ö [
+" map! ä ]
+" map! é {
+" map! à }
 
-nmap ö [
-nmap ä ]
-nmap é {
-nmap à }
+" noremap! ö [
+" noremap! ä ]
+" noremap! é {
+" noremap! à }
 
-omap ö [
-omap ä ]
-omap é {
-omap à }
+" nnoremap ö [
+" nnoremap ä ]
+" nnoremap é {
+" nnoremap à }
 
-xmap ö [
-xmap ä ]
-xmap é {
-xmap à }
+" onoremap ö [
+" onoremap ä ]
+" onoremap é {
+" onoremap à }
 
-" Map in find string as well
-cmap ö [
-cmap ä ]
-cmap é {
-cmap à }
+" xnoremap ö [
+" xnoremap ä ]
+" xnoremap é {
+" xnoremap à }
 
-smap ö [
-smap ä ]
-smap é {
-smap à }
+" " noremap in find string as well
+" cnoremap ö [
+" cnoremap ä ]
+" cnoremap é {
+" cnoremap à }
 
-imap ö [
-imap ä ]
-imap é {
-imap à }
+" snoremap ö [
+" snoremap ä ]
+" snoremap é {
+" snoremap à }
+
+" inoremap ö [
+" inoremap ä ]
+" inoremap é {
+" inoremap à }
 
 " github copilot mappings
 imap <silent> <C-.> <Plug>(copilot-next)
