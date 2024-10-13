@@ -9,7 +9,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 
 if !exists('g:vscode')
   source $HOME/.config/nvim/keys/which-key.vim
-"  source $HOME/.config/nvim/themes/airline.vim
+  source $HOME/.config/nvim/themes/airline.vim
 endif
 
 source $HOME/.config/nvim/plug-config/fzf.vim
