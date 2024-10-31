@@ -201,6 +201,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'stevearc/oil.nvim'
 
+  Plug 'dyng/ctrlsf.vim'
+
 call plug#end()
 
 lua <<EOF
