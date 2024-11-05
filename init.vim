@@ -284,6 +284,8 @@ imap <silent> <C-ä> <Plug>(copilot-next)
 imap <silent> <C-,> <Plug>(copilot-previous)
 imap <silent> <C-ö> <Plug>(copilot-previous)
 
+nmap <silent> <C-S-f> <Plug>CtrlSFPrompt
+
 set backspace=indent,eol,start
 " Commands to not save to clipboard
 nnoremap <BS> "_X
