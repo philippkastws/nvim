@@ -457,3 +457,41 @@ let g:EasyMotion_do_shade = 0
 "})
 "EOF
 "
+
+" Compare entire buffer against clipboard
+function! DiffClipboard()
+    let ft=&ft
+    vertical new
+    setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile
+    :1put
+    silent 0d_
+    diffthis
+    setlocal nomodifiable
+    execute "set ft=" . ft
+    wincmd p
+    diffthis
+endfunction
+command! DiffClipboard call DiffClipboard()
+
+" compare visual selection against clipboard
+lua <<EOF
+local function compare_to_clipboard()
+  local ftype = vim.api.nvim_eval("&filetype")
+  vim.cmd(string.format([[
+    execute "normal! \"xy"
+    vsplit
+    enew
+    normal! P
+    setlocal buftype=nowrite
+    set filetype=%s
+    diffthis
+    execute "normal! \<C-w>\<C-w>"
+    enew
+    setlocal buftype=nowrite
+    set filetype=%s
+    normal! "xP
+    diffthis
+  ]], ftype, ftype))
+end
+vim.keymap.set('x', '<Leader>d', compare_to_clipboard)
+EOF
