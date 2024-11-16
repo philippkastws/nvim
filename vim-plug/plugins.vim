@@ -1400,6 +1400,12 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "deepseek-coder-v2",
     }
+    gen.prompts['Review_Code_No_Replace_DeepSeek_Coder_V2'] = {
+      name = "Review_Code_No_Replace_DeepSeek_Coder_V2",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "deepseek-coder-v2",
+    }
     gen.prompts['Chat_With_DeepSeek_Coder'] = {
       prompt = "$input",
       model = "deepseek-coder:latest",
