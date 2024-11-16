@@ -1400,12 +1400,6 @@ lua << EOF
       extract = "```$filetype\n(.-)```",
       model = "deepseek-coder-v2",
     }
-    gen.prompts['Review_Code_No_Replace_DeepSeek_Coder_V2'] = {
-      name = "Review_Code_No_Replace_DeepSeek_Coder_V2",
-      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-      replace = false,
-      model = "deepseek-coder-v2",
-    }
     gen.prompts['Chat_With_DeepSeek_Coder'] = {
       prompt = "$input",
       model = "deepseek-coder:latest",
@@ -1455,6 +1449,24 @@ lua << EOF
       prompt = "Generate a commit message for the following changes:\n$text",
       replace = false,
       model = "deepseek-coder-v2",
+    }
+    gen.prompts['Review_Code_DeepSeek_Coder_V2'] = {
+      name = "Review_Code_DeepSeek_Coder_V2",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "deepseek-coder-v2",
+    }
+    gen.prompts['Review_With_QWen-2.5'] = {
+      name = "Review_With_QWen-2.5",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "qwen2.5-coder:3b",
+    }
+    gen.prompts['Review_With_CodeGemma'] = {
+      name = "Review_With_CodeGemma",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "codegemma",
     }
   end)
 EOF
