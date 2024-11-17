@@ -23,7 +23,8 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 :set timeoutlen=1000
 :set list
 :set cursorline
-:set spelllang=en,en_us,de
+:set spelllang=en_us
+":set spelllang=en_us,de_ch
 :set spelloptions=camel
 " This is local to buffer, so we have to enable it on each new and opened buffer
 autocmd BufRead,BufNewFile * setlocal spelloptions=camel
