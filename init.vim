@@ -85,7 +85,10 @@ let g:airline_theme='onedark'
 " colorscheme onedark
 " colorscheme catppuccin-macchiato
 " colorscheme tokyonight
-colorscheme tokyonight-moon
+if !exists('g:vscode')
+    colorscheme tokyonight-night
+    colorscheme tokyonight-moon
+endif
 " colorscheme github_dark
 " colorscheme doom-one
 
