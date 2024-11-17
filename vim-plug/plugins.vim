@@ -1456,11 +1456,17 @@ lua << EOF
       replace = false,
       model = "deepseek-coder-v2",
     }
-    gen.prompts['Review_With_QWen-2.5'] = {
+    gen.prompts['Review_With_QWen-2.5:3b'] = {
       name = "Review_With_QWen-2.5",
       prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
       replace = false,
       model = "qwen2.5-coder:3b",
+    }
+    gen.prompts['Review_With_QWen-2.5'] = {
+      name = "Review_With_QWen-2.5",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "qwen2.5-coder",
     }
     gen.prompts['Review_With_CodeGemma'] = {
       name = "Review_With_CodeGemma",
