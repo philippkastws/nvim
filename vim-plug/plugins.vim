@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Better comments
   Plug 'tpope/vim-commentary'
 
+  Plug 'easymotion/vim-easymotion'
+
   if !exists('g:vscode')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
@@ -106,8 +108,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'phaazon/hop.nvim'
 
     " Plug 'mfussenegger/nvim-treehopper'
-
-    Plug 'easymotion/vim-easymotion'
 
     Plug 'nvim-tree/nvim-tree.lua'
 
