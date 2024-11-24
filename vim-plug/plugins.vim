@@ -15,6 +15,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'easymotion/vim-easymotion'
 
+  " Smooth scroll
+  Plug 'psliwka/vim-smoothie'
+
   if !exists('g:vscode')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
@@ -33,8 +36,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
     " Plug 'folke/which-key.nvim'
-    " Smooth scroll
-    Plug 'psliwka/vim-smoothie'
 
     Plug 'vim-airline/vim-airline-themes'
     Plug 'francoiscabrol/ranger.vim'
