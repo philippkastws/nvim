@@ -357,7 +357,7 @@ vim.opt.breakindent = true
 vim.opt.undofile = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
 -- Search for selected text
 vim.keymap.set('v', '/', "\"fy/\\V<C-R>f<CR>" )
