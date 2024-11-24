@@ -309,9 +309,11 @@ nmap <leader>m <C-W>o
 map <leader>p "0p
 map <leader>P "0P
 
-" Navigate buffers
-nnoremap <S-l> :bnext<CR>
-nnoremap <S-h> :bprevious<CR>
+if !exists('g:vscode')
+    " Navigate buffers
+    nnoremap <S-l> :bnext<CR>
+    nnoremap <S-h> :bprevious<CR>
+endif
 
 " Repeat last command
 nnoremap <leader>r @:
