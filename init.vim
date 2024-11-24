@@ -102,8 +102,11 @@ endif
 nmap <buffer> <C-¨> <C-]>
 nmap <buffer> <C-ü> <C-[>
 
-" Map J to alt-j
-nnoremap <A-j> gJ
+" Map J, K, H, L originals to alt
+nnoremap <a-j> J
+nnoremap <a-k> K
+nnoremap <a-h> H
+nnoremap <a-l> L
 " Map K to alt-k
 nnoremap <A-k> <cmd>:lua vim.lsp.buf.hover()<CR>
 " For quicker navigation map these
