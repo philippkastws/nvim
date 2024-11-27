@@ -196,9 +196,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'stevearc/oil.nvim'
 
     Plug 'dyng/ctrlsf.vim'
+
+    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
   endif
 
 call plug#end()
+
+lua << EOF
+  pcall(function()
+    require("CopilotChat").setup {
+      -- See Configuration section for options
+    }
+  end)
+EOF
 
 lua <<EOF
   pcall(function()
