@@ -1450,12 +1450,12 @@ lua << EOF
       replace = false,
       model = "deepseek-coder-v2",
     }
-    gen.prompts['Review_With_QWen-2.5:3b'] = {
-      name = "Review_With_QWen-2.5",
-      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-      replace = false,
-      model = "qwen2.5-coder:3b",
-    }
+    -- gen.prompts['Review_With_QWen-2.5:3b'] = {
+    --   name = "Review_With_QWen-2.5",
+    --   prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+    --   replace = false,
+    --   model = "qwen2.5-coder:3b",
+    -- }
     gen.prompts['Review_With_QWen-2.5'] = {
       name = "Review_With_QWen-2.5",
       prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
@@ -1466,7 +1466,13 @@ lua << EOF
       name = "Review_With_CodeGemma",
       prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
       replace = false,
-      model = "codegemma",
+      model = "codegemma:7b",
+    }
+    gen.prompts['Review_With_Codellama'] = {
+      name = "Review_With_Codellama",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "codellama:7b",
     }
   end)
 EOF
