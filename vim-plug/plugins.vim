@@ -1484,6 +1484,12 @@ lua << EOF
       replace = false,
       model = "codellama:7b",
     }
+    gen.prompts['Review_With_Codestral'] = {
+      name = "Review_With_Codesral",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "codestral",
+    }
   end)
 EOF
 
