@@ -197,7 +197,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'dyng/ctrlsf.vim'
 
-    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
   endif
 
 call plug#end()
