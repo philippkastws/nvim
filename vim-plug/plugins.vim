@@ -1475,6 +1475,12 @@ lua << EOF
       replace = false,
       model = "qwen2.5-coder",
     }
+    gen.prompts['Review_With_QWen-2.5:14b'] = {
+      name = "Review_With_QWen-2.5:14b",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "qwen2.5-coder:14b",
+    }
     gen.prompts['Review_With_CodeGemma'] = {
       name = "Review_With_CodeGemma",
       prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
