@@ -328,7 +328,7 @@ lua <<EOF
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
       mapping = cmp.mapping.preset.cmdline{
-        ['<cr>'] = cmp.mapping(function(fallback)
+        ['<RIGHT>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.confirm()
             else
