@@ -198,6 +198,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dyng/ctrlsf.vim'
 
     Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
+
+    Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install --frozen-lockfile --production',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
   endif
 
 call plug#end()
