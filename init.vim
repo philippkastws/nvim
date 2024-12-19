@@ -8,7 +8,7 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
 if !exists('g:vscode')
-  source $HOME/.config/nvim/keys/which-key.vim
+  " source $HOME/.config/nvim/keys/which-key.vim
   source $HOME/.config/nvim/themes/airline.vim
 endif
 
@@ -326,7 +326,7 @@ vnoremap <leader>r @:
 let g:sneak#use_ic_scs = 1 " case insensitive
 
 " easymotion over window
-nmap <Leader>s <Plug>(easymotion-overwin-f)
+" nmap <Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader>s <Plug>(easymotion-s)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader><Leader>s <Plug>(easymotion-s)

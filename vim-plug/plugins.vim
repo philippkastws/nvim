@@ -34,8 +34,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Start Screen
     Plug 'mhinz/vim-startify'
     " See what keys do like in emacs
-    Plug 'liuchengxu/vim-which-key'
-    " Plug 'folke/which-key.nvim'
+    " Plug 'liuchengxu/vim-which-key'
+    Plug 'folke/which-key.nvim'
 
     Plug 'vim-airline/vim-airline-themes'
     Plug 'francoiscabrol/ranger.vim'
@@ -76,6 +76,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'sudormrfbin/cheatsheet.nvim'
 
+    "Plug 'echasnovski/mini.icons'
     Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
     " Plug 'ryanoasis/vim-devicons' Icons without colours
     "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
@@ -1603,52 +1604,61 @@ lua <<EOF
   end)
 EOF
 
-" lua <<EOF
-"   pcall(function()
-"     local wk = require("which-key")
-"     wk.add({
-"       { "<leader>f", "<cmd>:Telescope find_files<cr>", desc = "Find File", mode = "n" },
-"       { "<leader>g", "<cmd>:Telescope live_grep<cr>", desc = "Grep Text", mode = "n" },
-"       { "<leader>h", "<cmd>:Telescope command_history<cr>", desc = "Command history (:Telescope command_history)", mode = "n" },
-"       { "<leader>ww", "<cmd>:Windows<cr>", desc = "search windows", mode = "n" },
-"       --" { "<leader>w'] = [ '<C-W>w', 'next window']
-"       --" { "<leader>f'] = [ ':Telescope find_files', 'search files' ] " [ ':Files', 'search files' ]
-"       --" { "<leader>F'] = [ ':Telescope find_files hidden=true no_ignore=true', 'search files (incl hidden)' ]
-"       --" { "<leader>q'] = [ ':qall' , 'quit' ]
-"       --" { "<leader>r'] = [ ':Ranger' , 'ranger (Q to quit)' ]
-"       --" { "<leader>E'] = [ ':Explore' , 'explore' ]
-"       --" { "<leader>?'] = [ ':Cheat40' , 'cheat sheet' ]
-"       --" { "<leader>??'] = [ ':Cheatsheet' , 'cheat' ]
-"       --" { "<leader>T'] = [ ':FloatermToggle' , 'terminal toggle' ]
-"       --" { "<leader>g'] = [ ':Telescope live_grep', 'grep text' ] "[ ':Rg', 'grep text' ]
-"       --" { "<leader>rg'] = [ ':Rg', 'grep text with rg' ]
-"       --" { "<leader>o'] = [ ':Telescope oldfiles', 'recent files' ]
-"       --" { "<leader>O'] = [ ':Startify', 'start page' ]
-"       --" { "<leader>G'] = [ ':Telescope live_grep hidden=true glob_pattern=*', 'grep text (incl hidden)' ]
-"       --" { "<leader>e'] = [ ':NvimTreeToggle', 'nvim tree toggle' ]
-"       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
-"       --" { "<leader>i'] = [ ':Git', 'Git Fugitive (:Git)' ]
-"       --" { "<leader>x'] = [ ':Gitsigns next_hunk', 'Next hunk (:Gitsigns next_hunk)' ]
-"       --" { "<leader>y'] = [ ':Gitsigns prev_hunk', 'Prev hunk (:Gitsigns prev_hunk)' ]
-"       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
-"       --" { "<leader>M'] = [ ':Magit', 'Magit' ]
-"       --" { "<leader>L'] = [ ':LazyGit', 'Lazy git' ]
-"       --" { "<leader>XX'] = [ ':Gitsigns reset_hunk', 'Undo hunk' ]
-"       --" { "<leader>PP'] = [ ':Gitsigns preview_hunk', 'Previgitsigns.preview_hunkew hunk (<leader>hp)' ]
-"       --" { "<leader>b'] = [ ':Telescope buffers', 'Show buffers' ]
-"       --" { "<leader>B'] = [ ':Telescope current_buffer_fuzzy_find', 'Buffer fuzzy find' ]
-"       --" { "<leader>C'] = [ '<C-w>c', 'Close window (ctrl-w c)' ]
-"       --" { "<leader>c'] = [ ':bd', 'Close buffer (:bd)' ]
-"       --" { "<leader>nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
-"       --" { "<leader>ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
-"       --" { "<leader>kk'] = [ ' k', 'LSP hoover (<leader>k)' ]
-"       --" { "<leader>ii'] = [ 'gl', 'LSP diagnostic (gl)' ]
-"       --" { "<leader>VV'] = [ ':BqfToggle', 'Quick view preview toggle (:BqfToggle)' ]
-"       --" { "<leader>fb'] = [ ':Telescope current_buffer_fuzzy_find', 'Find in current buffer' ]
-"       --" { "<leader>R'] = [ '@:', 'Repeat last command' ]
-"     })
-"   end)
-" EOF
+lua <<EOF
+  pcall(function()
+    local wk = require("which-key")
+    wk.add({
+      { "<leader>q", "<cmd>:qall<cr>", desc = "Quit", mode = "n" },
+      { "<leader>f", "<cmd>:Telescope find_files<cr>", desc = "Find File", mode = "n" },
+      { "<leader>F", "<cmd>:Telescope find_files hidden=true no_ignore=true<cr>", desc = "Find File (incl hidden)", mode = "n" },
+      { "<leader>g", "<cmd>:Telescope live_grep<cr>", desc = "Grep Text", mode = "n", icon = "󰺮" },
+      { "<leader>G", "<cmd>:Telescope live_grep hidden=true glob_pattern=*<cr>", desc = "Grep Text (incl hidden)", icon = "󰺮", mode = "n" },
+      { "<leader>h", "<cmd>:Telescope command_history<cr>", desc = "Command History (:Telescope command_history)", mode = "n" },
+      { "<leader>i", "<cmd>:Git<cr>", desc = "Git Fugitive (:Git)", mode = "n" },
+      { "<leader>w", "<C-W>w", desc = "Next Window", mode = "n" },
+      { "<leader>c", "<cmd>:bd<cr>", desc = "Close buffer (:bd)", mode = "n" },
+      { "<leader>r", "<cmd>:Ranger<cr>", desc = "Ranger (Q to quit)", mode = "n" },
+      { "<leader>e", "<cmd>:NvimTreeToggle<cr>", desc = "Nvim Tree Toggle", mode = "n" },
+      { "<leader>T", "<cmd>:FloatermToggle<cr>", desc = "Terminal Toggle", mode = "n" },
+      { "<leader>E", "<cmd>:Explore<cr>", desc = "Explore", mode = "n" },
+      { "<leader>?", "<cmd>:Cheat40<cr>", desc = "Cheat Sheet", mode = "n" },
+      { "<leader>o", "<cmd>:Telescope oldfiles<cr>", desc = "Recent Files", mode = "n" },
+      { "<leader>O", "<cmd>:Startify<cr>", desc = "Start Page", mode = "n" },
+      { "<leader>x", "<cmd>:Gitsigns next_hunk<cr>", desc = "Next Hunk (:Gitsigns next_hunk)", mode = "n" },
+      { "<leader>y", "<cmd>:Gitsigns prev_hunk<cr>", desc = "Prev Hunk (:Gitsigns prev_hunk)", mode = "n" },
+      { "<leader>X", "<cmd>:Gitsigns reset_hunk<cr>", desc = "Reset Hunk (:Gitsigns reset_hunk)", mode = "n" },
+      { "<leader>B", "<cmd>:Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer Fuzzy Find", mode = "n" },
+      { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
+      { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
+      { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
+      --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
+      --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
+      --" { "<leader>M'] = [ ':Magit', 'Magit' ]
+      --" { "<leader>L'] = [ ':LazyGit', 'Lazy git' ]
+      --" { "<leader>PP'] = [ ':Gitsigns preview_hunk', 'Previgitsigns.preview_hunkew hunk (<leader>hp)' ]
+      --" { "<leader>nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
+      --" { "<leader>ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
+      --" { "<leader>kk'] = [ ' k', 'LSP hoover (<leader>k)' ]
+      --" { "<leader>ii'] = [ 'gl', 'LSP diagnostic (gl)' ]
+      --" { "<leader>VV'] = [ ':BqfToggle', 'Quick view preview toggle (:BqfToggle)' ]
+      --" { "<leader>fb'] = [ ':Telescope current_buffer_fuzzy_find', 'Find in current buffer' ]
+      --" { "<leader>R'] = [ '@:', 'Repeat last command' ]  {
+      --" { "<leader>??'] = [ ':Cheatsheet' , 'cheat' ]
+      --" { "<leader>rg'] = [ ':Rg', 'grep text with rg' ]
+      { "<leader>S", group = "Spell" }, -- group
+      { "<leader>So", "<cmd>:set spell | set spelloptions=camel | :hi spellbad gui=undercurl guibg=#552222 ctermbg=224<cr>", desc = "On", mode = "n" },
+      { "<leader>Sx", "<cmd>:set nospell<cr>", desc = "Off", mode = "n" },
+      { "<leader>Ss", "z=", desc = "Suggest (z=)", mode = "n" },
+      { "<leader>Sa", "zg", desc = "Add to dict (zg)", mode = "n" },
+
+      { "<leader>W", group = "Whitespace" }, -- group
+      { "<leader>Ws", "<cmd>:set listchars=space:·,tab:→\\ ,trail:␣,precedes:«,extends:»,eol:⏎ | :set list<cr>", desc = "Show", mode = "n" },
+      { "<leader>Wh", "<cmd>:set listchars& | :set nolist<cr>", desc = "Off", mode = "n" },
+      { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
+      { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
+    })
+  end)
+EOF
 
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
