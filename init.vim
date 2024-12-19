@@ -402,7 +402,7 @@ vnoremap p P
 nnoremap x "_x
 nnoremap X "_X
 
-nnoremap WW :w<cr>
+" nnoremap WW :w<cr>
 
 inoremap <S-Down> <Down>
 inoremap <S-Up> <Up>
