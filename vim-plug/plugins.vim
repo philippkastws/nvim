@@ -1631,6 +1631,7 @@ lua <<EOF
       { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
       { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
       { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
+      { "<leader>d", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview Hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
       --" { "<leader>M'] = [ ':Magit', 'Magit' ]
@@ -1656,7 +1657,7 @@ lua <<EOF
       { "<leader>Wh", "<cmd>:set listchars& | :set nolist<cr>", desc = "Off", mode = "n" },
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
-      { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Wrap Lines", mode = "n" },
+      { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Toggle Wrap Lines", mode = "n" },
     })
   end)
 EOF
