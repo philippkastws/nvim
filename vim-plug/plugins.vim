@@ -1656,6 +1656,7 @@ lua <<EOF
       { "<leader>Wh", "<cmd>:set listchars& | :set nolist<cr>", desc = "Off", mode = "n" },
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
+      { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Wrap Lines", mode = "n" },
     })
   end)
 EOF
