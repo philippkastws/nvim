@@ -504,3 +504,15 @@ local function compare_to_clipboard()
 end
 vim.keymap.set('x', '<Leader>d', compare_to_clipboard)
 EOF
+
+function! ClearRegisters()
+    let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
+    let i=0
+    while (i<strlen(regs))
+        exec 'let @'.regs[i].'=""' 
+        let i=i+1
+    endwhile
+endfunction
+
+command! ClearRegisters call ClearRegisters()
+
