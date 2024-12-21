@@ -1632,13 +1632,14 @@ lua <<EOF
       { "<leader>?", "<cmd>:Cheat40<cr>", desc = "Cheat Sheet", mode = "n" },
       { "<leader>o", "<cmd>:Telescope oldfiles<cr>", desc = "Recent Files", mode = "n" },
       { "<leader>O", "<cmd>:Startify<cr>", desc = "Start Page", mode = "n" },
-      { "<leader>x", "<cmd>:Gitsigns next_hunk<cr>", desc = "Next Hunk (:Gitsigns next_hunk)", mode = "n" },
-      { "<leader>y", "<cmd>:Gitsigns prev_hunk<cr>", desc = "Prev Hunk (:Gitsigns prev_hunk)", mode = "n" },
-      { "<leader>X", "<cmd>:Gitsigns reset_hunk<cr>", desc = "Reset Hunk (:Gitsigns reset_hunk)", mode = "n" },
+      { "<leader>x", "<cmd>:Gitsigns next_hunk<cr>", desc = "Next Hunk", mode = "n" },
+      { "<leader>y", "<cmd>:Gitsigns prev_hunk<cr>", desc = "Prev Hunk", mode = "n" },
+      { "<leader>X", "<cmd>:Gitsigns reset_hunk<cr>", desc = "Reset Hunk", mode = "n" },
       { "<leader>B", "<cmd>:Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer Fuzzy Find", mode = "n" },
       { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
       { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
       { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
+
       { "<leader>d", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview Hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
