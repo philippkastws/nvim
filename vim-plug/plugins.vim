@@ -325,6 +325,13 @@ lua <<EOF
          --"         fallback()
          --"     end
          --" end, { 'c' }),
+        ['<RIGHT>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.confirm()
+            else
+                fallback()
+            end
+        end, { 'c' }),
       },
       sources = {
         { name = 'buffer' }
