@@ -218,7 +218,27 @@ EOF
 
 lua <<EOF
   pcall(function()
-    require('ollama').setup()
+    require('ollama').setup({
+      -- model = "mistral",
+      -- url = "http://127.0.0.1:11434",
+      -- serve = {
+      --   on_start = false,
+      --   command = "ollama",
+      --   args = { "serve" },
+      --   stop_command = "pkill",
+      --   stop_args = { "-SIGTERM", "ollama" },
+      -- },
+      -- View the actual default prompts in ./lua/ollama/prompts.lua
+      prompts = {
+        Review_Code = {
+          prompt = "Review and optimize the following $ftype code so that it is efficient and both easier to read and understand. "
+            .. "Respond EXACTLY in this format:\n```$ftype\n<your code>\n```"
+            .. "\n\n```$ftype\n$sel```",
+          --action = "replace",
+          model = "qwen2.5-coder:latest",
+        },
+      }
+    })
   end)
 EOF
 
