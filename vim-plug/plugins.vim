@@ -84,15 +84,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tiagovla/scope.nvim'
 
     " Completion
-    "Plug 'neovim/nvim-lspconfig'
+    Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
-    " For vsnip users.
-    Plug 'hrsh7th/cmp-vsnip'
-    Plug 'hrsh7th/vim-vsnip'
 
     " LSP Support
     Plug 'neovim/nvim-lspconfig'             " Required
@@ -278,18 +275,19 @@ lua <<EOF
     local cmp = require'cmp'
 
     cmp.setup({
-      snippet = {
-        -- REQUIRED - you must specify a snippet engine
-        expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-          -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-          -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-          -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        end,
-      },
+      -- snippet = {
+      --   -- REQUIRED - you must specify a snippet engine
+      --   expand = function(args)
+      --     vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      --     -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      --     -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+      --     -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      --     -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+      --   end,
+      -- },
       window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -306,34 +304,19 @@ lua <<EOF
         -- { name = 'snippy' }, -- For snippy users.
       }, {
         { name = 'buffer' },
-      }),
-      formatting = {
-        format = function(entry, vim_item)
-          -- fancy icons and a name of kind
-          --vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-
-          -- set a name for each source
-          vim_item.menu = ({
-            nvim_lsp = "[LSP]",
-            buffer = "[Buffer]",
-            vsnip = "[Vsnip]",
-            luasnip = "[Luasnip]",
-            ultisnips = "[Ultisnips]",
-            snippy = "[Snippy]",
-          })[entry.source.name]
-          return vim_item
-        end,
-      },
+      })
     })
 
+    -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
     -- Set configuration for specific filetype.
-    cmp.setup.filetype('gitcommit', {
+    --[[ cmp.setup.filetype('gitcommit', {
       sources = cmp.config.sources({
-        { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+        { name = 'git' },
       }, {
         { name = 'buffer' },
       })
-    })
+   })
+   require("cmp_git").setup() ]]-- 
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({ '/', '?' }, {
@@ -381,11 +364,16 @@ lua <<EOF
       })
     })
 
+    -- Set up lspconfig.
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+    require('lspconfig')['ts_ls'].setup {
+      capabilities = capabilities
+    }
   end)
 EOF
 
 lua <<EOF
-  -- Set up nvim-cmp.
   pcall(function()
     require("screenkey").setup({
       win_opts = {
