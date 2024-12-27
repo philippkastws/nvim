@@ -5,8 +5,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-"let g:use_github_copilot = 1
-
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'tpope/vim-fugitive'
@@ -161,10 +159,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
     " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
     " you define in the local http server
-    if !exists('g:use_github_copilot')
-      Plug 'TabbyML/vim-tabby'
-      filetype plugin on
-    endif
+    Plug 'TabbyML/vim-tabby'
 
     Plug 'github/copilot.vim'
 
@@ -245,16 +240,6 @@ lua <<EOF
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
   end)
 EOF
-
-" setup tabby
-"let g:copilot_enabled = 0
-if exists('g:use_github_copilot')
-  let g:tabby_trigger_mode = 'manual'
-  let g:tabby_keybinding_trigger_or_dismiss = '<C-\>'
-  let g:tabby_keybinding_accept = '<Tab>'
-else
-  let g:tabby_keybinding_accept = '<Tab>'
-endif
 
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
