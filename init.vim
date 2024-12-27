@@ -516,3 +516,6 @@ endfunction
 
 command! ClearRegisters call ClearRegisters()
 
+" tabby setup key map overwirte for tab key
+imap <script><silent><nowait><expr> <C-G> tabby#inline_completion#service#Accept()
+
