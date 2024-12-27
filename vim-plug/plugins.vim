@@ -428,7 +428,6 @@ lua <<EOF
 EOF
 
 lua <<EOF
-  -- Set up nvim-cmp.
   pcall(function()
     require'treesitter-context'.setup{
       max_lines = 10, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -1600,14 +1599,12 @@ lua << EOF
 EOF
 
 lua <<EOF
-  -- Set up nvim-cmp.
   pcall(function()
     require("tokyodark").setup({})
   end)
 EOF
 
 lua <<EOF
-  -- Set up nvim-cmp.
   pcall(function()
     require("outline").setup({})
   end)
