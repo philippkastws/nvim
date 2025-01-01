@@ -1624,6 +1624,7 @@ lua <<EOF
       -- { "<leader>i", "<cmd>:tab Git<cr>", desc = "Git Fugitive (:Git)", mode = "n" },
       -- { "<leader>I", "<cmd>:tabc<cr>", desc = "Close tab", mode = "n" },
       { "<leader>w", "<C-W>w", desc = "Next Window", mode = "n" },
+      { "<leader>p", "<C-W>W", desc = "Prev Window", mode = "n" },
       { "<leader>c", "<cmd>:bd<cr>", desc = "Close buffer (:bd)", mode = "n" },
       { "<leader>r", "<cmd>:Ranger<cr>", desc = "Ranger (Q to quit)", mode = "n" },
       { "<leader>e", "<cmd>:NvimTreeToggle<cr>", desc = "Nvim Tree Toggle", mode = "n" },

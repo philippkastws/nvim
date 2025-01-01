@@ -284,8 +284,8 @@ vmap <leader>b y'>p
 " max/only window
 nmap <leader>m <C-W>o
 " map paste what has been yanked
-map <leader>p "0p
-map <leader>P "0P
+" map <leader>p "0p
+" map <leader>P "0P
 
 if !exists('g:vscode')
     " Navigate buffers
