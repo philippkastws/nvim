@@ -1329,7 +1329,7 @@ EOF
 lua << EOF
   pcall(function()
     require("toggleterm").setup({
-      open_mapping = [[<leader-t>]]
+      open_mapping = [[<C-t>]]
     })
   end)
 EOF
