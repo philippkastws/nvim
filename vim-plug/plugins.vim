@@ -1513,6 +1513,11 @@ lua << EOF
       replace = false,
       model = "codestral",
     }
+    gen.prompts['Ask_with_Llama3'] = {
+      name = "Ask_with_Llama3",
+      prompt = "Regarding the following text, $input:\n$text",
+      model = "llama3",
+    }
   end)
 EOF
 
