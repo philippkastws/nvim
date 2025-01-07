@@ -44,8 +44,8 @@ set smarttab       " Always use shiftwidth
 set linebreak
 filetype plugin indent on
 
-let g:better_escape_interval = 500
-let g:better_escape_shortcut = ['jk', 'jj', 'kj']
+" let g:better_escape_interval = 500
+" let g:better_escape_shortcut = ['jk', 'jj', 'kj']
 
 let g:auto_session_enabled = v:false
 

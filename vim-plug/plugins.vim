@@ -51,7 +51,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'pechorin/any-jump.vim'
 
-    Plug 'jdhao/better-escape.vim'
+    "Plug 'jdhao/better-escape.vim'
+    Plug 'max397574/better-escape.nvim'
+
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -205,6 +207,45 @@ lua << EOF
     require("CopilotChat").setup {
       -- See Configuration section for options
     }
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("better_escape").setup({
+      timeout = 500,
+      default_mappings = false,
+      mappings = {
+          i = {
+              j = {
+                  -- These can all also be functions
+                  k = "<Esc>`^",
+                  j = "<Esc>",
+              },
+          },
+          c = {
+              j = {
+                  k = "<Esc>",
+                  j = "<Esc>",
+              },
+          },
+          t = {
+              j = {
+                  k = "<C-\\><C-n>",
+              },
+          },
+          v = {
+              j = {
+                  k = "<Esc>",
+              },
+          },
+          s = {
+              j = {
+                  k = "<Esc>",
+              },
+          },
+      },
+  })
   end)
 EOF
 
