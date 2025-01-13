@@ -187,13 +187,38 @@ EOF
 
 " Fix copilot tab to accept suggestion
 lua <<EOF
-    pcall(function()
-        -- Disable copilot by default for now
-        vim.g.copilot_enabled = true -- true
-        vim.g.copilot_no_tab_map = true
-        vim.g.copilot_assume_mapped = true
-        vim.g.copilot_tab_fallback = ""
-    end)
+
+pcall(function()
+
+-- Disable copilot by default for now
+vim.g.copilot_enabled = true -- true
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
+
+local cmp = require("cmp")
+
+cmp.setup({
+    mapping = {
+        ["<Tab>"] = function(fallback)
+            -- if cmp.visible() then
+            --     cmp.select_next_item()
+            -- elseif vim.fn["vsnip#available"](1) > 0 then
+            --     -- handle vsnip
+            -- else
+                local copilot_keys = vim.fn["copilot#Accept"]()
+                if copilot_keys ~= "" then
+                    vim.api.nvim_feedkeys(copilot_keys, "i", true)
+                else
+                    fallback()
+                end
+            -- end
+        end,
+    },
+})
+
+end)
+
 EOF
 
 let g:VM_theme = 'neon'
