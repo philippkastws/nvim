@@ -214,6 +214,8 @@ cmp.setup({
                 end
             -- end
         end,
+        ['<CR>'] = nil,
+        ['<Right>'] = cmp.mapping.confirm({ select = true }),
     },
 })
 
