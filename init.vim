@@ -115,7 +115,7 @@ map K <C-u>
 
 " show line numbers
 :set number
-:set relativenumber
+":set relativenumber
 
 " show whitespaces by default
 :set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:¶ | :set list
