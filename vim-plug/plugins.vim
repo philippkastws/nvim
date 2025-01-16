@@ -1388,12 +1388,20 @@ lua << EOF
       builtin_marks = { ".", "<", ">", "^" },
       signs = true,
       sign_priority = {
-        lower = 13,
-        upper = 14,
-        builtin = 11,
-        bookmark = 12,
+        lower = 1,
+        upper = 2,
+        builtin = 3,
+        bookmark = 4,
       }
     }
+    -- remove line number highlighting on marked lines
+    local group = vim.api.nvim_create_augroup("marks-fix-hl", {})
+    vim.api.nvim_create_autocmd({ "VimEnter" }, {
+      group = group,
+      callback = function()
+        vim.api.nvim_set_hl(0, "MarkSignNumHL", {})
+      end,
+    })
   end)
 EOF
 
