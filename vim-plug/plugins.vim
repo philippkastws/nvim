@@ -198,9 +198,23 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       \ 'do': 'yarn install --frozen-lockfile --production',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
+    Plug 'kwkarlwang/bufjump.nvim'
+
   endif
 
 call plug#end()
+
+
+lua << EOF
+  pcall(function()
+    -- Jump to previous buffer
+    require("bufjump").setup({
+      forward_key = "<C-S-p>",
+      backward_key = "<C-p>",
+      on_success = nil
+    })
+  end)
+EOF
 
 lua << EOF
   pcall(function()
