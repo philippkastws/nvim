@@ -521,3 +521,6 @@ command! ClearRegisters call ClearRegisters()
 " tabby setup key map overwirte for tab key
 imap <script><silent><nowait><expr> <C-G> tabby#inline_completion#service#Accept()
 
+" do not bind <leader>bd
+let g:bclose_no_plugin_maps = v:true
+
