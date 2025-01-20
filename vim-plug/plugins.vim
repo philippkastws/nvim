@@ -1700,6 +1700,8 @@ lua <<EOF
       { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
       { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
       { "<leader>aa", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
+      { "<leader>ap", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
+      { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
 
       { "<leader>d", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview Hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
