@@ -1402,9 +1402,9 @@ lua << EOF
       builtin_marks = { ".", "<", ">", "^" },
       signs = true,
       sign_priority = {
-        lower = 1,
-        upper = 2,
-        builtin = 3,
+        lower = 2,
+        upper = 3,
+        builtin = 1,
         bookmark = 4,
       }
     }
