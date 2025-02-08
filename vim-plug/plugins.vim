@@ -97,7 +97,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'williamboman/mason-lspconfig.nvim' " Optional
 
     "  Snippets
-    Plug 'L3MON4D3/LuaSnip'             " Required
+    " Plug 'L3MON4D3/LuaSnip'             " Required
     "Plug 'rafamadriz/friendly-snippets' " Optional
 
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
