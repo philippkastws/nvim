@@ -542,3 +542,7 @@ let g:bclose_no_plugin_maps = v:true
 "   endif
 " endfunction
 
+"lua <<EOF
+"require("config.lazy")
+"EOF
+
