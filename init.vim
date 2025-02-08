@@ -524,3 +524,21 @@ imap <script><silent><nowait><expr> <C-G> tabby#inline_completion#service#Accept
 " do not bind <leader>bd
 let g:bclose_no_plugin_maps = v:true
 
+" History key generated with Qwen
+"
+" let g:last_command_was_jump = 0
+
+" " Custom mappings for jump list navigation
+" nnoremap <C-o> :let g:last_command_was_jump = 1<CR><C-o>
+" nnoremap <C-i> :let g:last_command_was_jump = 1<CR><C-i>
+
+" autocmd CursorHold * call CheckLastCommand()
+
+" function! CheckLastCommand()
+"   if g:last_command_was_jump
+"     let g:last_command_was_jump = 0
+"   else
+"     normal! m'
+"   endif
+" endfunction
+
