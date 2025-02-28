@@ -26,7 +26,7 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 :set spelllang=en_us
 ":set spelllang=en_us,de_ch
 :set spelloptions=camel
-:set spell
+":set spell
 " disable spell checking for capital words
 :set spellcapcheck=
 " This is local to buffer, so we have to enable it on each new and opened buffer
