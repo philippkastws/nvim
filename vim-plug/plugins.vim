@@ -1406,7 +1406,10 @@ lua << EOF
         upper = 3,
         builtin = 1,
         bookmark = 4,
-      }
+      },
+      mappings = {
+        delete_line = "dm-",
+      },
     }
     -- remove line number highlighting on marked lines
     local group = vim.api.nvim_create_augroup("marks-fix-hl", {})
