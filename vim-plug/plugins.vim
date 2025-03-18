@@ -200,40 +200,42 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'kwkarlwang/bufjump.nvim'
 
-    " Avante
-    "
-    " Deps
-    " Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'stevearc/dressing.nvim'
-    " Plug 'nvim-lua/plenary.nvim'
-    Plug 'MunifTanjim/nui.nvim'
-    Plug 'MeanderingProgrammer/render-markdown.nvim'
+    " " Avante
+    " "
+    " " Deps
+    " " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'stevearc/dressing.nvim'
+    " " Plug 'nvim-lua/plenary.nvim'
+    " Plug 'MunifTanjim/nui.nvim'
+    " Plug 'MeanderingProgrammer/render-markdown.nvim'
 
-    " Optional deps
-    " Plug 'hrsh7th/nvim-cmp'
-    " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-    " Plug 'HakonHarnes/img-clip.nvim'
-    " Plug 'zbirenbaum/copilot.lua'
+    " " Optional deps
+    " " Plug 'hrsh7th/nvim-cmp'
+    " " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+    " " Plug 'HakonHarnes/img-clip.nvim'
+    " " Plug 'zbirenbaum/copilot.lua'
 
-    " Yay, pass source=true if you want to build from source
-    Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    " " Yay, pass source=true if you want to build from source
+    " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
   endif
 
 call plug#end()
 
 
-" avante
-autocmd! User avante.nvim
-lua << EOF
-require('avante').setup({
-  provider = "ollama",
-  ollama = {
-    model = "qwen2.5-coder:14b"
-    -- model = "qwq:32b",
-  }
-})
-EOF
+" " avante
+" autocmd! User avante.nvim
+" lua << EOF
+" require('avante').setup({
+"   provider = "ollama",
+"   ollama = {
+"     --model = "qwen2.5-coder:14b"
+"     -- model = "qwen2.5-coder:latest"
+"     model = "deepseek-r1:latest"
+"     -- model = "qwq:32b",
+"   }
+" })
+" EOF
 
 lua << EOF
   pcall(function()
@@ -1732,9 +1734,9 @@ lua <<EOF
       { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
       { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
       { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
-      { "<leader>aa", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
-      { "<leader>ap", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
-      { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
+      { "<leader>Aa", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
+      { "<leader>Ap", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
+      { "<leader>Ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
 
       { "<leader>d", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview Hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
