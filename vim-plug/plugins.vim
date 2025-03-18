@@ -1431,7 +1431,7 @@ EOF
 lua << EOF
   pcall(function()
     require'marks'.setup {
-      builtin_marks = { ".", "<", ">", "^" },
+      -- builtin_marks = { ".", "<", ">", "^" },
       signs = true,
       sign_priority = {
         lower = 2,
