@@ -29,11 +29,13 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 ":set spell
 " disable spell checking for capital words
 :set spellcapcheck=
+" disable spell by default
+:set nospell
 " This is local to buffer, so we have to enable it on each new and opened buffer
-autocmd BufRead,BufNewFile * setlocal spelloptions=camel
+"autocmd BufRead,BufNewFile * setlocal spelloptions=camel
 
 " Spell-check Markdown files and Git Commit Messages
-autocmd FileType markdown setlocal spell
+" autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 set clipboard+=unnamedplus
