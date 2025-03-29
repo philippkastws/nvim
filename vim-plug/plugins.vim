@@ -218,10 +218,29 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " " Yay, pass source=true if you want to build from source
     " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
+    " Plug 'nvim-lua/plenary.nvim'
+    " " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'olimorris/codecompanion.nvim'
+
   endif
 
 call plug#end()
 
+" lua << EOF
+"   require("codecompanion").setup({
+"     strategies = {
+"       chat = {
+"         adapter = "ollama",
+"       },
+"       inline = {
+"         adapter = "ollama",
+"       },
+"       cmd = {
+"         adapter = "ollama",
+"       }
+"     },
+"   })
+" EOF
 
 " " avante
 " autocmd! User avante.nvim
