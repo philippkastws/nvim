@@ -174,7 +174,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'tiagovla/tokyodark.nvim'
 
-    Plug 'huggingface/llm.nvim'
+    " Plug 'huggingface/llm.nvim'
 
     " Plug 'wellle/context.vim'
     Plug 'nvim-treesitter/nvim-treesitter-context'
@@ -1628,34 +1628,34 @@ lua << EOF
   end)
 EOF
 
-lua << EOF
-  pcall(function()
-    local llm = require('llm')
+" lua << EOF
+"   pcall(function()
+"     local llm = require('llm')
 
-    llm.setup({
-      backend = "ollama",
-      --model = "starcoder2:3b",
-      --model = "codellama:7b",
-      model = "codellama:7b-code",
-      --model = "stable-code:latest",
-      accept_keymap = "<S-CR>",
-      dismiss_keymap = "<CR>",
-      url = "http://localhost:11434/api/generate",
-      -- request_body = {
-      --   options = {
-      --     temperature = 0.8, --0.2,
-      --     top_p = 0.95,
-      --   },
-      -- },
-      enable_suggestions_on_startup = false,
-      --enable_suggestions_on_startup = true,
-      -- MasonInstall llm-ls
-      lsp = {
-        bin_path = vim.api.nvim_call_function("stdpath", { "data" }) .. "/mason/bin/llm-ls",
-      },
-    })
-  end)
-EOF
+"     llm.setup({
+"       backend = "ollama",
+"       --model = "starcoder2:3b",
+"       --model = "codellama:7b",
+"       model = "codellama:7b-code",
+"       --model = "stable-code:latest",
+"       accept_keymap = "<S-CR>",
+"       dismiss_keymap = "<CR>",
+"       url = "http://localhost:11434/api/generate",
+"       -- request_body = {
+"       --   options = {
+"       --     temperature = 0.8, --0.2,
+"       --     top_p = 0.95,
+"       --   },
+"       -- },
+"       enable_suggestions_on_startup = false,
+"       --enable_suggestions_on_startup = true,
+"       -- MasonInstall llm-ls
+"       lsp = {
+"         bin_path = vim.api.nvim_call_function("stdpath", { "data" }) .. "/mason/bin/llm-ls",
+"       },
+"     })
+"   end)
+" EOF
 
   " api_token = nil, -- cf Install paragraph
   " model = "bigcode/starcoder2-15b", -- the model ID, behavior depends on backend
