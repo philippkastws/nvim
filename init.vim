@@ -339,6 +339,7 @@ nmap <Leader><Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader><Leader>s <Plug>(easymotion-s)
 
 nmap s <Plug>(easymotion-overwin-f)
+vmap s <Plug>(easymotion-s)
 
 " create undo group after 4 seconds wait in insert mode
 au CursorHoldI * let &undolevels = &undolevels
