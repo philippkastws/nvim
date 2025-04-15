@@ -401,7 +401,8 @@ xnoremap <silent> y ygv<Esc>
 map <leader>J :call AllAnyJumpToggle()<CR>
 
 " Terminal
-tnoremap <Esc> <C-\><C-n>
+" breaks lazygit esc
+"tnoremap <Esc> <C-\><C-n>
 
 " Stop yanking on past in selection
 vnoremap p P
