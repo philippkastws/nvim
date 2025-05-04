@@ -222,6 +222,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " " Plug 'nvim-treesitter/nvim-treesitter'
     " Plug 'olimorris/codecompanion.nvim'
 
+    Plug 'morhetz/gruvbox'
+    Plug 'sainnhe/everforest'
+
   endif
 
 call plug#end()

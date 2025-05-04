@@ -97,6 +97,11 @@ if !exists('g:vscode')
 endif
 " colorscheme github_dark
 " colorscheme doom-one
+colorscheme everforest
+" my everforest adaptions
+highlight! link TSKeyword Purple
+highlight! link TSKeywordFunction Purple
+highlight! link TSKeywordReturn Purple
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
