@@ -27,13 +27,13 @@ endfunction
 
 let g:startify_lists = [
         \ { 'type': 'sessions',  'header': ['   Sessions']       },
-        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'files',     'header': ['   MRU']            },
         \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
+        " \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        " \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
 
 "let g:startify_session_dir = '~/.config/nvim/session'
 "
