@@ -200,8 +200,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'kwkarlwang/bufjump.nvim'
 
-    " " Avante
-    " "
+    " Avante
+    "
     " " Deps
     " " Plug 'nvim-treesitter/nvim-treesitter'
     " Plug 'stevearc/dressing.nvim'
@@ -214,6 +214,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
     " " Plug 'HakonHarnes/img-clip.nvim'
     " " Plug 'zbirenbaum/copilot.lua'
+
+    " " " Yay, pass source=true if you want to build from source
+    " " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    " " Deps
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'stevearc/dressing.nvim'
+    " Plug 'nvim-lua/plenary.nvim'
+    " Plug 'MunifTanjim/nui.nvim'
+    " Plug 'MeanderingProgrammer/render-markdown.nvim'
+
+    " " Optional deps
+    " Plug 'hrsh7th/nvim-cmp'
+    " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+    " Plug 'HakonHarnes/img-clip.nvim'
+    " Plug 'zbirenbaum/copilot.lua'
 
     " " Yay, pass source=true if you want to build from source
     " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
@@ -251,11 +266,17 @@ call plug#end()
 " require('avante').setup({
 "   provider = "ollama",
 "   ollama = {
-"     --model = "qwen2.5-coder:14b"
-"     -- model = "qwen2.5-coder:latest"
-"     model = "deepseek-r1:latest"
-"     -- model = "qwq:32b",
-"   }
+"     endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
+"     --model = "qwq:32b",
+"     model = "gemma3"
+"   },
+"   -- provider = "ollama",
+"   -- ollama = {
+"   --   --model = "qwen2.5-coder:14b"
+"   --   -- model = "qwen2.5-coder:latest"
+"   --   --model = "deepseek-r1:latest"
+"   --   model = "qwq:32b"
+"   -- }
 " })
 " EOF
 
