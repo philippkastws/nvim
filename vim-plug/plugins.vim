@@ -201,41 +201,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kwkarlwang/bufjump.nvim'
 
     " Avante
-    "
-    " " Deps
-    " " Plug 'nvim-treesitter/nvim-treesitter'
-    " Plug 'stevearc/dressing.nvim'
-    " " Plug 'nvim-lua/plenary.nvim'
-    " Plug 'MunifTanjim/nui.nvim'
-    " Plug 'MeanderingProgrammer/render-markdown.nvim'
-
-    " " Optional deps
-    " " Plug 'hrsh7th/nvim-cmp'
-    " " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-    " " Plug 'HakonHarnes/img-clip.nvim'
-    " " Plug 'zbirenbaum/copilot.lua'
-
-    " " " Yay, pass source=true if you want to build from source
-    " " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
-    " " Deps
+    " Deps
     " Plug 'nvim-treesitter/nvim-treesitter'
-    " Plug 'stevearc/dressing.nvim'
     " Plug 'nvim-lua/plenary.nvim'
-    " Plug 'MunifTanjim/nui.nvim'
-    " Plug 'MeanderingProgrammer/render-markdown.nvim'
+    Plug 'MunifTanjim/nui.nvim'
+    Plug 'MeanderingProgrammer/render-markdown.nvim'
 
-    " " Optional deps
-    " Plug 'hrsh7th/nvim-cmp'
+    " Optional deps
+    " Plug 'hrsh7th/nvim-cmp' " what
     " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-    " Plug 'HakonHarnes/img-clip.nvim'
-    " Plug 'zbirenbaum/copilot.lua'
+    Plug 'HakonHarnes/img-clip.nvim'
+    Plug 'zbirenbaum/copilot.lua'
+    Plug 'stevearc/dressing.nvim' " for enhanced input UI
+    Plug 'folke/snacks.nvim' " for modern input UI
 
-    " " Yay, pass source=true if you want to build from source
-    " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    " Yay, pass source=true if you want to build from source
+    Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') } }
 
-    " Plug 'nvim-lua/plenary.nvim'
-    " " Plug 'nvim-treesitter/nvim-treesitter'
-    " Plug 'olimorris/codecompanion.nvim'
     Plug 'olimorris/codecompanion.nvim'
 
     Plug 'morhetz/gruvbox'
@@ -1813,6 +1796,13 @@ lua <<EOF
     require("outline").setup({})
   end)
 EOF
+
+autocmd! User avante.nvim
+lua << EOF
+-- require('avante_lib').load()
+require('avante').setup()
+EOF
+
 
 lua <<EOF
   pcall(function()
