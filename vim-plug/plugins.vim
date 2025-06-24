@@ -1799,8 +1799,10 @@ EOF
 
 autocmd! User avante.nvim
 lua << EOF
--- require('avante_lib').load()
-require('avante').setup()
+  pcall(function()
+    -- require('avante_lib').load()
+    require('avante').setup()
+  end)
 EOF
 
 
