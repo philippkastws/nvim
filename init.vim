@@ -98,6 +98,10 @@ endif
 " colorscheme github_dark
 " colorscheme doom-one
 colorscheme everforest
+" if the terminal emulator is ghostty, use the dimmed colorscheme
+if $TERM_PROGRAM == 'ghostty'
+  colorscheme github_dark_dimmed
+endif
 " my everforest adaptions
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
