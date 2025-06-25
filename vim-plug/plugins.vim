@@ -353,7 +353,7 @@ EOF
 lua << EOF
   pcall(function()
     require("better_escape").setup({
-      timeout = 500,
+      timeout = 200,
       default_mappings = false,
       mappings = {
           i = {
