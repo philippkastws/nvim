@@ -161,7 +161,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
     " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
     " you define in the local http server
-    Plug 'TabbyML/vim-tabby'
+    " Plug 'TabbyML/vim-tabby'
 
     Plug 'github/copilot.vim'
 
