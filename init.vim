@@ -102,6 +102,9 @@ colorscheme everforest
 if $TERM_PROGRAM == 'ghostty'
   colorscheme github_dark_dimmed
 endif
+if $TERM_PROGRAM == 'WezTerm'
+  colorscheme catppuccin-frappe
+endif
 " my everforest adaptions
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
