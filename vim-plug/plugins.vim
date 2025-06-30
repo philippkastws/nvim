@@ -216,7 +216,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'folke/snacks.nvim' " for modern input UI
 
     " Yay, pass source=true if you want to build from source
-    Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+    " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
     " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') } }
 
     Plug 'olimorris/codecompanion.nvim'
@@ -1797,13 +1797,23 @@ lua <<EOF
   end)
 EOF
 
-autocmd! User avante.nvim
-lua << EOF
-  pcall(function()
-    -- require('avante_lib').load()
-    require('avante').setup()
-  end)
-EOF
+" autocmd! User avante.nvim
+" lua << EOF
+"   pcall(function()
+"     require('avante_lib').load()
+"     --require('avante').setup()
+"     require('avante').setup({
+"       provider = "ollama",
+"       providers = {
+"         ollama = {
+"           endpoint = "http://127.0.0.1:11434",
+"           timeout = 30000, -- Timeout in milliseconds
+"           model = "gemma3",
+"         },
+"       },
+"     })
+"   end)
+" EOF
 
 
 lua <<EOF
