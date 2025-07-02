@@ -1500,7 +1500,14 @@ EOF
 lua << EOF
   pcall(function()
     require("toggleterm").setup({
-      open_mapping = [[<C-t>]]
+      open_mapping = [[<C-t>]],
+      -- while open disable leader key by setting timeout to 0
+      on_open = function(term)
+        vim.o.timeoutlen = 0
+      end,
+      on_close = function(term)
+        vim.o.timeoutlen = 1000
+      end,
     })
   end)
 EOF
