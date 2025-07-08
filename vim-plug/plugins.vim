@@ -241,7 +241,8 @@ require("codecompanion").setup({
         },
         schema = {
           model = {
-            default = "gemma3",  -- define llm model to be used
+            --default = "gemma3",  -- define llm model to be used
+            default = "devstral",
           },
           temperature = {
             order = 2,
