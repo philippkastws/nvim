@@ -422,6 +422,7 @@ lua <<EOF
   end)
 EOF
 
+let g:any_jump_disable_default_keybindings = 1
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
 
@@ -1856,9 +1857,10 @@ lua <<EOF
       { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
       { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
       { "<leader>s", "<cmd>:w<cr>", desc = "Write File", mode = "n" },
-      { "<leader>aa", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
-      { "<leader>ap", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
-      { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
+      { "<leader>ta", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
+      { "<leader>tr", "<cmd>:Telescope resume<cr>", desc = "Telescope resume", mode = "n" },
+      { "<leader>tp", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
+      -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
 
       { "<leader>d", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview Hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]

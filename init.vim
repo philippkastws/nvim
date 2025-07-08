@@ -5,6 +5,7 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
+let mapleader = " " " map leader to space
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
 if !exists('g:vscode')
@@ -266,7 +267,6 @@ let g:VM_theme = 'neon'
 " Disable gutter keys, otherwise they show up in which-key
 let g:gitgutter_map_keys = 0
 
-let mapleader = " " " map leader to space
 " Remove search results
 nmap <leader>n :noh<CR>
 lua vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
