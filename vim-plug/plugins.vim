@@ -312,26 +312,6 @@ require("codecompanion").setup({
 })
 EOF
 
-" " avante
-" autocmd! User avante.nvim
-" lua << EOF
-" require('avante').setup({
-"   provider = "ollama",
-"   ollama = {
-"     endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
-"     --model = "qwq:32b",
-"     model = "gemma3"
-"   },
-"   -- provider = "ollama",
-"   -- ollama = {
-"   --   --model = "qwen2.5-coder:14b"
-"   --   -- model = "qwen2.5-coder:latest"
-"   --   --model = "deepseek-r1:latest"
-"   --   model = "qwq:32b"
-"   -- }
-" })
-" EOF
-
 lua << EOF
   pcall(function()
     -- Jump to previous buffer
