@@ -423,7 +423,7 @@ lua <<EOF
   end)
 EOF
 
-let g:any_jump_disable_default_keybindings = 1
+"let g:any_jump_disable_default_keybindings = 1
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
 
