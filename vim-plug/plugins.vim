@@ -1685,6 +1685,30 @@ lua << EOF
       replace = false,
       model = "codestral",
     }
+    gen.prompts['Review_With_Gpt-Oss'] = {
+      name = "Review_With_Gpt-Oss",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "gpt-oss",
+    }
+    gen.prompts['Review_With_Qwen3-Coder'] = {
+      name = "Review_With_Qwen3-Coder",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "qwen3-coder",
+    }
+    gen.prompts['Review_With_Phi4-Reasoning'] = {
+      name = "Review_With_Phi4-Reasoning",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "phi4-reasoning",
+    }
+    gen.prompts['Review_With_Devstral'] = {
+      name = "Review_With_Devstral",
+      prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+      replace = false,
+      model = "devstral",
+    }
     gen.prompts['Ask_with_Llama3'] = {
       name = "Ask_with_Llama3",
       prompt = "Regarding the following text, $input:\n$text",
