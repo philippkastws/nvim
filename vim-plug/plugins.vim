@@ -1869,7 +1869,8 @@ lua <<EOF
       { "<leader>tp", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
       -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
 
-      { "<leader>d", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview Hunk", mode = "n" },
+      { "<leader>d", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline", mode = "n" },
+      { "<leader>D", "<cmd>:Gitsigns preview_hunk<cr>", desc = "Preview hunk", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
       --" { "<leader>M'] = [ ':Magit', 'Magit' ]
