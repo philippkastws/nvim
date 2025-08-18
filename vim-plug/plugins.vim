@@ -1823,6 +1823,8 @@ lua << EOF
           endpoint = "http://127.0.0.1:11434",
           timeout = 30000, -- Timeout in milliseconds
           model = "gemma3",
+          --model = "qwq:32b"
+          --model = "deepseek-r1"
         },
       },
     })
