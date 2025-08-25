@@ -223,93 +223,180 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'morhetz/gruvbox'
     Plug 'sainnhe/everforest'
+    Plug 'robitx/gp.nvim'
 
   endif
 
 call plug#end()
 
+
 lua << EOF
-require("codecompanion").setup({
-  adapters = {
-    my_openai = function()
-      return require("codecompanion.adapters").extend("openai_compatible", {
-        env = {
-          url = "http://127.0.0.1:11434", -- optional: default value is ollama url http://127.0.0.1:11434
-          --api_key = "OpenAI_API_KEY", -- optional: if your endpoint is authenticated
-          chat_url = "/v1/chat/completions", -- optional: default value, override if different
-          models_endpoint = "/v1/models", -- optional: attaches to the end of the URL to form the endpoint to retrieve models
-        },
-        schema = {
+  pcall(function()
+    local conf = {
+      -- For customization, refer to Install > Configuration in the Documentation/Readme
+      providers = {
+        ollama = {
+          disable = false,
+          endpoint = "http://localhost:11434/api/chat",
+        }
+      },
+      agents = {
+        {
+          provider = "ollama",
+          name = "OllamaLocalChatGemma3",
+          chat = true,
+          command = false,
+          -- string with model name or table with model name and parameters
           model = {
-            --default = "gemma3",  -- define llm model to be used
-            default = "devstral",
+            model = "gemma3",
+            think = false, -- toggle thinking mode for Ollama's thinking models
           },
-          temperature = {
-            order = 2,
-            mapping = "parameters",
-            type = "number",
-            optional = true,
-            default = 0.8,
-            desc = "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
-            validate = function(n)
-              return n >= 0 and n <= 2, "Must be between 0 and 2"
-            end,
-          },
-          max_completion_tokens = {
-            order = 3,
-            mapping = "parameters",
-            type = "integer",
-            optional = true,
-            default = nil,
-            desc = "An upper bound for the number of tokens that can be generated for a completion.",
-            validate = function(n)
-              return n > 0, "Must be greater than 0"
-            end,
-          },
-          stop = {
-            order = 4,
-            mapping = "parameters",
-            type = "string",
-            optional = true,
-            default = nil,
-            desc = "Sets the stop sequences to use. When this pattern is encountered the LLM will stop generating text and return. Multiple stop patterns may be set by specifying multiple separate stop parameters in a modelfile.",
-            validate = function(s)
-              return s:len() > 0, "Cannot be an empty string"
-            end,
-          },
-          logit_bias = {
-            order = 5,
-            mapping = "parameters",
-            type = "map",
-            optional = true,
-            default = nil,
-            desc = "Modify the likelihood of specified tokens appearing in the completion. Maps tokens (specified by their token ID) to an associated bias value from -100 to 100. Use https://platform.openai.com/tokenizer to find token IDs.",
-            subtype_key = {
-              type = "integer",
-            },
-            subtype = {
-              type = "integer",
-              validate = function(n)
-                return n >= -100 and n <= 100, "Must be between -100 and 100"
-              end,
-            },
-          },
+          -- system prompt (use this to specify the persona/role of the AI)
+          system_prompt = "You are a general AI assistant.",
         },
-      })
-    end,
-  },
-  strategies = {
-    chat = {
-      adapter = "my_openai",
-    },
-    inline = {
-      adapter = "my_openai",
-    },
-    agent = {
-      adapter = "my_openai",
-    },
-  }
-})
+        {
+          provider = "ollama",
+          name = "OllamaLocalChatDevstral",
+          chat = true,
+          command = false,
+          -- string with model name or table with model name and parameters
+          model = {
+            model = "devstral",
+            think = false, -- toggle thinking mode for Ollama's thinking models
+          },
+          -- system prompt (use this to specify the persona/role of the AI)
+          system_prompt = "You are a general AI assistant.",
+          disable = false,
+        },
+        {
+          provider = "ollama",
+          name = "OllamaLocalChatGptOss",
+          chat = true,
+          command = false,
+          -- string with model name or table with model name and parameters
+          model = {
+            model = "gpt-oss",
+            think = false, -- toggle thinking mode for Ollama's thinking models
+          },
+          -- system prompt (use this to specify the persona/role of the AI)
+          system_prompt = "You are a general AI assistant.",
+        },
+        {
+          provider = "ollama",
+          name = "OllamaLocalChatDeepseekR1",
+          chat = true,
+          command = false,
+          -- string with model name or table with model name and parameters
+          model = {
+            model = "deepseek-r1",
+            think = true, -- toggle thinking mode for Ollama's thinking models
+          },
+          -- system prompt (use this to specify the persona/role of the AI)
+          system_prompt = "You are a general AI assistant.",
+        },
+        {
+          provider = "ollama",
+          name = "OllamaLocalChatPhi4",
+          chat = true,
+          command = false,
+          -- string with model name or table with model name and parameters
+          model = {
+            model = "phi4-reasoning",
+            think = true, -- toggle thinking mode for Ollama's thinking models
+          },
+          -- system prompt (use this to specify the persona/role of the AI)
+          system_prompt = "You are a general AI assistant.",
+        }
+      }
+    }
+    require("gp").setup(conf)
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require("codecompanion").setup({
+      adapters = {
+        my_openai = function()
+          return require("codecompanion.adapters").extend("openai_compatible", {
+            env = {
+              url = "http://127.0.0.1:11434", -- optional: default value is ollama url http://127.0.0.1:11434
+              --api_key = "OpenAI_API_KEY", -- optional: if your endpoint is authenticated
+              chat_url = "/v1/chat/completions", -- optional: default value, override if different
+              models_endpoint = "/v1/models", -- optional: attaches to the end of the URL to form the endpoint to retrieve models
+            },
+            schema = {
+              model = {
+                --default = "gemma3",  -- define llm model to be used
+                default = "devstral",
+              },
+              temperature = {
+                order = 2,
+                mapping = "parameters",
+                type = "number",
+                optional = true,
+                default = 0.8,
+                desc = "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
+                validate = function(n)
+                  return n >= 0 and n <= 2, "Must be between 0 and 2"
+                end,
+              },
+              max_completion_tokens = {
+                order = 3,
+                mapping = "parameters",
+                type = "integer",
+                optional = true,
+                default = nil,
+                desc = "An upper bound for the number of tokens that can be generated for a completion.",
+                validate = function(n)
+                  return n > 0, "Must be greater than 0"
+                end,
+              },
+              stop = {
+                order = 4,
+                mapping = "parameters",
+                type = "string",
+                optional = true,
+                default = nil,
+                desc = "Sets the stop sequences to use. When this pattern is encountered the LLM will stop generating text and return. Multiple stop patterns may be set by specifying multiple separate stop parameters in a modelfile.",
+                validate = function(s)
+                  return s:len() > 0, "Cannot be an empty string"
+                end,
+              },
+              logit_bias = {
+                order = 5,
+                mapping = "parameters",
+                type = "map",
+                optional = true,
+                default = nil,
+                desc = "Modify the likelihood of specified tokens appearing in the completion. Maps tokens (specified by their token ID) to an associated bias value from -100 to 100. Use https://platform.openai.com/tokenizer to find token IDs.",
+                subtype_key = {
+                  type = "integer",
+                },
+                subtype = {
+                  type = "integer",
+                  validate = function(n)
+                    return n >= -100 and n <= 100, "Must be between -100 and 100"
+                  end,
+                },
+              },
+            },
+          })
+        end,
+      },
+      strategies = {
+        chat = {
+          adapter = "my_openai",
+        },
+        inline = {
+          adapter = "my_openai",
+        },
+        agent = {
+          adapter = "my_openai",
+        },
+      }
+    })
+  end)
 EOF
 
 lua << EOF
