@@ -100,7 +100,7 @@ endif
 " colorscheme doom-one
 colorscheme everforest
 " if we are in iTerm2, adapt the background color
-if $TERM_PROGRAM == 'iTerm.app'
+if $TERM_PROGRAM == 'iTerm.app' || $TERM_PROGRAM == 'tmux'
     highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
     highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
 endif
