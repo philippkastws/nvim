@@ -1938,16 +1938,32 @@ lua << EOF
     require('avante_lib').load()
     --require('avante').setup()
     require('avante').setup({
+      mode = "legacy",
       provider = "ollama",
       providers = {
         ollama = {
-          endpoint = "http://127.0.0.1:11434",
-          timeout = 30000, -- Timeout in milliseconds
-          model = "gemma3",
-          --model = "qwq:32b"
-          --model = "deepseek-r1"
+          endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
+          --model = "gemma3",
+          model = "gpt-oss",
+          --model = "codegemma",
+          --model = "devstral",
+          --model = "qwq:32b",
+          disable_tools = true,
+          disable_tool_calls = true,
         },
       },
+      -- provider = "ollama",
+      -- providers = {
+      --   ollama = {
+      --     endpoint = "http://127.0.0.1:11434",
+      --     timeout = 30000, -- Timeout in milliseconds
+      --     model = "gemma3",
+      --     --model = "phi4-reasoning",
+      --     --model = "devstral",
+      --     --model = "qwq:32b"
+      --     --model = "deepseek-r1"
+      --   },
+      -- },
     })
   end)
 EOF
