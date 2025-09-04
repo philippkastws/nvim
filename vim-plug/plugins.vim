@@ -1235,7 +1235,7 @@ lua << EOF
         "Whitespace",
     }
     require("ibl").setup {
-        enabled = false,
+        enabled = true,
         -- indent = { highlight = highlight, char = "" },
         -- whitespace = {
         --     highlight = highlight,
