@@ -41,14 +41,14 @@ autocmd FileType gitcommit setlocal spell
 
 set clipboard+=unnamedplus
 
-set tabstop=2       " number of visual spaces per TAB
-set softtabstop=-1 " Use value of shiftwidth
-set shiftwidth=2    " number of spaces to use for autoindent
-set autoindent
-set copyindent      " copy indent from the previous line
-set smarttab       " Always use shiftwidth
-set linebreak
-filetype plugin indent on
+" set tabstop=2       " number of visual spaces per TAB
+" set softtabstop=-1 " Use value of shiftwidth
+" set shiftwidth=2    " number of spaces to use for autoindent
+" set autoindent
+" set copyindent      " copy indent from the previous line
+" set smarttab       " Always use shiftwidth
+" set linebreak
+" filetype plugin indent on
 
 " let g:better_escape_interval = 500
 " let g:better_escape_shortcut = ['jk', 'jj', 'kj']
@@ -206,28 +206,30 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-  indent = { enable = true, disable = { "yaml" } },
+  indent = {
+      enable = false, -- doesn't work!
+  },
 }
 
 end)
 
 EOF
 
-lua <<EOF
+" lua <<EOF
 
-pcall(function()
+" pcall(function()
 
-local tab_number = 2
-vim.opt.showtabline = tab_number                -- always show tabs
-vim.opt.smartcase = true                        -- smart case
-vim.opt.smartindent = true                      -- make indenting smarter again
-vim.opt.expandtab = true                        -- convert tabs to spaces
-vim.opt.shiftwidth = tab_number                 -- the number of spaces inserted for each indentation
-vim.opt.tabstop = tab_number                    -- insert 2 spaces for a tab
+" local tab_number = 2
+" vim.opt.showtabline = tab_number                -- always show tabs
+" vim.opt.smartcase = true                        -- smart case
+" vim.opt.smartindent = true                      -- make indenting smarter again
+" vim.opt.expandtab = true                        -- convert tabs to spaces
+" vim.opt.shiftwidth = tab_number                 -- the number of spaces inserted for each indentation
+" vim.opt.tabstop = tab_number                    -- insert 2 spaces for a tab
 
-end)
+" end)
 
-EOF
+" EOF
 
 " Fix copilot tab to accept suggestion
 lua <<EOF
@@ -397,7 +399,7 @@ lua <<EOF
 -- vim.o.completeopt = 'menuone,noselect'
 
 -- Enable break indent
-vim.opt.breakindent = true
+-- vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
