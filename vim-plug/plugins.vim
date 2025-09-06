@@ -232,6 +232,9 @@ call plug#end()
 
 lua << EOF
   pcall(function()
+    -- Gp.nvim (GPT prompt) Neovim AI plugin
+    -- GpChatNew
+    -- GpSelectAgent
     local conf = {
       -- For customization, refer to Install > Configuration in the Documentation/Readme
       providers = {
