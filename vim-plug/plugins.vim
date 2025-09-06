@@ -523,7 +523,8 @@ EOF
 lua <<EOF
   pcall(function()
     require('ollama').setup({
-      -- model = "mistral",
+      -- model = "qwen2.5-coder:latest",
+      model = "mistral:latest", -- default model
       -- url = "http://127.0.0.1:11434",
       -- serve = {
       --   on_start = false,
@@ -539,7 +540,7 @@ lua <<EOF
             .. "Respond EXACTLY in this format:\n```$ftype\n<your code>\n```"
             .. "\n\n```$ftype\n$sel```",
           --action = "replace",
-          model = "qwen2.5-coder:latest",
+          --model = "qwen2.5-coder:latest",
         },
       }
     })
