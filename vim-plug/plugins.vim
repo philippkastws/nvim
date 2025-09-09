@@ -348,6 +348,33 @@ lua << EOF
               },
             })
           end,
+          gptOss = function()
+            return require("codecompanion.adapters").extend("ollama", {
+              name = "gpt-oss", -- Give this adapter a different name to differentiate it from the default ollama adapter
+              opts = {
+                vision = true,
+                stream = true,
+              },
+              schema = {
+                model = {
+                  default = "gpt-oss",
+                  --default = "gpt-oss",
+                  --default = "devstral:latest",
+                  --default = "phi4-reasoning",
+                  --default = 'qwen3-coder',
+                },
+                num_ctx = {
+                  default = 16384,
+                },
+                think = {
+                  default = false,
+                },
+                keep_alive = {
+                  default = "5m",
+                },
+              },
+            })
+          end,
         },
       },
 -- `adapters.<adapter_name>` and `adapters.opts` is deprecated, use `adapters.http.<adapter_name>` and `adapters.http.
