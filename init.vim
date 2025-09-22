@@ -99,6 +99,10 @@ endif
 " colorscheme github_dark
 " colorscheme doom-one
 colorscheme everforest
+" my everforest adaptions
+highlight! link TSKeyword Purple
+highlight! link TSKeywordFunction Purple
+highlight! link TSKeywordReturn Purple
 " if we are in iTerm2, adapt the background color
 if $TERM_PROGRAM == 'iTerm.app'
     highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
@@ -107,14 +111,16 @@ endif
 " if the terminal emulator is ghostty, use the dimmed colorscheme
 if $TERM_PROGRAM == 'ghostty' || $TERM_PROGRAM == 'tmux'
   colorscheme github_dark_dimmed
+  highlight Keyword ctermfg=208 guifg=#FFA500
+  highlight Type ctermfg=208 guifg=#FFA500
+  highlight @type.builtin ctermfg=208 guifg=#FFA500
+  highlight @type.parameter ctermfg=208 guifg=#FFA500
+  highlight @type.definition ctermfg=208 guifg=#FFA500
+  highlight @type ctermfg=208 guifg=#FFA500
 endif
 if $TERM_PROGRAM == 'WezTerm'
   colorscheme catppuccin-frappe
 endif
-" my everforest adaptions
-highlight! link TSKeyword Purple
-highlight! link TSKeywordFunction Purple
-highlight! link TSKeywordReturn Purple
 lua <<EOF
 vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
 vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
