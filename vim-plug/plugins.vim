@@ -228,6 +228,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
+    Plug 'vim-scripts/BufOnly.vim'
+
   endif
 
 call plug#end()
@@ -2110,6 +2112,8 @@ lua <<EOF
 
       { "<leader>di", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline", mode = "n" },
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
+      { "<leader>dm", "<cmd>:w !diff % -<cr>", desc = "Diff in-memory changes", mode = "n" },
+      { "<leader>db", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
       --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
       --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
       --" { "<leader>M'] = [ ':Magit', 'Magit' ]
