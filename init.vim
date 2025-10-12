@@ -162,6 +162,8 @@ nnoremap <A-k> <cmd>:lua vim.lsp.buf.hover()<CR>
 " For quicker navigation map these
 map J <C-d>
 map K <C-u>
+" select all
+nnoremap <C-a> ggVG
 
 " show line numbers
 :set number
