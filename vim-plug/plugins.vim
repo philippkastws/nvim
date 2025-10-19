@@ -101,7 +101,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'L3MON4D3/LuaSnip'             " Required
     "Plug 'rafamadriz/friendly-snippets' " Optional
 
-    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+    " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
     Plug 'folke/trouble.nvim'
 
@@ -813,12 +813,12 @@ lua <<EOF
       })
     })
 
-    -- Set up lspconfig.
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    require('lspconfig')['ts_ls'].setup {
-      capabilities = capabilities
-    }
+    -- -- Set up lspconfig.
+    -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    -- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+    -- require('lspconfig')['ts_ls'].setup {
+    --   capabilities = capabilities
+    -- }
   end)
 EOF
 
@@ -895,40 +895,57 @@ EOF
 
 lua <<EOF
   pcall(function()
-    local lsp = require('lsp-zero').preset({
-      name = 'minimal',
-      set_lsp_keymaps = true,
-      manage_nvim_cmp = true,
-      --suggest_lsp_servers = true,
+    --local lsp = require('lsp-zero').preset({
+    --  name = 'minimal',
+    --  set_lsp_keymaps = true,
+    --  manage_nvim_cmp = true,
+    --  --suggest_lsp_servers = true,
+    --})
+
+    --lsp.setup()
+
+    -- local signs = {
+    --   { name = "DiagnosticSignError", text = "" },
+    --   { name = "DiagnosticSignWarn", text = "" },
+    --   { name = "DiagnosticSignHint", text = "" },
+    --   { name = "DiagnosticSignInfo", text = "" },
+    -- }
+    -- for _, sign in ipairs(signs) do
+    --   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+    -- end
+
+    vim.diagnostic.config({
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = "",
+          [vim.diagnostic.severity.WARN]  = "",
+          [vim.diagnostic.severity.INFO]  = "",
+          [vim.diagnostic.severity.HINT]  = "",
+        },
+        numhl = {
+          [vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
+          [vim.diagnostic.severity.WARN]  = "DiagnosticSignWarn",
+          [vim.diagnostic.severity.INFO]  = "DiagnosticSignInfo",
+          [vim.diagnostic.severity.HINT]  = "DiagnosticSignHint",
+        },
+      },
     })
-
-    lsp.setup()
-
-    local signs = {
-      { name = "DiagnosticSignError", text = "" },
-      { name = "DiagnosticSignWarn", text = "" },
-      { name = "DiagnosticSignHint", text = "" },
-      { name = "DiagnosticSignInfo", text = "" },
-    }
-    for _, sign in ipairs(signs) do
-      vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-    end
-    lsp.on_attach(function(client, bufnr)
-      local opts = {buffer = bufnr}
-      vim.keymap.set('n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-        -- local opts = { noremap=true, silent=true, buffer=ev.buf }
-        -- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-        -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-        -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-        -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-        -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-        -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-        -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-        -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-        -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
-        -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    end)
+    -- vim.lsp.config.on_attach(function(client, bufnr)
+    --   local opts = {buffer = bufnr}
+    --   vim.keymap.set('n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+    --     -- local opts = { noremap=true, silent=true, buffer=ev.buf }
+    --     -- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    --     -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    --     -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    --     -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    --     -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    --     -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    --     -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    --     -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+    --     -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    --     -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
+    --     -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    -- end)
   end)
 EOF
 
@@ -2152,6 +2169,7 @@ lua <<EOF
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
       { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Toggle Wrap Lines", mode = "n" },
+      { "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover info", mode = "n" },
     })
   end)
 EOF
