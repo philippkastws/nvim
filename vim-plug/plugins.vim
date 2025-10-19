@@ -2169,8 +2169,26 @@ lua <<EOF
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
       { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Toggle Wrap Lines", mode = "n" },
-      { "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover info", mode = "n" },
+      --{ "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover info", mode = "n" },
+      { "<leader>kD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "LSP hover info", mode = "n" },
+      { "<leader>kd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "LSP definition", mode = "n" },
+      { "<leader>kk", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "LSP hover", mode = "n" },
+      { "<leader>ki", "<cmd>lua vim.lsp.buf.implementation()<cr>", desc = "LSP implementation", mode = "n" },
+      { "<leader>ks", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "LSP signature help", mode = "n" },
+      { "<leader>kt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", desc = "LSP definition", mode = "n" },
+      { "<leader>kn", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "LSP rename", mode = "n" },
+      { "<leader>ka", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "LSP code action", mode = "n" },
+      { "<leader>kr", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "LSP references", mode = "n" },
+      { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "n" },
     })
+    -- remaining lsp-zero keymaps
+    map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+    map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+    map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+    map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+    map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
   end)
 EOF
 
