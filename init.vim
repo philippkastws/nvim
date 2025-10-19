@@ -215,7 +215,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
   indent = {
-      enable = false, -- doesn't work!
+      enable = true,
   },
 }
 
