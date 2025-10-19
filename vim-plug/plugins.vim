@@ -2180,6 +2180,8 @@ lua <<EOF
       { "<leader>ka", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "LSP code action", mode = "n" },
       { "<leader>kr", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "LSP references", mode = "n" },
       { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "n" },
+      -- format in visual mode
+      { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "v" },
     })
     -- remaining lsp-zero keymaps
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
