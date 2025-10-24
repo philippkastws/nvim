@@ -34,7 +34,7 @@ source $HOME/.config/nvim/lua/config.lua
 "" disable spell checking for capital words
 ":set spellcapcheck=
 "" disable spell by default
-:set nospell
+" :set nospell
 " This is local to buffer, so we have to enable it on each new and opened buffer
 "autocmd BufRead,BufNewFile * setlocal spelloptions=camel
 
