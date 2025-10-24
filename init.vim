@@ -18,19 +18,22 @@ source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 
-:set mouse=a
-:set ignorecase
-:set smartcase
-:set timeoutlen=1000
-:set list
-:set cursorline
-:set spelllang=en_us
-":set spelllang=en_us,de_ch
-:set spelloptions=camel
-":set spell
-" disable spell checking for capital words
-:set spellcapcheck=
-" disable spell by default
+
+source $HOME/.config/nvim/lua/config.lua
+
+":set mouse=a
+":set ignorecase
+":set smartcase
+":set timeoutlen=1000
+":set list
+":set cursorline
+":set spelllang=en_us
+"":set spelllang=en_us,de_ch
+":set spelloptions=camel
+"":set spell
+"" disable spell checking for capital words
+":set spellcapcheck=
+"" disable spell by default
 :set nospell
 " This is local to buffer, so we have to enable it on each new and opened buffer
 "autocmd BufRead,BufNewFile * setlocal spelloptions=camel
