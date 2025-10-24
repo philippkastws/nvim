@@ -455,7 +455,8 @@ lua << EOF
               schema = {
                 model = {
                   --default = "gemma3",
-                  default = "gemma3:27b",
+                  default = "gemma3:12b",
+                  --default = "gemma3:27b",
                   --default = "gpt-oss",
                   --default = "devstral:latest",
                   --default = "phi4-reasoning",
