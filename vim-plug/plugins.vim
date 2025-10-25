@@ -230,6 +230,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'vim-scripts/BufOnly.vim'
 
+    Plug 'folke/todo-comments.nvim'
+
   endif
 
 call plug#end()
@@ -953,6 +955,11 @@ EOF
 lua << EOF
   pcall(function()
     require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+    require("todo-comments").setup {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
