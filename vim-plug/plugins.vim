@@ -232,6 +232,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'folke/todo-comments.nvim'
 
+    Plug 'rmagatti/auto-session'
+
   endif
 
 call plug#end()
@@ -959,11 +961,20 @@ lua << EOF
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
+  end)
+EOF
+lua << EOF
+  pcall(function()
     require("todo-comments").setup {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
+  end)
+EOF
+lua << EOF
+  pcall(function()
+    require("auto-session").setup({})
   end)
 EOF
 
