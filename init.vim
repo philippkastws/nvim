@@ -8,10 +8,10 @@
 let mapleader = " " " map leader to space
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
-if !exists('g:vscode')
+" if !exists('g:vscode')
   " source $HOME/.config/nvim/keys/which-key.vim
-  source $HOME/.config/nvim/themes/airline.vim
-endif
+source $HOME/.config/nvim/themes/airline.vim
+" endif
 
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
@@ -92,10 +92,10 @@ let g:airline_theme='onedark'
 " colorscheme onedark
 " colorscheme catppuccin-macchiato
 " colorscheme tokyonight
-if !exists('g:vscode')
-    colorscheme tokyonight-night
-    colorscheme tokyonight-moon
-endif
+" if !exists('g:vscode')
+colorscheme tokyonight-night
+colorscheme tokyonight-moon
+" endif
 " colorscheme github_dark
 " colorscheme doom-one
 colorscheme everforest
@@ -367,11 +367,11 @@ nmap <leader>m <C-W>o
 " map <leader>p "0p
 " map <leader>P "0P
 
-if !exists('g:vscode')
-    " Navigate buffers
-    nnoremap <S-l> :bnext<CR>
-    nnoremap <S-h> :bprevious<CR>
-endif
+" if !exists('g:vscode')
+" Navigate buffers
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprevious<CR>
+" endif
 
 " Repeat last command
 nnoremap <leader>r @:
@@ -566,7 +566,7 @@ function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
     let i=0
     while (i<strlen(regs))
-        exec 'let @'.regs[i].'=""' 
+        exec 'let @'.regs[i].'=""'
         let i=i+1
     endwhile
 endfunction
