@@ -2186,6 +2186,7 @@ lua <<EOF
       { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "n" },
       -- format in visual mode
       { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "v" },
+      { "<leader>kt", "<cmd>vim.diagnostic.setloclist()<cr>", desc = "Diagnostics", mode = "n" },
     })
     -- remaining lsp-zero keymaps
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
