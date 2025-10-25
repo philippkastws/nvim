@@ -770,7 +770,7 @@ lua <<EOF
         { name = 'buffer' },
       })
    })
-   require("cmp_git").setup() ]]-- 
+   require("cmp_git").setup() ]]--
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     -- cmp.setup.cmdline({ '/', '?' }, {
@@ -954,29 +954,7 @@ lua <<EOF
   end)
 EOF
 
-lua << EOF
-  pcall(function()
-    require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end)
-EOF
-lua << EOF
-  pcall(function()
-    require("todo-comments").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end)
-EOF
-lua << EOF
-  pcall(function()
-    require("auto-session").setup({})
-  end)
-EOF
+source ~/.config/nvim/vim-plug/plugins-load.lua
 
 lua << EOF
   pcall(function()
