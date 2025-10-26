@@ -78,6 +78,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'sudormrfbin/cheatsheet.nvim'
 
   "Plug 'echasnovski/mini.icons'
+  Plug 'nvim-mini/mini.nvim', { 'branch': 'stable' }
   Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
   " Plug 'ryanoasis/vim-devicons' Icons without colours
   "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
