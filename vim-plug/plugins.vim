@@ -2141,6 +2141,7 @@ lua <<EOF
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
       { "<leader>dm", "<cmd>:w !diff % -<cr>", desc = "Diff in-memory changes", mode = "n" },
       { "<leader>db", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
+      { "<leader>dm", "<cmd>lua MiniDiff.toggle_overlay()<cr>", desc = "Mini diff inline", mode = "n" },
       { "<leader>lc", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
       { "<leader>lp", "<cmd>:BufferLineCyclePrev<cr>", desc = "Prev buffer", mode = "n" },
       { "<leader>ln", "<cmd>:BufferLineCycleNext<cr>", desc = "Next buffer", mode = "n" },
