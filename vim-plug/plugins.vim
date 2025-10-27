@@ -14,223 +14,228 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'easymotion/vim-easymotion'
 
   " Smooth scroll
-  Plug 'psliwka/vim-smoothie'
+  "Plug 'psliwka/vim-smoothie'
 
-  if !exists('g:vscode')
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-airline/vim-airline'
-    " FZF
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    " Git
-    "Plug 'airblade/vim-gitgutter'
-    Plug 'lewis6991/gitsigns.nvim'
-    " Plug 'romgrk/barbar.nvim'
-    Plug 'tpope/vim-rhubarb'
-    " Terminal
-    Plug 'voldikss/vim-floaterm'
-    " Start Screen
-    Plug 'mhinz/vim-startify'
-    " See what keys do like in emacs
-    " Plug 'liuchengxu/vim-which-key'
-    Plug 'folke/which-key.nvim'
+  " if !exists('g:vscode')
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'vim-airline/vim-airline'
+  " FZF
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  " Git
+  "Plug 'airblade/vim-gitgutter'
+  Plug 'lewis6991/gitsigns.nvim'
+  " Plug 'romgrk/barbar.nvim'
+  Plug 'tpope/vim-rhubarb'
+  " Terminal
+  Plug 'voldikss/vim-floaterm'
+  " Start Screen
+  Plug 'mhinz/vim-startify'
+  " See what keys do like in emacs
+  " Plug 'liuchengxu/vim-which-key'
+  Plug 'folke/which-key.nvim'
 
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'francoiscabrol/ranger.vim'
-    Plug 'rbgrouleff/bclose.vim'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
 
-    Plug 'lifepillar/vim-cheat40'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'peitalin/vim-jsx-typescript'
+  Plug 'lifepillar/vim-cheat40'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
 
-    Plug 'preservim/nerdtree'
+  Plug 'preservim/nerdtree'
 
-  "  Plug 'kamykn/spelunker.vim'
+"  Plug 'kamykn/spelunker.vim'
 
-    Plug 'will133/vim-dirdiff'
+  Plug 'will133/vim-dirdiff'
 
-    Plug 'pechorin/any-jump.vim'
+  Plug 'pechorin/any-jump.vim'
 
-    "Plug 'jdhao/better-escape.vim'
-    Plug 'max397574/better-escape.nvim'
+  "Plug 'jdhao/better-escape.vim'
+  Plug 'max397574/better-escape.nvim'
 
 
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-    "Plug 'yioneko/nvim-yati', { 'tag': '*' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  "Plug 'yioneko/nvim-yati', { 'tag': '*' }
 
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
-  "  Plug 'rmagatti/auto-session'
-  "  Plug 'rmagatti/session-lens'
+"  Plug 'rmagatti/auto-session'
+"  Plug 'rmagatti/session-lens'
 
-    Plug 'jreybert/vimagit'
+  Plug 'jreybert/vimagit'
 
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-    " Themes
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-    Plug 'joshdick/onedark.vim'
-    Plug 'rebelot/kanagawa.nvim'
+  " Themes
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  Plug 'joshdick/onedark.vim'
+  Plug 'rebelot/kanagawa.nvim'
 
-    Plug 'sudormrfbin/cheatsheet.nvim'
+  Plug 'sudormrfbin/cheatsheet.nvim'
 
-    "Plug 'echasnovski/mini.icons'
-    Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
-    " Plug 'ryanoasis/vim-devicons' Icons without colours
-    "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-    Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
-    Plug 'tiagovla/scope.nvim'
+  "Plug 'echasnovski/mini.icons'
+  Plug 'nvim-mini/mini.nvim', { 'branch': 'stable' }
+  Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+  " Plug 'ryanoasis/vim-devicons' Icons without colours
+  "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+  Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
+  Plug 'tiagovla/scope.nvim'
 
-    " Completion
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-buffer'
-    Plug 'hrsh7th/cmp-path'
-    Plug 'hrsh7th/cmp-cmdline'
-    Plug 'hrsh7th/nvim-cmp'
+  " Completion
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
 
-    " LSP Support
-    Plug 'neovim/nvim-lspconfig'             " Required
-    Plug 'williamboman/mason.nvim'           " Optional
-    Plug 'williamboman/mason-lspconfig.nvim' " Optional
+  " LSP Support
+  Plug 'neovim/nvim-lspconfig'             " Required
+  Plug 'williamboman/mason.nvim'           " Optional
+  Plug 'williamboman/mason-lspconfig.nvim' " Optional
 
-    "  Snippets
-    " Plug 'L3MON4D3/LuaSnip'             " Required
-    "Plug 'rafamadriz/friendly-snippets' " Optional
+  "  Snippets
+  " Plug 'L3MON4D3/LuaSnip'             " Required
+  "Plug 'rafamadriz/friendly-snippets' " Optional
 
-    " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+  " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
-    Plug 'folke/trouble.nvim'
+  Plug 'folke/trouble.nvim'
 
-    Plug 'phaazon/hop.nvim'
+  Plug 'phaazon/hop.nvim'
 
-    " Plug 'mfussenegger/nvim-treehopper'
+  " Plug 'mfussenegger/nvim-treehopper'
 
-    Plug 'nvim-tree/nvim-tree.lua'
+  Plug 'nvim-tree/nvim-tree.lua'
 
-    Plug 'justinmk/vim-sneak'
+  Plug 'justinmk/vim-sneak'
 
-    Plug 'RRethy/vim-illuminate'
+  Plug 'RRethy/vim-illuminate'
 
-    Plug 'sindrets/diffview.nvim'
+  Plug 'sindrets/diffview.nvim'
 
-    Plug 'kdheepak/lazygit.nvim'
+  Plug 'kdheepak/lazygit.nvim'
 
-    Plug 'kkharji/sqlite.lua'
-    Plug 'AckslD/nvim-neoclip.lua'
+  Plug 'kkharji/sqlite.lua'
+  Plug 'AckslD/nvim-neoclip.lua'
 
-    Plug 'tpope/vim-unimpaired'
-    Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-sensible'
 
-    Plug 'kevinhwang91/nvim-bqf'
+  Plug 'kevinhwang91/nvim-bqf'
 
-    Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'lukas-reineke/indent-blankline.nvim'
 
-    " Find helper, but is slow on some files
-    " Plug 'folke/flash.nvim'
+  " Find helper, but is slow on some files
+  " Plug 'folke/flash.nvim'
 
-    Plug 'windwp/nvim-autopairs'
+  Plug 'windwp/nvim-autopairs'
 
-    Plug 'tpope/vim-sleuth'
+  Plug 'tpope/vim-sleuth'
 
-    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
-    Plug 'projekt0n/github-nvim-theme'
+  Plug 'projekt0n/github-nvim-theme'
 
-    Plug 'EdenEast/nightfox.nvim'
+  Plug 'EdenEast/nightfox.nvim'
 
-    Plug 'rose-pine/neovim'
+  Plug 'rose-pine/neovim'
 
-    Plug 'folke/twilight.nvim'
+  Plug 'folke/twilight.nvim'
 
-    Plug 'gbprod/yanky.nvim'
+  Plug 'gbprod/yanky.nvim'
 
-    Plug 'folke/zen-mode.nvim'
+  Plug 'folke/zen-mode.nvim'
 
-    Plug 'kevinhwang91/nvim-hlslens'
-    Plug 'petertriho/nvim-scrollbar'
+  Plug 'kevinhwang91/nvim-hlslens'
+  Plug 'petertriho/nvim-scrollbar'
 
-    Plug 'chentoast/marks.nvim'
+  Plug 'chentoast/marks.nvim'
 
-    " Run on console
-    " tabby serve --device metal --model StarCoder-1B
-    " Including chat
-    " tabby serve --device metal --model StarCoder-1B --chat-model WizardCoder-3B
-    " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
-    " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
-    " you define in the local http server
-    " Plug 'TabbyML/vim-tabby'
+  " Run on console
+  " tabby serve --device metal --model StarCoder-1B
+  " Including chat
+  " tabby serve --device metal --model StarCoder-1B --chat-model WizardCoder-3B
+  " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
+  " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
+  " you define in the local http server
+  " Plug 'TabbyML/vim-tabby'
 
-    Plug 'github/copilot.vim'
+  Plug 'github/copilot.vim'
 
-    Plug 'romgrk/doom-one.vim'
+  Plug 'romgrk/doom-one.vim'
 
-    " ollama plugin
-    Plug 'David-Kunz/gen.nvim'
+  " ollama plugin
+  Plug 'David-Kunz/gen.nvim'
 
-    Plug 'nvim-pack/nvim-spectre'
+  Plug 'nvim-pack/nvim-spectre'
 
-    Plug 'tiagovla/tokyodark.nvim'
+  Plug 'tiagovla/tokyodark.nvim'
 
-    " Plug 'huggingface/llm.nvim'
+  " Plug 'huggingface/llm.nvim'
 
-    " Plug 'wellle/context.vim'
-    Plug 'nvim-treesitter/nvim-treesitter-context'
+  " Plug 'wellle/context.vim'
+  Plug 'nvim-treesitter/nvim-treesitter-context'
 
-    Plug 'nvim-telescope/telescope-ui-select.nvim'
-    Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
+  Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
 
-    Plug 'hedyhli/outline.nvim'
+  Plug 'hedyhli/outline.nvim'
 
-    Plug 'nomnivore/ollama.nvim'
+  Plug 'nomnivore/ollama.nvim'
 
-    Plug 'mbbill/undotree'
+  Plug 'mbbill/undotree'
 
-    Plug 'stevearc/oil.nvim'
+  Plug 'stevearc/oil.nvim'
 
-    Plug 'dyng/ctrlsf.vim'
+  Plug 'dyng/ctrlsf.vim'
 
-    Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
+  Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
 
-    Plug 'prettier/vim-prettier', {
-      \ 'do': 'yarn install --frozen-lockfile --production',
-      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+  Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install --frozen-lockfile --production',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
-    Plug 'kwkarlwang/bufjump.nvim'
+  Plug 'kwkarlwang/bufjump.nvim'
 
-    " Avante
-    " Deps
-    " Plug 'nvim-treesitter/nvim-treesitter'
-    " Plug 'nvim-lua/plenary.nvim'
-    Plug 'MunifTanjim/nui.nvim'
-    Plug 'MeanderingProgrammer/render-markdown.nvim'
+  " Avante
+  " Deps
+  " Plug 'nvim-treesitter/nvim-treesitter'
+  " Plug 'nvim-lua/plenary.nvim'
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'MeanderingProgrammer/render-markdown.nvim'
 
-    " Optional deps
-    " Plug 'hrsh7th/nvim-cmp' " what
-    " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-    Plug 'HakonHarnes/img-clip.nvim'
-    Plug 'zbirenbaum/copilot.lua'
-    Plug 'stevearc/dressing.nvim' " for enhanced input UI
-    Plug 'folke/snacks.nvim' " for modern input UI
+  " Optional deps
+  " Plug 'hrsh7th/nvim-cmp' " what
+  " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+  Plug 'HakonHarnes/img-clip.nvim'
+  Plug 'zbirenbaum/copilot.lua'
+  Plug 'stevearc/dressing.nvim' " for enhanced input UI
+  Plug 'folke/snacks.nvim' " for modern input UI
 
-    " Yay, pass source=true if you want to build from source
-    Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
-    " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') } }
+  " Yay, pass source=true if you want to build from source
+  Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+  " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') } }
 
-    Plug 'olimorris/codecompanion.nvim'
+  Plug 'olimorris/codecompanion.nvim'
 
-    Plug 'morhetz/gruvbox'
-    Plug 'sainnhe/everforest'
-    Plug 'robitx/gp.nvim'
+  Plug 'morhetz/gruvbox'
+  Plug 'sainnhe/everforest'
+  Plug 'robitx/gp.nvim'
 
-    Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
-    Plug 'vim-scripts/BufOnly.vim'
+  Plug 'vim-scripts/BufOnly.vim'
 
-  endif
+  Plug 'folke/todo-comments.nvim'
+
+  Plug 'rmagatti/auto-session'
+
+  " endif
 
 call plug#end()
 
@@ -767,7 +772,7 @@ lua <<EOF
         { name = 'buffer' },
       })
    })
-   require("cmp_git").setup() ]]-- 
+   require("cmp_git").setup() ]]--
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     -- cmp.setup.cmdline({ '/', '?' }, {
@@ -951,15 +956,7 @@ lua <<EOF
   end)
 EOF
 
-lua << EOF
-  pcall(function()
-    require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end)
-EOF
+source ~/.config/nvim/vim-plug/plugins-load.lua
 
 lua << EOF
   pcall(function()
@@ -2145,6 +2142,7 @@ lua <<EOF
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
       { "<leader>dm", "<cmd>:w !diff % -<cr>", desc = "Diff in-memory changes", mode = "n" },
       { "<leader>db", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
+      { "<leader>dm", "<cmd>lua MiniDiff.toggle_overlay()<cr>", desc = "Mini diff inline", mode = "n" },
       { "<leader>lc", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
       { "<leader>lp", "<cmd>:BufferLineCyclePrev<cr>", desc = "Prev buffer", mode = "n" },
       { "<leader>ln", "<cmd>:BufferLineCycleNext<cr>", desc = "Next buffer", mode = "n" },
@@ -2187,6 +2185,7 @@ lua <<EOF
       { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "n" },
       -- format in visual mode
       { "<leader>kf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", desc = "LSP format", mode = "v" },
+      { "<leader>kt", "<cmd>vim.diagnostic.setloclist()<cr>", desc = "Diagnostics", mode = "n" },
     })
     -- remaining lsp-zero keymaps
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
