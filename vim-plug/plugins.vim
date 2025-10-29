@@ -2188,13 +2188,14 @@ lua <<EOF
       { "<leader>kt", "<cmd>vim.diagnostic.setloclist()<cr>", desc = "Diagnostics", mode = "n" },
     })
     -- remaining lsp-zero keymaps
-    map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-    map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-    map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
-    map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
-    map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
-    map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
-    map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { desc = 'LSP jump to definition' })
+    vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', { desc = 'LSP jump to declaration' })
+    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', { desc = 'LSP jump to implementation' })
+    vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', { desc = 'LSP jump to type definition' })
+    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { desc = 'LSP jump to references' })
+    vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { desc = 'LSP rename' })
+    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = 'LSP code action' })
+    vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.config({ virtual_text = true })<cr>', { desc = 'LSP diagnostic virual text' })
   end)
 EOF
 
