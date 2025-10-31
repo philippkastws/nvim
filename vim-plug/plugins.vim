@@ -461,6 +461,8 @@ lua << EOF
                 model = {
                   --default = "gemma3",
                   default = "gemma3:12b",
+                  --default = "gpt-oss:120b-cloud",
+                  --default = "minimax-m2:cloud",
                   --default = "gemma3:27b",
                   --default = "gpt-oss",
                   --default = "devstral:latest",
