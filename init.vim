@@ -389,7 +389,8 @@ vmap <Leader>s <Plug>(easymotion-s)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader><Leader>s <Plug>(easymotion-s)
 
-nmap s <Plug>(easymotion-overwin-f)
+"nmap s <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-s)
 vmap s <Plug>(easymotion-s)
 
 " create undo group after 4 seconds wait in insert mode
