@@ -2072,20 +2072,31 @@ lua << EOF
     require('avante_lib').load()
     --require('avante').setup()
     require('avante').setup({
-      mode = "legacy",
       provider = "ollama",
       providers = {
         ollama = {
-          endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
-          --model = "gemma3",
-          model = "gpt-oss",
-          --model = "codegemma",
-          --model = "devstral",
           --model = "qwq:32b",
-          disable_tools = true,
-          disable_tool_calls = true,
+          model = "gpt-oss",
+          --model = "gpt-oss:120b-cloud",
+          is_env_set = require("avante.providers.ollama").check_endpoint_alive,
         },
-      },
+      }
+      --mode = "legacy",
+      --provider = "ollama",
+      --providers = {
+      --  ollama = {
+      --    endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
+      --    --model = "gemma3",
+      --    model = "gpt-oss",
+      --    --model = "gpt-oss:120b-cloud",
+      --    --model = "minimax-m2:cloud",
+      --    --model = "codegemma",
+      --    --model = "devstral",
+      --    --model = "qwq:32b",
+      --    disable_tools = true,
+      --    disable_tool_calls = true,
+      --  },
+      --},
       -- provider = "ollama",
       -- providers = {
       --   ollama = {
