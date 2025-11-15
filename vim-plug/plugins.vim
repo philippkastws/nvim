@@ -583,7 +583,7 @@ lua << EOF
         -- end,
       strategies = {
         chat = {
-          adapter = "gemma3",
+          adapter = "gptOss",
         },
         inline = {
           adapter = "gemma3",
