@@ -2201,8 +2201,7 @@ lua <<EOF
       { "<leader>kt", "<cmd>vim.diagnostic.setloclist()<cr>", desc = "Diagnostics", mode = "n" },
     })
     -- remaining lsp-zero keymaps
-    -- gd works better without
-    -- vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { desc = 'LSP jump to definition' })
+    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { desc = 'LSP jump to definition' })
     vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', { desc = 'LSP jump to declaration' })
     vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', { desc = 'LSP jump to implementation' })
     vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', { desc = 'LSP jump to type definition' })
