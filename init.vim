@@ -90,7 +90,7 @@ require("catppuccin").setup({
 end)
 EOF
 " let g:airline_theme='catppuccin'
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
 
 " colorscheme onedark
 " colorscheme catppuccin-macchiato
@@ -124,6 +124,7 @@ highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
 " if $TERM_PROGRAM == 'WezTerm'
 "   colorscheme catppuccin-frappe
 " endif
+let g:airline_theme='everforest'
 lua <<EOF
 vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
 vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
