@@ -60,7 +60,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'yioneko/nvim-yati', { 'tag': '*' }
 
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.9' }
 
 "  Plug 'rmagatti/auto-session'
 "  Plug 'rmagatti/session-lens'
