@@ -841,6 +841,7 @@ lua <<EOF
       --     anchor = "SE",
       --     width = 40,
           height = 1,
+          border = "none",
       --     border = "single",
       },
       -- compress_after = 3,
