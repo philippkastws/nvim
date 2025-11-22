@@ -2208,6 +2208,7 @@ lua <<EOF
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
       { "<leader>Ww", "<cmd>:set wrap!<cr>", desc = "Toggle Wrap Lines", mode = "n" },
+      { "<leader>Wb", "<cmd>:Gitsigns toggle_current_line_blame<cr>", desc = "Toggle line blame", mode = "n" },
       --{ "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover info", mode = "n" },
       { "<leader>kD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "LSP hover info", mode = "n" },
       { "<leader>kd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "LSP definition", mode = "n" },
