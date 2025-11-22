@@ -447,7 +447,7 @@ lua << EOF
 EOF
 
 lua << EOF
-  -- pcall(function()
+  pcall(function()
     require("snacks").setup({
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -475,7 +475,7 @@ lua << EOF
         lsp_doc_border = false, -- add a border to hover docs and signature help
       },
     })
-  -- end)
+  end)
 EOF
 
 lua << EOF
