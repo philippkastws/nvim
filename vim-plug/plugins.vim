@@ -33,7 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mhinz/vim-startify'
   " See what keys do like in emacs
   " Plug 'liuchengxu/vim-which-key'
-  Plug 'folke/which-key.nvim'
 
   Plug 'vim-airline/vim-airline-themes'
   Plug 'francoiscabrol/ranger.vim'
@@ -103,8 +102,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'rafamadriz/friendly-snippets' " Optional
 
   " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
-
-  Plug 'folke/trouble.nvim'
 
   Plug 'phaazon/hop.nvim'
 
@@ -218,6 +215,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/snacks.nvim' " for modern input UI
   Plug 'rcarriga/nvim-notify'
   Plug 'folke/noice.nvim'
+  Plug 'folke/which-key.nvim'
+  Plug 'folke/trouble.nvim'
 
   " Yay, pass source=true if you want to build from source
   Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
