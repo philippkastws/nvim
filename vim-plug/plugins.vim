@@ -216,6 +216,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'zbirenbaum/copilot.lua'
   Plug 'stevearc/dressing.nvim' " for enhanced input UI
   Plug 'folke/snacks.nvim' " for modern input UI
+  Plug 'folke/noice.nvim'
 
   " Yay, pass source=true if you want to build from source
   Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
@@ -463,6 +464,8 @@ lua << EOF
       scroll = { enabled = false },
       statuscolumn = { enabled = false },
       words = { enabled = false },
+    })
+    require("noice").setup({
     })
   end)
 EOF
