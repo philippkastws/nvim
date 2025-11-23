@@ -853,11 +853,11 @@ lua <<EOF
   pcall(function()
     require("screenkey").setup({
       win_opts = {
-      --     row = vim.o.lines - vim.o.cmdheight - 1,
-      --     col = vim.o.columns - 1,
+          row = vim.o.lines - vim.o.cmdheight,
+          col = vim.o.columns,
       --     relative = "editor",
       --     anchor = "SE",
-      --     width = 40,
+          width = 30,
           height = 1,
           border = "none",
       --     border = "single",
