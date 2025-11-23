@@ -2199,7 +2199,7 @@ lua <<EOF
       { "<leader>Sa", "zg", desc = "Add to dict (zg)", mode = "n" },
 
       { "<leader>W", group = "Whitespace" }, -- group
-      { "<leader>Ws", "<cmd>:set listchars=space:·,tab:→\\ ,trail:␣,precedes:«,extends:»,eol:⏎ | :set list<cr>", desc = "Show", mode = "n" },
+      { "<leader>Ws", "<cmd>:set listchars=space:·,tab:→\\ ,trail:.,precedes:«,extends:»,eol:¶ | :set list<cr>", desc = "Show", mode = "n" },
       { "<leader>Wh", "<cmd>:set listchars& | :set nolist<cr>", desc = "Off", mode = "n" },
       { "<leader>Wt", "<cmd>:set showtabline=0<cr>", desc = "Hide Tabs", mode = "n" },
       { "<leader>Wz", "<cmd>:set showtabline=2<cr>", desc = "Show Tabs", mode = "n" },
