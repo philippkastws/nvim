@@ -219,8 +219,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'folke/trouble.nvim'
 
   " Yay, pass source=true if you want to build from source
-  Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
-  " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') } }
+  " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
   Plug 'olimorris/codecompanion.nvim'
 
