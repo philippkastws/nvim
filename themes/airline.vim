@@ -53,5 +53,6 @@
 "let g:webdevicons_enable_airline_tabline = 1
 "
 
-let g:airline_section_z = airline#section#create([ 'Col %v L %l/%L☰%p%%'])
+" let g:airline_section_z = airline#section#create([ 'Col %v L %l/%L☰%p%%'])
+let g:airline_section_z = airline#section#create([ 'Col %v L %l/%L'])
 
