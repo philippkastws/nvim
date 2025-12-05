@@ -530,19 +530,37 @@ let g:EasyMotion_do_shade = 0
 "
 
 " Compare entire buffer against clipboard
+" or the visual selection against clipboard
 function! DiffClipboard()
     let ft=&ft
+    if mode() ==# 'v' || mode() ==# 'V'
+        " Get visual selection range
+        let [line_start, col_start] = [getpos("'<")[1], getpos("'<")[2]]
+        let [line_end, col_end] = [getpos("'>")[1], getpos("'>")[2]]
+        let lines = getline(line_start, line_end)
+        " If selection is characterwise, trim first and last lines
+        if mode() ==# 'v'
+            let lines[0] = lines[0][col_start - 1 :]
+            let lines[-1] = lines[-1][: col_end - 2]
+        endif
+    else
+        let lines = getline(1, '$')
+    endif
+    " Get clipboard contents
+    let clipboard = split(getreg('+'), "\n")
+    " Open new vertical split and put clipboard contents
     vertical new
     setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile
-    :1put
+    call setline(1, clipboard)
     silent 0d_
     diffthis
     setlocal nomodifiable
     execute "set ft=" . ft
+    " Go back to previous window and put selected lines/buffer
     wincmd p
     diffthis
 endfunction
-command! DiffClipboard call DiffClipboard()
+command! -range DiffClipboard call DiffClipboard()
 
 " compare visual selection against clipboard
 lua <<EOF
