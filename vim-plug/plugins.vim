@@ -14,7 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'easymotion/vim-easymotion'
 
   " Smooth scroll
-  "Plug 'psliwka/vim-smoothie'
+  Plug 'psliwka/vim-smoothie'
 
   " if !exists('g:vscode')
   Plug 'ryanoasis/vim-devicons'
