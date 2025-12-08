@@ -21,7 +21,7 @@ pcall(function()
   local animate = require('mini.animate')
   animate.setup({
     cursor = {
-      enable = false,
+      enable = true,
     },
     scroll = {
       enable = false,
