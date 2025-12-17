@@ -55,7 +55,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   "Plug 'yioneko/nvim-yati', { 'tag': '*' }
 
   Plug 'nvim-lua/plenary.nvim'
