@@ -917,7 +917,7 @@ lua <<EOF
     require'treesitter-context'.setup{
       max_lines = 10, -- How many lines the window should span. Values <= 0 mean no limit.
     }
-    vim.keymap.set("n", "[c", function()
+    vim.keymap.set("n", "<C-m>", function()
       require("treesitter-context").go_to_context(vim.v.count1)
     end, { silent = true })
   end)
@@ -2171,6 +2171,8 @@ lua <<EOF
       { "<leader>tr", "<cmd>:Telescope resume<cr>", desc = "Telescope resume", mode = "n" },
       { "<leader>tp", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
       -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
+      { "<leader>am", "vab", desc = "Match outer block (vab)", mode = "n" },
+      { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
 
       { "<leader>di", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline", mode = "n" },
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
