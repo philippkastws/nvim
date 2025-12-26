@@ -54,7 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'max397574/better-escape.nvim'
 
 
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate'}
   " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   "Plug 'yioneko/nvim-yati', { 'tag': '*' }
 
