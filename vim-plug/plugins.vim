@@ -209,7 +209,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Optional deps
   " Plug 'hrsh7th/nvim-cmp' " what
   " Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-  Plug 'HakonHarnes/img-clip.nvim'
+  " Doesn't work well after pasting from clipboard in search
+  " Plug 'HakonHarnes/img-clip.nvim'
   Plug 'zbirenbaum/copilot.lua'
   Plug 'stevearc/dressing.nvim' " for enhanced input UI
   Plug 'folke/snacks.nvim' " for modern input UI
