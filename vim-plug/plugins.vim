@@ -844,12 +844,12 @@ lua <<EOF
     })
 
     -- Set up lspconfig.
-    --local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    -- vim.lsp.config('<YOUR_LSP_SERVER>', {
-    --   capabilities = capabilities
-    -- })
-    -- vim.lsp.enable('<YOUR_LSP_SERVER>')
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local YOUR_LSP_SERVERS = { 'ts_ls', 'eslint', 'cssls' }
+    vim.lsp.config(YOUR_LSP_SERVERS, {
+      capabilities = capabilities
+    })
+    vim.lsp.enable(YOUR_LSP_SERVERS)
   end)
 EOF
 
