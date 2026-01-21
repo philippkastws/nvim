@@ -2185,6 +2185,8 @@ lua <<EOF
       -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
       { "<leader>am", "vab", desc = "Match outer block (vab)", mode = "n" },
       { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
+      { "<leader>ac", '<cmd>:let @+=expand("%") . ":" . line(".")<CR>', desc = "Copy current line to clipboard", mode = "n" },
+      { "<leader>ac", "<cmd>:let @+=expand('%') . ':' . line(\"'<\") . '-' . line(\"'>\")<CR>", desc = "Copy visual range to clipboard", mode = "v" },
 
       { "<leader>di", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline", mode = "n" },
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
