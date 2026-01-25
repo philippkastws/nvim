@@ -20,6 +20,7 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 
 
 source $HOME/.config/nvim/lua/config.lua
+source $HOME/.config/nvim/lua/autocmds.lua
 
 ":set mouse=a
 ":set ignorecase
