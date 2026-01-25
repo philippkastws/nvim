@@ -6,7 +6,7 @@ Started one day off [Truly the Ultimate Neovim Config Nvim Mach 2](https://githu
 
 ## Install
 
-### Instal dependencies
+### Install dependencies
 
 On Mac:
 ```
