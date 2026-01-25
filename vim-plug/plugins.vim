@@ -488,6 +488,10 @@ lua << EOF
         view_search = false, --"virtualtext", -- view for search count messages. Set to `false` to disable
       },
     })
+    require("notify").setup({
+      -- stages = "fade_in_slide_out",
+      timeout = 0,
+    })
   end)
 EOF
 
