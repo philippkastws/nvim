@@ -2161,7 +2161,7 @@ lua <<EOF
       { "<leader>g", "<cmd>:Telescope live_grep<cr>", desc = "Grep Text", mode = "n", icon = "󰺮" },
       { "<leader>G", "<cmd>:Telescope live_grep hidden=true glob_pattern=*<cr>", desc = "Grep Text (incl hidden)", icon = "󰺮", mode = "n" },
       { "<leader>h", "<cmd>:Telescope command_history<cr>", desc = "Command History (:Telescope command_history)", mode = "n" },
-      { "<leader>i", "<cmd>:Git<cr>", desc = "Git Fugitive (:Git)", mode = "n" },
+      { "<leader>i", "<cmd>:Git<cr><C-w>5-", desc = "Git Fugitive (:Git)", mode = "n" },
       -- { "<leader>i", "<cmd>:tab Git<cr>", desc = "Git Fugitive (:Git)", mode = "n" },
       -- { "<leader>I", "<cmd>:tabc<cr>", desc = "Close tab", mode = "n" },
       { "<leader>w", "<C-W>w", desc = "Next Window", mode = "n" },
