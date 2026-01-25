@@ -500,7 +500,7 @@ lua << EOF
     require("codecompanion").setup({
       adapters = {
         http = {
-          gemma3 = function()
+          local_gemma3 = function()
             return require("codecompanion.adapters").extend("ollama", {
               name = "gemma3", -- Give this adapter a different name to differentiate it from the default ollama adapter
               opts = {
@@ -531,7 +531,69 @@ lua << EOF
               },
             })
           end,
-          gptOss = function()
+          local_ministral_3 = function()
+            return require("codecompanion.adapters").extend("ollama", {
+              name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+              opts = {
+                vision = true,
+                stream = true,
+              },
+              schema = {
+                model = {
+                  --default = "gemma3",
+                  default = "ministral-3",
+                  --default = "gpt-oss:120b-cloud",
+                  --default = "minimax-m2:cloud",
+                  --default = "gemma3:27b",
+                  --default = "gpt-oss",
+                  --default = "devstral:latest",
+                  --default = "phi4-reasoning",
+                  --default = 'qwen3-coder',
+                },
+                num_ctx = {
+                  default = 16384,
+                },
+                think = {
+                  default = false,
+                },
+                keep_alive = {
+                  default = "5m",
+                },
+              },
+            })
+          end,
+          local_devstral_small_2 = function()
+            return require("codecompanion.adapters").extend("ollama", {
+              name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+              opts = {
+                vision = true,
+                stream = true,
+              },
+              schema = {
+                model = {
+                  --default = "gemma3",
+                  default = "devstral-small-2",
+                  --default = "gpt-oss:120b-cloud",
+                  --default = "minimax-m2:cloud",
+                  --default = "gemma3:27b",
+                  --default = "gpt-oss",
+                  --default = "devstral:latest",
+                  --default = "phi4-reasoning",
+                  --default = 'qwen3-coder',
+                },
+                num_ctx = {
+                  default = 16384,
+                },
+                think = {
+                  default = false,
+                },
+                keep_alive = {
+                  default = "5m",
+                },
+              },
+            })
+          end,
+          local_gptOss = function()
             return require("codecompanion.adapters").extend("ollama", {
               name = "gpt-oss", -- Give this adapter a different name to differentiate it from the default ollama adapter
               opts = {
@@ -633,13 +695,13 @@ lua << EOF
         -- end,
       strategies = {
         chat = {
-          adapter = "gptOss",
+          adapter = "local_ministral_3",
         },
         inline = {
-          adapter = "gemma3",
+          adapter = "local_gemma3",
         },
         agent = {
-          adapter = "gemma3",
+          adapter = "local_gemma3",
         },
       }
     })
