@@ -2168,14 +2168,15 @@ EOF
 autocmd! User avante.nvim
 lua << EOF
   pcall(function()
-    require('avante_lib').load()
+    --require('avante_lib').load()
     --require('avante').setup()
     require('avante').setup({
       provider = "ollama",
       providers = {
         ollama = {
           --model = "qwq:32b",
-          model = "gpt-oss",
+          --model = "gpt-oss",
+          model = "glm-4.7:cloud",
           --model = "gpt-oss:120b-cloud",
           is_env_set = require("avante.providers.ollama").check_endpoint_alive,
         },
