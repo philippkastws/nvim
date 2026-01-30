@@ -2252,6 +2252,7 @@ lua <<EOF
       -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
       { "<leader>am", "vab", desc = "Match outer block (vab)", mode = "n" },
       { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
+      { "<leader>af", "va{", desc = "Match outer curlie bracked (va{)", mode = "n" },
       { "<leader>ac", '<cmd>:let @+=expand("%") . ":" . line(".")<CR>', desc = "Copy current line to clipboard", mode = "n" },
       { "<leader>ac", "<cmd>:let @+=expand('%') . ':' . line(\"'<\") . '-' . line(\"'>\")<CR>", desc = "Copy visual range to clipboard", mode = "v" },
 
