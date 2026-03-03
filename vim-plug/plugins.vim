@@ -2254,7 +2254,7 @@ lua <<EOF
       { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
       { "<leader>af", "va{", desc = "Match outer curlie bracked (va{)", mode = "n" },
       { "<leader>ac", '<cmd>:let @+=expand("%") . ":" . line(".")<CR>', desc = "Copy current line to clipboard", mode = "n" },
-      { "<leader>ac", "<cmd>:let @+=expand('%') . ':' . line(\"'<\") . '-' . line(\"'>\")<CR>", desc = "Copy visual range to clipboard", mode = "v" },
+      { "<leader>ac", ":<C-u>let @+=expand('%') . ':' . line(\"'<\") . '-' . line(\"'>\")<CR>", desc = "Copy visual range to clipboard", mode = "v" },
 
       { "<leader>di", "<cmd>:Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk inline", mode = "n" },
       { "<leader>dd", "<cmd>:Gitsigns diffthis<cr>", desc = "Diff this", mode = "n" },
