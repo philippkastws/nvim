@@ -2253,6 +2253,7 @@ lua <<EOF
       { "<leader>am", "vab", desc = "Match outer block (vab)", mode = "n" },
       { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
       { "<leader>af", "va{", desc = "Match outer curlie bracked (va{)", mode = "n" },
+      { "<leader>ag", "<cmd>:Gedit<cr>", desc = "Gedit (:Gedit)", mode = "n" },
       { "<leader>ac", '<cmd>:let @+=expand("%") . ":" . line(".")<CR>', desc = "Copy current line to clipboard", mode = "n" },
       { "<leader>ac", ":<C-u>let @+=expand('%') . ':' . line(\"'<\") . '-' . line(\"'>\")<CR>", desc = "Copy visual range to clipboard", mode = "v" },
 
