@@ -2261,6 +2261,7 @@ lua <<EOF
       { "<leader>dm", "<cmd>:w !diff % -<cr>", desc = "Diff in-memory changes", mode = "n" },
       { "<leader>db", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
       { "<leader>dm", "<cmd>lua MiniDiff.toggle_overlay()<cr>", desc = "Mini diff inline", mode = "n" },
+      { "<leader>db", "<cmd>DiffviewOpen origin/HEAD...HEAD<cr>", desc = "Diff against master/main branch", mode = "n" },
       { "<leader>dc", "<cmd>:DiffviewClose<cr>", desc = "Diff view close", mode = "n" },
       { "<leader>D", "<cmd>:DiffviewOpen<cr>", desc = "Diff view open", mode = "n" },
       { "<leader>lc", "<cmd>:BufOnly<cr>", desc = "Close all buffers but current", mode = "n" },
