@@ -2249,6 +2249,7 @@ lua <<EOF
       { "<leader>ta", "<cmd>:Telescope commands<cr>", desc = "All commands", mode = "n" },
       { "<leader>tr", "<cmd>:Telescope resume<cr>", desc = "Telescope resume", mode = "n" },
       { "<leader>tp", "<C-p>", desc = "Previous buffer <c-p>", mode = "n" },
+      { "<leader>tn", "<cmd>:tabNext<cr>", desc = "Next tab :tabNext", mode = "n" },
       -- { "<leader>ag", "<C-g>", desc = "Tabby accept suggestion (<c-g>)", mode = "n" },
       { "<leader>am", "vab", desc = "Match outer block (vab)", mode = "n" },
       { "<leader>at", "vat", desc = "Match outer tag (vat)", mode = "n" },
