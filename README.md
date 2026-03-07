@@ -35,7 +35,6 @@ Space opens menu with commands.
 
 Most important keybindings:
 --
-- <space>: Open menu
 - <space>e: Toggle file manager side panel
 - <space>f: Fuzzy find files
 - <space>F: Like above, but include hidden files
@@ -49,13 +48,19 @@ Most important keybindings:
 - <space>o: Open recent files
 - <space>O: Start page
 - <space>n: Clear find highlighting
-- <space>o: Open recent files
-- <space>O: Open start page
 - <space>h: Show command history
 - <space>b: Show open files
 - <space>B: Fuzzy find current buffer
-- <space>s/s: Easy motion, type character and jump
+- <space>s: Easy motion, type character and jump
 - <space>j: Any jump, jump to definition or reference of element under cursor
+- <space>D: Open diff view
+- <space>dc: Close diff view
+- <space>Ww: Toggle wrap lines
+- <space>ac: Copy current line path to clipboard
+- <space>.: Telescope continue
+
+
+
 - :SSave: Save session
 
 
