@@ -169,6 +169,7 @@ map J <C-d>
 map K <C-u>
 " select all
 nnoremap <C-a> ggVG
+nnoremap <A-a> ggVG
 
 " show line numbers
 :set number
