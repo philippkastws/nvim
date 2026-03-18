@@ -1,4 +1,6 @@
 # Finally, a terminal for the 90s
+This is all about ergonomics. Saving keystrokes, avoiding reaching out to the mouse and making the terminal a
+more pleasant place to be.
 
 # Terminal
 [Finally, a command line shell for the 90s](https://fishshell.com/)
