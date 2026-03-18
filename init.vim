@@ -54,6 +54,10 @@ set clipboard+=unnamedplus
 " set linebreak
 " filetype plugin indent on
 
+" for bqf (better quickfix) plugin
+set tabstop=2
+set shiftwidth=2
+
 " let g:better_escape_interval = 500
 " let g:better_escape_shortcut = ['jk', 'jj', 'kj']
 
