@@ -113,8 +113,8 @@ highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
 " if we are in iTerm2, adapt the background color
 " if $TERM_PROGRAM == 'iTerm.app'
-highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
-highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
+highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
+highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 " endif
 " if the terminal emulator is ghostty, use the dimmed colorscheme
 " if $TERM_PROGRAM == 'ghostty' || $TERM_PROGRAM == 'tmux'
@@ -131,10 +131,10 @@ highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=#2d3530b
 " endif
 let g:airline_theme='everforest'
 lua <<EOF
-vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
-vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
-vim.api.nvim_set_hl(0, 'DiffChange', { bg = '#2F4146' })
-vim.api.nvim_set_hl(0, 'DiffText', { bg = '#463C2F' })
+-- vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
+-- vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
+-- vim.api.nvim_set_hl(0, 'DiffChange', { bg = '#2F4146' })
+-- vim.api.nvim_set_hl(0, 'DiffText', { bg = '#463C2F' })
 
 -- vim.api.nvim_set_hl(0, 'DiffAdded', { fg = colors[3], bold = true })
 -- vim.api.nvim_set_hl(0, 'DiffRemoved', { fg = colors[2], bold = true })
@@ -151,6 +151,12 @@ vim.api.nvim_set_hl(0, 'DiffText', { bg = '#463C2F' })
 -- vim.api.nvim_set_hl(0, 'DiffviewStatusDeleted', { fg = colors[2], bold = true })
 -- vim.api.nvim_set_hl(0, 'DiffviewStatusIgnored', { fg = colors[9], bold = true })
 EOF
+
+set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram
+" if &diff
+"     colorscheme tokyonight-night
+" endif
+
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
