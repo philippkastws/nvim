@@ -236,6 +236,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'rmagatti/auto-session'
 
+  Plug 'esmuellert/nvim-eslint'
+
   " endif
 
 call plug#end()
@@ -357,6 +359,12 @@ lua <<EOF
           },
       },
     }
+  end)
+EOF
+
+lua << EOF
+  pcall(function()
+    require('nvim-eslint').setup({})
   end)
 EOF
 
