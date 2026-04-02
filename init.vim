@@ -129,7 +129,7 @@ highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 " if $TERM_PROGRAM == 'WezTerm'
 "   colorscheme catppuccin-frappe
 " endif
-let g:airline_theme='everforest'
+let g:airline_theme='bubblegum'
 lua <<EOF
 -- vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
 -- vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
