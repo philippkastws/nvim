@@ -2156,6 +2156,12 @@ lua << EOF
       options = {
         style_preset = bufferline.style_preset.no_italic,
         color_icons = true,
+        -- underline indicator
+        indicator = {
+          style = "underline",
+          --style = "icon",
+          --style = "none",
+        },
         --diagnostics = "nvim_lsp",
         separator_style = "slant" --  "slant" | "slope" | "thick" | "thin" |
       }
