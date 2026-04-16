@@ -2155,7 +2155,9 @@ lua << EOF
     bufferline.setup{
       options = {
         style_preset = bufferline.style_preset.no_italic,
-        color_icons = true
+        color_icons = true,
+        --diagnostics = "nvim_lsp",
+        separator_style = "slant" --  "slant" | "slope" | "thick" | "thin" |
       }
     }
     require("scope").setup({})
