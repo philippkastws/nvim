@@ -316,10 +316,6 @@ lua <<EOF
           --   enable = false -- disable builtin indent module
           -- }
         },
---      },
---    }
---    require'nvim-treesitter.configs'.setup {
---      textobjects = {
         move = {
           enable = true,
           set_jumps = true, -- whether to set jumps in the jumplist
@@ -357,7 +353,7 @@ lua <<EOF
           goto_previous = {
             ["[d"] = "@conditional.outer",
           }
-          },
+        },
       },
     }
   end)
