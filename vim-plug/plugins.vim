@@ -215,7 +215,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'stevearc/dressing.nvim' " for enhanced input UI
   Plug 'folke/snacks.nvim' " for modern input UI
   Plug 'rcarriga/nvim-notify'
-  Plug 'folke/noice.nvim'
+  " Plug 'folke/noice.nvim'
   Plug 'folke/which-key.nvim'
   Plug 'folke/trouble.nvim'
 
