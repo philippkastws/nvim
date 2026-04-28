@@ -204,7 +204,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'nvim-treesitter/nvim-treesitter'
   " Plug 'nvim-lua/plenary.nvim'
   Plug 'MunifTanjim/nui.nvim'
-  Plug 'MeanderingProgrammer/render-markdown.nvim'
+  " Plug 'MeanderingProgrammer/render-markdown.nvim'
 
   " Optional deps
   " Plug 'hrsh7th/nvim-cmp' " what
