@@ -54,7 +54,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'max397574/better-escape.nvim'
 
 
-  Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate'}
+  " https://www.qu8n.com/posts/treesitter-migration-guide-for-nvim-0-12
+  Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main', 'do': ':TSUpdate'}
   " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   "Plug 'yioneko/nvim-yati', { 'tag': '*' }
 
@@ -176,7 +177,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'huggingface/llm.nvim'
 
   " Plug 'wellle/context.vim'
-  Plug 'nvim-treesitter/nvim-treesitter-context'
+  " Plug 'nvim-treesitter/nvim-treesitter-context'
 
   Plug 'nvim-telescope/telescope-ui-select.nvim'
   Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
@@ -246,7 +247,7 @@ call plug#end()
 
 lua <<EOF
   pcall(function()
-    require'nvim-treesitter.configs'.setup {
+    require'nvim-treesitter'.setup {
       --yati = {
       --  enable = true,
       --  -- Disable by languages, see `Supported languages`
@@ -996,16 +997,16 @@ lua <<EOF
   end)
 EOF
 
-lua <<EOF
-  pcall(function()
-    require'treesitter-context'.setup{
-      max_lines = 10, -- How many lines the window should span. Values <= 0 mean no limit.
-    }
-    vim.keymap.set("n", "<C-m>", function()
-      require("treesitter-context").go_to_context(vim.v.count1)
-    end, { silent = true })
-  end)
-EOF
+" lua <<EOF
+"   pcall(function()
+"     require'treesitter-context'.setup{
+"       max_lines = 10, -- How many lines the window should span. Values <= 0 mean no limit.
+"     }
+"     vim.keymap.set("n", "<C-m>", function()
+"       require("treesitter-context").go_to_context(vim.v.count1)
+"     end, { silent = true })
+"   end)
+" EOF
 
 lua <<EOF
   pcall(function()
