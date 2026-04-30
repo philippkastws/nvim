@@ -497,7 +497,9 @@ lua << EOF
     require("notify").setup({
       -- stages = "fade_in_slide_out",
       timeout = 500,
-      render = "compact",
+      -- minimum_width = 50,
+      max_width = 50,
+      --render = "compact",
     })
   end)
 EOF
