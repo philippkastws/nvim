@@ -54,3 +54,8 @@ vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 vim.api.nvim_command('filetype indent off')
 vim.opt.smartindent = false
 
+-- get out of my way command window
+vim.keymap.set('n', 'q:', '<nop>')
+vim.keymap.set('n', 'q/', '<nop>')
+vim.keymap.set('n', 'q?', '<nop>')
+
