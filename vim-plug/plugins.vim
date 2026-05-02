@@ -583,13 +583,23 @@ lua << EOF
     --    view_search = false, --"virtualtext", -- view for search count messages. Set to `false` to disable
     --  },
     --})
-    --require("notify").setup({
-    --  -- stages = "fade_in_slide_out",
-    --  timeout = 500,
-    --  -- minimum_width = 50,
-    --  max_width = 50,
-    --  --render = "compact",
-    --})
+    local notify = require("notify")
+    vim.notify = notify
+    print = function(...)
+        local print_safe_args = {}
+        local _ = { ... }
+        for i = 1, #_ do
+            table.insert(print_safe_args, tostring(_[i]))
+        end
+        notify(table.concat(print_safe_args, ' '), "info")
+    end
+    notify.setup({
+      -- stages = "fade_in_slide_out",
+      timeout = 500,
+      -- minimum_width = 50,
+      max_width = 50,
+      --render = "compact",
+    })
   end)
 EOF
 
