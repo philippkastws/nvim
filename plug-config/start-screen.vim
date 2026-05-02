@@ -1,14 +1,14 @@
 
 let g:startify_custom_header = [
-        \ '',
-        \ '│ ╲ ││',
-        \ '││╲╲││',
-        \ '││ ╲ │',
-        \ '',
-        \ ' NVIM',
-        \ '────────────────────────────────────────────',
-        \ 'Nvim is open source and freely distributable',
-        \ '────────────────────────────────────────────',
+        \ '   ',
+        \ '  │ ╲ ││',
+        \ '  ││╲╲││',
+        \ '  ││ ╲ │',
+        \ '   ',
+        \ '  NVIM',
+        \ '  ────────────────────────────────────────────',
+        \ '  Nvim is open source and freely distributable',
+        \ '  ────────────────────────────────────────────',
         \]
 
 " returns all modified files of the current git repo
