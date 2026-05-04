@@ -104,7 +104,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
-  Plug 'phaazon/hop.nvim'
+  " Plug 'phaazon/hop.nvim'
 
   " Plug 'mfussenegger/nvim-treehopper'
 
