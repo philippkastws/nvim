@@ -460,7 +460,7 @@ lua << EOF
     -- Gp.nvim (GPT prompt) Neovim AI plugin
     -- GpChatNew
     -- GpSelectAgent
-    local conf = {
+    local gpConf = {
       -- For customization, refer to Install > Configuration in the Documentation/Readme
       providers = {
         ollama = {
@@ -471,12 +471,12 @@ lua << EOF
       agents = {
         {
           provider = "ollama",
-          name = "OllamaLocalChatGemma3",
+          name = "OllamaLocalChatGemma4",
           chat = true,
           command = false,
           -- string with model name or table with model name and parameters
           model = {
-            model = "gemma3",
+            model = "gemma4",
             think = false, -- toggle thinking mode for Ollama's thinking models
           },
           -- system prompt (use this to specify the persona/role of the AI)
@@ -537,7 +537,7 @@ lua << EOF
         }
       }
     }
-    require("gp").setup(conf)
+    require("gp").setup(gpConf)
   end)
 EOF
 
@@ -608,17 +608,17 @@ lua << EOF
     require("codecompanion").setup({
       adapters = {
         http = {
-          local_gemma3 = function()
+          local_gemma4 = function()
             return require("codecompanion.adapters").extend("ollama", {
-              name = "gemma3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+              name = "gemma4", -- Give this adapter a different name to differentiate it from the default ollama adapter
               opts = {
                 vision = true,
                 stream = true,
               },
               schema = {
                 model = {
-                  --default = "gemma3",
-                  default = "gemma3:12b",
+                  --default = "gemma4",
+                  default = "gemma4:31b",
                   --default = "gpt-oss:120b-cloud",
                   --default = "minimax-m2:cloud",
                   --default = "gemma3:27b",
@@ -806,10 +806,10 @@ lua << EOF
           adapter = "local_ministral_3",
         },
         inline = {
-          adapter = "local_gemma3",
+          adapter = "local_gemma4",
         },
         agent = {
-          adapter = "local_gemma3",
+          adapter = "local_gemma4",
         },
       }
     })
