@@ -2382,7 +2382,13 @@ lua <<EOF
       { "<leader>.", "<cmd>:Telescope resume<cr>", desc = "Telescope resume", mode = "n" },
       { "<leader>c", "<cmd>:bd<cr>", desc = "Close buffer (:bd)", mode = "n" },
       { "<leader>r", "<cmd>:Ranger<cr>", desc = "Ranger (Q to quit)", mode = "n" },
-      { "<leader>e", "<cmd>:NvimTreeToggle<cr>", desc = "Nvim Tree Toggle", mode = "n" },
+      { "<leader>e", function()
+    if require("nvim-tree.api").tree.is_visible() then
+        require("nvim-tree.api").tree.close()
+    else
+        require("nvim-tree.api").tree.toggle(true)
+    end
+end, desc = "Toggle NvimTree and find current file", mode = "n" },
       --{ "<leader>T", "<cmd>:FloatermToggle<cr>", desc = "Terminal Toggle", mode = "n" },
       { "<leader>E", "<cmd>:Explore<cr>", desc = "Explore", mode = "n" },
       { "<leader>?", "<cmd>:Cheat40<cr>", desc = "Cheat Sheet", mode = "n" },
