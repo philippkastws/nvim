@@ -7,6 +7,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+  " https://github.com/tpope/vim-fugitive/pull/2218
   Plug 'tpope/vim-fugitive'
   " Better comments
   Plug 'tpope/vim-commentary'
