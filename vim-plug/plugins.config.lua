@@ -2055,3 +2055,4 @@ end, desc = "Toggle NvimTree and find current file", mode = "n" },
   vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = 'LSP code action' })
   vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.config({ virtual_text = true })<cr>', { desc = 'LSP diagnostic virual text' })
 end)
+

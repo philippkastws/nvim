@@ -5,7 +5,7 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
-let mapleader = " " " map leader to space
+source $HOME/.config/nvim/init.config.lua
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
 " if !exists('g:vscode')
