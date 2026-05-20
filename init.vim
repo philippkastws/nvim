@@ -97,6 +97,8 @@ EOF
 " let g:airline_theme='catppuccin'
 " let g:airline_theme='onedark'
 
+set termguicolors
+
 " colorscheme onedark
 " colorscheme catppuccin-macchiato
 " colorscheme tokyonight
