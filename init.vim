@@ -428,11 +428,11 @@ lua <<EOF
 -- Enable break indent
 -- vim.opt.breakindent = true
 
--- Save undo history
-vim.opt.undofile = true
+-- -- Save undo history
+-- vim.opt.undofile = true
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 5
+-- -- Minimal number of screen lines to keep above and below the cursor.
+-- vim.opt.scrolloff = 5
 
 -- Search for selected text
 vim.keymap.set('v', '/', "\"fy/\\V<C-R>f<CR>" )
