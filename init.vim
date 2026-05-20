@@ -8,64 +8,26 @@
 source $HOME/.config/nvim/init.config.lua
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
-" if !exists('g:vscode')
-  " source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/themes/airline.vim
-" endif
 
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 
-
 source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/autocmds.lua
 
-":set mouse=a
-":set ignorecase
-":set smartcase
-":set timeoutlen=1000
-":set list
-":set cursorline
-":set spelllang=en_us
-"":set spelllang=en_us,de_ch
-":set spelloptions=camel
-"":set spell
-"" disable spell checking for capital words
-":set spellcapcheck=
-"" disable spell by default
-" :set nospell
-" This is local to buffer, so we have to enable it on each new and opened buffer
-"autocmd BufRead,BufNewFile * setlocal spelloptions=camel
-
-" Spell-check Markdown files and Git Commit Messages
-" autocmd FileType markdown setlocal spell
+" Spell-check Git Commit Messages
 autocmd FileType gitcommit setlocal spell
 
 set clipboard+=unnamedplus
 
-" set tabstop=2       " number of visual spaces per TAB
-" set softtabstop=-1 " Use value of shiftwidth
-" set shiftwidth=2    " number of spaces to use for autoindent
-" set autoindent
-" set copyindent      " copy indent from the previous line
-" set smarttab       " Always use shiftwidth
-" set linebreak
-" filetype plugin indent on
-
-" for bqf (better quickfix) plugin
 set tabstop=2
 set shiftwidth=2
 
-" let g:better_escape_interval = 500
-" let g:better_escape_shortcut = ['jk', 'jj', 'kj']
-
 let g:auto_session_enabled = v:false
 
-" 'style': 'dark',
-" 'style': 'darker',
-" 'style': 'warmer',
 let g:onedark_config = {
     \ 'style': 'dark',
     \ 'transparent': 'true',
@@ -94,71 +56,24 @@ require("catppuccin").setup({
 });
 end)
 EOF
-" let g:airline_theme='catppuccin'
-" let g:airline_theme='onedark'
 
 set termguicolors
 
-" colorscheme onedark
-" colorscheme catppuccin-macchiato
-" colorscheme tokyonight
-" if !exists('g:vscode')
 colorscheme tokyonight-night
 colorscheme tokyonight-moon
-" endif
-" colorscheme github_dark
-" colorscheme doom-one
 colorscheme everforest
 " my everforest adaptions
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
-" if we are in iTerm2, adapt the background color
-" if $TERM_PROGRAM == 'iTerm.app'
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
-" endif
-" if the terminal emulator is ghostty, use the dimmed colorscheme
-" if $TERM_PROGRAM == 'ghostty' || $TERM_PROGRAM == 'tmux'
-"   colorscheme github_dark_dimmed
-"   highlight Keyword ctermfg=208 guifg=#FFA500
-"   highlight Type ctermfg=208 guifg=#FFA500
-"   highlight @type.builtin ctermfg=208 guifg=#FFA500
-"   highlight @type.parameter ctermfg=208 guifg=#FFA500
-"   highlight @type.definition ctermfg=208 guifg=#FFA500
-"   highlight @type ctermfg=208 guifg=#FFA500
-" endif
-" if $TERM_PROGRAM == 'WezTerm'
-"   colorscheme catppuccin-frappe
-" endif
 let g:airline_theme='bubblegum'
-lua <<EOF
--- vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#34462F' })
--- vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#462F2F' })
--- vim.api.nvim_set_hl(0, 'DiffChange', { bg = '#2F4146' })
--- vim.api.nvim_set_hl(0, 'DiffText', { bg = '#463C2F' })
 
--- vim.api.nvim_set_hl(0, 'DiffAdded', { fg = colors[3], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffRemoved', { fg = colors[2], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffChanged', { fg = colors[4], bold = true })
---
--- vim.api.nvim_set_hl(0, 'DiffviewWinSeparator', { fg = colors[9] })
--- vim.api.nvim_set_hl(0, 'DiffviewDiffDelete', { fg = colors[9] })
--- vim.api.nvim_set_hl(0, 'DiffviewFilePanelSelected', { fg = colors[6] })
---
--- vim.api.nvim_set_hl(0, 'DiffviewStatusAdded', { fg = colors[3], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffviewStatusUntracked', { fg = colors[8], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffviewStatusModified', { fg = colors[4], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffviewStatusRenamed', { fg = colors[3], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffviewStatusDeleted', { fg = colors[2], bold = true })
--- vim.api.nvim_set_hl(0, 'DiffviewStatusIgnored', { fg = colors[9], bold = true })
+lua <<EOF
 EOF
 
 set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram
-" if &diff
-"     colorscheme tokyonight-night
-" endif
-
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
@@ -174,7 +89,6 @@ nnoremap <a-j> J
 nnoremap <a-k> K
 nnoremap <a-h> H
 nnoremap <a-l> L
-" Map K to alt-k
 nnoremap <A-k> <cmd>:lua vim.lsp.buf.hover()<CR>
 " For quicker navigation map these
 map J <C-d>
