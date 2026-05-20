@@ -1,5 +1,7 @@
 # Nvim Mach 2 On Diet
 
+[Terminal of the 90is](terminal-of-the-90is.md)
+
 Neovim configuration focusing on quick file viewing, code inspection and editing
 
 Started one day off [Truly the Ultimate Neovim Config Nvim Mach 2](https://github.com/ChristianChiarulli/nvim)
@@ -62,5 +64,4 @@ Most important keybindings:
 
 
 - :SSave: Save session
-
 
