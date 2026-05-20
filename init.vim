@@ -106,71 +106,6 @@ nnoremap <A-a> ggVG
 ":set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:⏎ | :set list
 ":set listchars=space:·,tab:→\ ,trail:␣,precedes:«,extends:»,eol:↵ | :set list
 
-" lua <<EOF
-"
-" pcall(function()
-"
-" require'nvim-treesitter.configs'.setup {
-"   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-"   ensure_installed = { "c", "lua", "vim", "vimdoc", "typescript", "javascript", "tsx", "css", "scss", "gitcommit", "diff" },
-"
-"   -- Install parsers synchronously (only applied to `ensure_installed`)
-"   sync_install = false,
-"
-"   -- Automatically install missing parsers when entering buffer
-"   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-"   auto_install = true, --false,
-"
-"   -- List of parsers to ignore installing (for "all")
-"   -- ignore_install = { "javascript" },
-"
-"   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-"   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-"
-"   highlight = {
-"     -- `false` will disable the whole extension
-"     enable = true,
-"
-"     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-"     disable = function(lang, buf)
-"         local max_filesize = 100 * 1024 -- 100 KB
-"         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-"         if ok and stats and stats.size > max_filesize then
-"             return true
-"         end
-"     end,
-"
-"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
-"     -- Instead of true it can also be a list of languages
-"     additional_vim_regex_highlighting = false,
-"   },
-"   indent = {
-"       enable = true,
-"   },
-" }
-"
-" end)
-"
-" EOF
-
-" lua <<EOF
-
-" pcall(function()
-
-" local tab_number = 2
-" vim.opt.showtabline = tab_number                -- always show tabs
-" vim.opt.smartcase = true                        -- smart case
-" vim.opt.smartindent = true                      -- make indenting smarter again
-" vim.opt.expandtab = true                        -- convert tabs to spaces
-" vim.opt.shiftwidth = tab_number                 -- the number of spaces inserted for each indentation
-" vim.opt.tabstop = tab_number                    -- insert 2 spaces for a tab
-
-" end)
-
-" EOF
-
 " Fix copilot tab to accept suggestion
 lua <<EOF
 
@@ -299,26 +234,21 @@ nmap <leader>m <C-W>o
 " map <leader>p "0p
 " map <leader>P "0P
 
-" if !exists('g:vscode')
 " Navigate buffers
 nnoremap <S-l> :bnext<CR>
 nnoremap <S-h> :bprevious<CR>
-" endif
 
 " Repeat last command
 nnoremap <leader>r @:
 vnoremap <leader>r @:
 
-"let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " case insensitive
 
 " easymotion over window
-" nmap <Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader>s <Plug>(easymotion-s)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-f)
 vmap <Leader><Leader>s <Plug>(easymotion-s)
 
-"nmap s <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-s)
 vmap s <Plug>(easymotion-s)
 
@@ -337,18 +267,6 @@ inoremap <c-u> <C-O>u
 
 lua <<EOF
 
--- vim.o.completeopt = 'menuone,noselect'
-
--- Enable break indent
--- vim.opt.breakindent = true
-
--- -- Save undo history
--- vim.opt.undofile = true
-
--- -- Minimal number of screen lines to keep above and below the cursor.
--- vim.opt.scrolloff = 5
-
--- Search for selected text
 vim.keymap.set('v', '/', "\"fy/\\V<C-R>f<CR>" )
 
 EOF
@@ -375,15 +293,7 @@ inoremap <silent> <Esc> <Esc>`^
 " keep cursor position when yanking in visual mode
 xnoremap <silent> y ygv<Esc>
 
-" set updatetime 60000
-" " add all places that you've stayed at for a longer time ('updatetime'; default is 4 seconds)
-" autocmd CursorHold * normal! m'
-
 map <leader>J :call AllAnyJumpToggle()<CR>
-
-" Terminal
-" breaks lazygit esc
-"tnoremap <Esc> <C-\><C-n>
 
 " Stop yanking on past in selection
 vnoremap p P
