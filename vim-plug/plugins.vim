@@ -240,7 +240,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'esmuellert/nvim-eslint'
 
-  " endif
+  Plug 'mikavilpas/yazi.nvim'
 
 call plug#end()
 
