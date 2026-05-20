@@ -12,7 +12,7 @@ Started one day off [Truly the Ultimate Neovim Config Nvim Mach 2](https://githu
 
 On Mac:
 ```
-brew install neovim ranger fzf ripgrep bat the_silver_searcher lazygit
+brew install neovim ranger fzf ripgrep bat the_silver_searcher lazygit yazi
 ```
 
 ### Clone this config
