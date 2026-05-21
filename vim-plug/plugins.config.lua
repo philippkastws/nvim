@@ -1959,6 +1959,7 @@ pcall(function()
     { "<leader>.", "<cmd>:Telescope resume<cr>", desc = "Telescope resume", mode = "n" },
     { "<leader>c", "<cmd>:bd<cr>", desc = "Close buffer (:bd)", mode = "n" },
     { "<leader>r", "<cmd>:Ranger<cr>", desc = "Ranger (Q to quit)", mode = "n" },
+    { "<leader>z", "<cmd>:Yazi<cr>", desc = "Yazi (q to quit)", mode = "n" },
     { "<leader>e", function()
   if require("nvim-tree.api").tree.is_visible() then
       require("nvim-tree.api").tree.close()
