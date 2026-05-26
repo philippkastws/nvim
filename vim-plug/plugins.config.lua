@@ -1927,12 +1927,12 @@ pcall(function()
         --style = "none",
       },
       diagnostics = "nvim_lsp",
-      numbers = "buffer_id",
+      -- numbers = "buffer_id",
       separator_style = "slant", --  "slant" | "slope" | "thick" | "thin" |
       custom_filter = function(buf_number, buf_numbers)
         local bufname = vim.fn.bufname(buf_number)
         if
-          bufname == "fugitive:///Users/kast/.config/nvim/.git//"
+          bufname:match("^fugitive://.*%.git//$")
           or vim.bo[buf_number].buftype == "quickfix"
         then
           return false
