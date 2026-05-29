@@ -2076,3 +2076,11 @@ end, desc = "Toggle NvimTree and find current file", mode = "n" },
   vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.config({ virtual_text = true })<cr>', { desc = 'LSP diagnostic virual text' })
 end)
 
+
+pcall(function()
+  require("everforest").setup({
+    colours_override = function (palette)
+      palette.red = "#30baac"
+    end
+  })
+end)
