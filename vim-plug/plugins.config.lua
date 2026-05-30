@@ -2079,8 +2079,8 @@ end)
 
 pcall(function()
   require("everforest").setup({
-    colours_override = function (palette)
-      palette.red = "#30baac"
-    end
+    -- colours_override = function (palette)
+    --   palette.red = "#30baac"
+    -- end
   })
 end)

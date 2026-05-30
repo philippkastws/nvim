@@ -227,7 +227,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'morhetz/gruvbox'
   "Plug 'sainnhe/everforest'
-  Plug 'neanias/everforest-nvim', { 'branch': 'main' }
+  Plug 'philippkastws/everforest-nvim'
   Plug 'robitx/gp.nvim'
 
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
