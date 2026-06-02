@@ -492,6 +492,10 @@ EOF
 lua <<EOF
 EOF
 
+" for vim-jsx-typescript
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
 " Automatically install missing plugins on startup
