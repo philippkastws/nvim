@@ -41,8 +41,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'lifepillar/vim-cheat40'
   Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
   Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'peitalin/vim-jsx-typescript'
 
   Plug 'preservim/nerdtree'
 
