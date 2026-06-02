@@ -42,6 +42,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'lifepillar/vim-cheat40'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'MaxMEllon/vim-jsx-pretty'
 
   Plug 'preservim/nerdtree'
 
@@ -491,10 +492,6 @@ EOF
 
 lua <<EOF
 EOF
-
-" for vim-jsx-typescript
-" set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
