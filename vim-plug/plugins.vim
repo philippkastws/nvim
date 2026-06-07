@@ -247,36 +247,6 @@ call plug#end()
 
 source $HOME/.config/nvim/vim-plug/plugins.config.lua
 
-lua <<EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua <<EOF
-EOF
-
-lua <<EOF
-EOF
-
 "let g:any_jump_disable_default_keybindings = 1
 " Optionally do not ignore ignored directories for any jump
 let g:any_jump_disable_vcs_ignore = 0
@@ -291,42 +261,6 @@ function! AllAnyJumpToggle()
     endif
 endfunction
 
-lua <<EOF
-EOF
-
-lua <<EOF
-EOF
-
-lua <<EOF
-EOF
-
-lua <<EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
 " lua << EOF
 "  -- jump to the begin of scope, uses hop, starting with a for nearest scope if not visible in buffer
 "  vim.keymap.set("n", "<space>i", function()
@@ -337,31 +271,6 @@ EOF
 " " select in visual mode entire function using hop
 " omap     <silent> m :<C-U>lua require('tsht').nodes()<CR>
 " xnoremap <silent> m :lua require('tsht').nodes()<CR>
-
-lua << EOF
-EOF
-
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
-
-lua << EOF
-EOF
 
 " lua << EOF
 "   pcall(function()
@@ -430,16 +339,7 @@ EOF
   " enable_suggestions_on_files = "*", -- pattern matching syntax to enable suggestions on specific files, either a string or a list of strings
   " disable_url_path_completion = false, -- cf Backend
 
-
 " set termguicolors
-lua << EOF
-EOF
-
-lua <<EOF
-EOF
-
-lua <<EOF
-EOF
 
 " autocmd! User avante.nvim
 " lua << EOF
@@ -489,10 +389,6 @@ EOF
 "   end)
 " EOF
 
-
-lua <<EOF
-EOF
-
 let g:github_enterprise_urls = ['https://git.autodesk.com']
 
 " Automatically install missing plugins on startup
@@ -500,8 +396,6 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
-
-
 
 " " packer plugin manager
 " lua << EOF
@@ -529,6 +423,4 @@ autocmd VimEnter *
 "   end
 " end)
 " EOF
-
-
 
