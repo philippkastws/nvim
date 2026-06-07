@@ -74,6 +74,10 @@ lua <<EOF
 EOF
 
 set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram
+" Try to aling lines better
+" If only indent whitespace changes
+set diffopt-=iwhite
+set diffopt+=linematch:60
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
