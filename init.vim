@@ -73,7 +73,7 @@ let g:airline_theme='bubblegum'
 lua <<EOF
 EOF
 
-set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram
+set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram,inline:char
 " Try to aling lines better
 " If only indent whitespace changes
 set diffopt-=iwhite
