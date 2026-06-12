@@ -66,6 +66,7 @@ colorscheme everforest
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
+colorscheme nordfox
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 let g:airline_theme='bubblegum'
