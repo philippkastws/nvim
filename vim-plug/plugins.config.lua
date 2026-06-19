@@ -1369,7 +1369,7 @@ pcall(function()
         require("telescope.themes").get_dropdown {
           -- even more opts
         }
-      }
+      },
     },
     defaults = {
       mappings = {
@@ -1382,6 +1382,7 @@ pcall(function()
   })
   telescope.load_extension('neoclip')
   telescope.load_extension("ui-select")
+  telescope.load_extension("live_grep_args")
 end)
 
 pcall(function()
@@ -1966,7 +1967,7 @@ pcall(function()
     { "<leader>q", "<cmd>:qall<cr>", desc = "Quit", mode = "n" },
     { "<leader>f", "<cmd>:Telescope find_files<cr>", desc = "Find File", mode = "n" },
     { "<leader>F", "<cmd>:Telescope find_files hidden=true no_ignore=true<cr>", desc = "Find File (incl hidden)", mode = "n" },
-    { "<leader>g", "<cmd>:Telescope live_grep<cr>", desc = "Grep Text", mode = "n", icon = "󰺮" },
+    { "<leader>g", "<cmd>:lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", desc = "Grep Text", mode = "n", icon = "󰺮" },
     { "<leader>G", "<cmd>:Telescope live_grep hidden=true glob_pattern=*<cr>", desc = "Grep Text (incl hidden)", icon = "󰺮", mode = "n" },
     { "<leader>h", "<cmd>:Telescope command_history<cr>", desc = "Command History (:Telescope command_history)", mode = "n" },
     { "<leader>i", "<cmd>:Git<cr><C-w>5-", desc = "Git Fugitive (:Git)", mode = "n" },

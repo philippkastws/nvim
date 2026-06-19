@@ -63,6 +63,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.0' }
+  Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 
 "  Plug 'rmagatti/auto-session'
 "  Plug 'rmagatti/session-lens'
