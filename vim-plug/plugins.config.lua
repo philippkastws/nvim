@@ -1917,13 +1917,302 @@ end)
 
 pcall(function()
   local bufferline = require("bufferline")
+  local fgColor = "#000000"
+  local bgColor = "#555555"
+  local sgColor = "#000000"
+  local fillFgColor = "#555555"
+  local fillBgColor = "#000000"
+  local selectedFgColor = "#000000"
+  local selectedBgColor = "#aaaaaa"
   bufferline.setup{
+    highlights = {
+        fill = {
+            fg = fillFgColor,
+            bg = fillBgColor,
+        },
+        background = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        tab = {
+            fg = bgColor,
+            bg = bgColor,
+        },
+        tab_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        tab_separator = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        tab_separator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+        },
+        tab_close = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        close_button = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        close_button_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        close_button_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        buffer_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        buffer_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
+        numbers = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        numbers_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        numbers_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
+        diagnostic = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        diagnostic_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
+        hint = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        hint_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        hint_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        hint_diagnostic = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        hint_diagnostic_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        hint_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        info = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        info_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        info_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        info_diagnostic = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        info_diagnostic_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        info_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        warning = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        warning_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        warning_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        warning_diagnostic = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        warning_diagnostic_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        warning_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        error = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        error_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        error_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        error_diagnostic = {
+            fg = fgColor,
+            bg = bgColor,
+            sp = sgColor,
+        },
+        error_diagnostic_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        error_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
+        modified = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        modified_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        modified_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        duplicate_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            italic = true,
+        },
+        duplicate_visible = {
+            fg = fgColor,
+            bg = bgColor,
+            italic = true,
+        },
+        duplicate = {
+            fg = fgColor,
+            bg = bgColor,
+            italic = true,
+        },
+        separator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        separator_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        separator = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        indicator_visible = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        indicator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        pick_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
+        pick_visible = {
+            fg = fgColor,
+            bg = bgColor,
+            bold = true,
+            italic = true,
+        },
+        pick = {
+            fg = fgColor,
+            bg = bgColor,
+            bold = true,
+            italic = true,
+        },
+        offset_separator = {
+            fg = fgColor,
+            bg = bgColor,
+        },
+        trunc_marker = {
+            fg = fgColor,
+            bg = bgColor,
+        }
+    },
     options = {
       style_preset = bufferline.style_preset.no_italic,
       color_icons = true,
       -- underline indicator
       indicator = {
-        style = "underline",
+        --style = "underline",
         --style = "icon",
         --style = "none",
       },

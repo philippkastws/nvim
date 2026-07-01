@@ -66,8 +66,8 @@ colorscheme everforest
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
-colorscheme nordfox
-"colorscheme vague
+" colorscheme nordfox
+colorscheme vague
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 let g:airline_theme='bubblegum'
@@ -83,6 +83,8 @@ set diffopt+=linematch:60
 
 :hi SpellBad gui=undercurl guibg=#552222 ctermbg=224
 
+" Set cursor line color
+:highlight CursorLine ctermbg=11 guibg=#222222
 " Set selected line number color
 :hi CursorLineNr ctermfg=11 guifg=Yellow
 
