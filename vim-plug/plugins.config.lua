@@ -1917,12 +1917,12 @@ end)
 
 pcall(function()
   local bufferline = require("bufferline")
-  local fgColor = "#000000"
+  local fgColor = "#222222"
   local bgColor = "#555555"
-  local sgColor = "#000000"
+  local sgColor = "#222222"
   local fillFgColor = "#555555"
-  local fillBgColor = "#000000"
-  local selectedFgColor = "#000000"
+  local fillBgColor = "#222222"
+  local selectedFgColor = "#222222"
   local selectedBgColor = "#aaaaaa"
   bufferline.setup{
     highlights = {
