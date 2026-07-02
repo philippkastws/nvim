@@ -63,11 +63,11 @@ colorscheme tokyonight-night
 colorscheme tokyonight-moon
 colorscheme everforest
 " my everforest adaptions
-" highlight! link TSKeyword Purple
-" highlight! link TSKeywordFunction Purple
-" highlight! link TSKeywordReturn Purple
-colorscheme nordfox
-" colorscheme vague
+highlight! link TSKeyword Purple
+highlight! link TSKeywordFunction Purple
+highlight! link TSKeywordReturn Purple
+" colorscheme nordfox
+colorscheme vague
 
 " Normal texts, set background to NONE for transparency
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
