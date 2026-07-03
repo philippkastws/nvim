@@ -2134,15 +2134,15 @@ pcall(function()
             italic = true,
         },
         modified = {
-            fg = "#aa5555",
+            fg = "#996666",
             bg = bgColor,
         },
         modified_visible = {
-            fg = "#aa5555",
-            bg = bgColor,
+            fg = "#996666",
+            bg = bgcolor,
         },
         modified_selected = {
-            fg = "#ff0000",
+            fg = "#aa5555",
             bg = selectedBgColor,
         },
         duplicate_selected = {
