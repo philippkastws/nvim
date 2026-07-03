@@ -1915,17 +1915,17 @@ pcall(function()
   }
 end)
 
-pcall(function()
+-- pcall(function()
   local bufferline = require("bufferline")
   -- local fgColor = "#222222"
   -- local bgColor = "#555555"
   -- local sgColor = "#222222"
   -- local fillFgColor = "#555555"
   -- local fillBgColor = "#222222"
-  -- local selectedFgColor = "#222222"
-  -- local selectedBgColor = "#aaaaaa"
+  local selectedFgColor = "#222222"
+  local selectedBgColor = "#aaaaaa"
   bufferline.setup{
-    -- highlights = {
+    highlights = {
     --     fill = {
     --         fg = fillFgColor,
     --         bg = fillBgColor,
@@ -1938,19 +1938,19 @@ pcall(function()
     --         fg = bgColor,
     --         bg = bgColor,
     --     },
-    --     tab_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --     },
+        tab_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
     --     tab_separator = {
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     tab_separator_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --     },
+        tab_separator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+        },
     --     tab_close = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -1963,20 +1963,20 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     close_button_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --     },
+        close_button_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
     --     buffer_visible = {
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     buffer_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        buffer_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
     --     numbers = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -1985,12 +1985,12 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     numbers_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        numbers_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
     --     diagnostic = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -1999,12 +1999,12 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     diagnostic_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
     --     hint = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2014,13 +2014,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     hint_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        hint_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     hint_diagnostic = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2030,13 +2030,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     hint_diagnostic_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        hint_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     info = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2046,13 +2046,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     info_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        info_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     info_diagnostic = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2062,13 +2062,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     info_diagnostic_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        info_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     warning = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2078,13 +2078,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     warning_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        warning_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     warning_diagnostic = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2094,13 +2094,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     warning_diagnostic_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        warning_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     error = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2110,13 +2110,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     error_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        error_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     error_diagnostic = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2126,13 +2126,13 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     error_diagnostic_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         sp = sgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        error_diagnostic_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            -- sp = sgColor,
+            bold = true,
+            italic = true,
+        },
     --     modified = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2141,15 +2141,15 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     modified_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --     },
-    --     duplicate_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         italic = true,
-    --     },
+        modified_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        duplicate_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            italic = true,
+        },
     --     duplicate_visible = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2160,10 +2160,10 @@ pcall(function()
     --         bg = bgColor,
     --         italic = true,
     --     },
-    --     separator_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --     },
+        separator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
     --     separator_visible = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2176,16 +2176,16 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     },
-    --     indicator_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --     },
-    --     pick_selected = {
-    --         fg = selectedFgColor,
-    --         bg = selectedBgColor,
-    --         bold = true,
-    --         italic = true,
-    --     },
+        indicator_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+        },
+        pick_selected = {
+            fg = selectedFgColor,
+            bg = selectedBgColor,
+            bold = true,
+            italic = true,
+        },
     --     pick_visible = {
     --         fg = fgColor,
     --         bg = bgColor,
@@ -2206,9 +2206,9 @@ pcall(function()
     --         fg = fgColor,
     --         bg = bgColor,
     --     }
-    -- },
+    },
     options = {
-      style_preset = bufferline.style_preset.no_italic,
+      -- style_preset = bufferline.style_preset.no_italic,
       color_icons = true,
       -- underline indicator
       indicator = {
@@ -2218,7 +2218,7 @@ pcall(function()
       },
       diagnostics = "nvim_lsp",
       -- numbers = "buffer_id",
-      separator_style = "slant", --  "slant" | "slope" | "thick" | "thin" |
+      -- separator_style = "slant", --  "slant" | "slope" | "thick" | "thin" |
       custom_filter = function(buf_number, buf_numbers)
         local bufname = vim.fn.bufname(buf_number)
         if
@@ -2240,7 +2240,7 @@ pcall(function()
     }
   }
   require("scope").setup({})
-end)
+-- end)
 
 pcall(function()
   require("tokyodark").setup({})
