@@ -59,8 +59,8 @@ EOF
 
 set termguicolors
 
-" colorscheme tokyonight-night
-" colorscheme tokyonight-moon
+colorscheme tokyonight-night
+colorscheme tokyonight-moon
 colorscheme everforest
 " my everforest adaptions
 highlight! link TSKeyword Purple
