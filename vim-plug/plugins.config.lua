@@ -1935,7 +1935,7 @@ pcall(function()
             bg = bgColor,
         },
         tab = {
-            fg = bgColor,
+            fg = fgColor,
             bg = bgColor,
         },
         tab_selected = {
