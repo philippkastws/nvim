@@ -61,9 +61,9 @@ set termguicolors
 
 " colorscheme tokyonight-night
 " colorscheme tokyonight-moon
-" colorscheme everforest
+colorscheme everforest
 " colorscheme nordfox
-colorscheme vague
+" colorscheme vague
 " my everforest adaptions
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
