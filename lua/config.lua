@@ -48,7 +48,7 @@ vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- Hide command line unless needed
---vim.o.cmdheight=0
+vim.o.cmdheight=0
 
 -- Fixes tree-sitter indentation for Typescript
 vim.api.nvim_command('filetype indent off')
