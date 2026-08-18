@@ -68,6 +68,10 @@ colorscheme everforest
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
+" Show the syntax highlight group under cursor
+nnoremap <F10> <cmd>echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+    \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+    \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>kk
 
 " Normal texts, set background to NONE for transparency
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
