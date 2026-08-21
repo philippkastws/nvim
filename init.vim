@@ -70,6 +70,11 @@ highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
 highlight! link typescriptEndColons Blue
 
+" hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
+" hi DiffChange   gui=none    guifg=NONE          guibg=#00ff00
+" hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
+hi DiffText     gui=none    guifg=NONE          guibg=#546569
+
 " Show the syntax highlight group under cursor
 nnoremap <F10> <cmd>echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
     \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
