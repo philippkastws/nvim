@@ -69,6 +69,7 @@ highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
 highlight! link typescriptEndColons Blue
+hi markdownH1 guifg=LightBlue gui=bold
 
 " hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
 " hi DiffChange   gui=none    guifg=NONE          guibg=#00ff00
