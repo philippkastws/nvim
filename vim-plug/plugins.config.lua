@@ -2375,3 +2375,9 @@ pcall(function()
     end
   })
 end)
+
+pcall(function()
+  require('render-markdown').setup({
+      enabled = false,
+  })
+end)
