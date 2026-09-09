@@ -75,10 +75,11 @@ highlight! link typescriptEndColons Blue
 " hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
 hi DiffText     gui=none    guifg=NONE          guibg=#6a818f
 
-" Show the syntax highlight group under cursor
-nnoremap <F10> <cmd>echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-    \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-    \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>kk
+" Show syntax highlighting groups for the word under the cursor using F10
+lua vim.keymap.set('n', '<F10>', ':Inspect<CR>', { desc = 'Inspect highlight groups under cursor' })
+" nnoremap <F10> <cmd>echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+"     \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+"     \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>kk
 
 " Normal texts, set background to NONE for transparency
 highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
