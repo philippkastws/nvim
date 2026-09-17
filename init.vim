@@ -119,6 +119,9 @@ map K <C-u>
 nnoremap <C-a> ggVG
 nnoremap <A-a> ggVG
 
+nnoremap 5 [
+nnoremap 6 ]
+
 " show line numbers
 :set number
 ":set relativenumber
