@@ -119,6 +119,11 @@ map K <C-u>
 nnoremap <C-a> ggVG
 nnoremap <A-a> ggVG
 
+" map F3 to ]
+nnoremap <F3> ]
+" map shift-F3 to [
+nnoremap <S-F3> [
+
 " show line numbers
 :set number
 ":set relativenumber
