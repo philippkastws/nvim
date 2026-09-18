@@ -124,6 +124,9 @@ nnoremap <F3> ]
 " map shift-F3 to [
 nnoremap <S-F3> [
 
+nnoremap 5 [
+nnoremap 6 ]
+
 " show line numbers
 :set number
 ":set relativenumber
