@@ -7,8 +7,7 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-  " https://github.com/tpope/vim-fugitive/pull/2218
-  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-fugitive' " https://github.com/tpope/vim-fugitive/pull/2218
   Plug 'tpope/vim-commentary'
   Plug 'easymotion/vim-easymotion'
   Plug 'psliwka/vim-smoothie'
@@ -19,70 +18,82 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'tpope/vim-rhubarb'
   Plug 'voldikss/vim-floaterm'
-  "Plug 'mhinz/vim-startify'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
-  "Plug 'lifepillar/vim-cheat40'
   Plug 'leafgarland/typescript-vim'
   Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'peitalin/vim-jsx-typescript'
-  "Plug 'preservim/nerdtree'
-  "Plug 'will133/vim-dirdiff'
   Plug 'pechorin/any-jump.vim'
-  "Plug 'max397574/better-escape.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.0' }
   Plug 'nvim-telescope/telescope-live-grep-args.nvim'
-  "Plug 'rmagatti/auto-session'
-  "Plug 'rmagatti/session-lens'
-  "Plug 'jreybert/vimagit'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'nvim-mini/mini.nvim', { 'version': '*' }
+  Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp' " completion plugin
+  Plug 'github/copilot.vim' " tab completion over cmp!?
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'nvim-tree/nvim-tree.lua'
+  Plug 'RRethy/vim-illuminate'
+  Plug 'sindrets/diffview.nvim'
+  Plug 'kdheepak/lazygit.nvim'
+  Plug 'tpope/vim-sensible'
+  Plug 'kevinhwang91/nvim-bqf' " Better quickfix window
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+  Plug 'folke/which-key.nvim'
+  Plug 'folke/trouble.nvim'
+  Plug 'chentoast/marks.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter-context'
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
+  Plug 'philippkastws/everforest-nvim'
+  Plug 'vim-scripts/BufOnly.vim'
+  Plug 'rmagatti/auto-session'
+  Plug 'esmuellert/nvim-eslint'
+  Plug 'mikavilpas/yazi.nvim'
+  "Plug 'folke/todo-comments.nvim'
+  "Plug 'vague-theme/vague.nvim'
+  "Plug 'robitx/gp.nvim'
+  "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  "Plug 'olimorris/codecompanion.nvim'
   "Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   "Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   "Plug 'joshdick/onedark.vim'
   "Plug 'rebelot/kanagawa.nvim'
   "Plug 'sudormrfbin/cheatsheet.nvim'
   "Plug 'echasnovski/mini.icons'
-  Plug 'nvim-mini/mini.nvim', { 'version': '*' }
-  Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
+  "Plug 'max397574/better-escape.nvim'
+  "Plug 'mhinz/vim-startify'
+  "Plug 'lifepillar/vim-cheat40'
+  "Plug 'preservim/nerdtree'
+  "Plug 'will133/vim-dirdiff'
+  "Plug 'rmagatti/auto-session'
+  "Plug 'rmagatti/session-lens'
+  "Plug 'jreybert/vimagit'
   "Plug 'tiagovla/scope.nvim'
-  "" Completion
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-cmdline'
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'github/copilot.vim' " tab completion over cmp!?
-  "" LSP Support
   "Plug 'neovim/nvim-lspconfig'             " Required
-  Plug 'williamboman/mason.nvim'           " Optional
-  Plug 'williamboman/mason-lspconfig.nvim' " Optional
-  "  Snippets
-  " Plug 'L3MON4D3/LuaSnip'             " Required
+  "Plug 'L3MON4D3/LuaSnip'             " Required
   "Plug 'rafamadriz/friendly-snippets' " Optional
-  " Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
-  " Plug 'phaazon/hop.nvim'
-  " Plug 'mfussenegger/nvim-treehopper'
-  Plug 'nvim-tree/nvim-tree.lua'
+  "Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+  "Plug 'phaazon/hop.nvim'
+  "Plug 'mfussenegger/nvim-treehopper'
   "Plug 'justinmk/vim-sneak'
-  Plug 'RRethy/vim-illuminate'
-  Plug 'sindrets/diffview.nvim'
-  Plug 'kdheepak/lazygit.nvim'
   "Plug 'kkharji/sqlite.lua'
   "Plug 'AckslD/nvim-neoclip.lua'
   "Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-sensible'
-  Plug 'kevinhwang91/nvim-bqf' " Better quickfix window
   "Plug 'lukas-reineke/indent-blankline.nvim'
-  "" Find helper, but is slow on some files
-  "" Plug 'folke/flash.nvim'
+  "Plug 'folke/flash.nvim'
   "Plug 'windwp/nvim-autopairs'
   "Plug 'tpope/vim-sleuth'
-  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   "Plug 'projekt0n/github-nvim-theme'
   "Plug 'EdenEast/nightfox.nvim'
   "Plug 'rose-pine/neovim'
@@ -91,24 +102,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'folke/zen-mode.nvim'
   "Plug 'kevinhwang91/nvim-hlslens'
   "Plug 'petertriho/nvim-scrollbar'
-  Plug 'chentoast/marks.nvim'
-  " Run on console
-  " tabby serve --device metal --model StarCoder-1B
-  " Including chat
-  " tabby serve --device metal --model StarCoder-1B --chat-model WizardCoder-3B
-  " tabby serve --device metal --model StarCoder2-3B --chat-model WizardCoder-3B
-  " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
-  " you define in the local http server
-  " Plug 'TabbyML/vim-tabby'
+  "Plug 'TabbyML/vim-tabby'
   "Plug 'romgrk/doom-one.vim'
   "Plug 'David-Kunz/gen.nvim'
   "Plug 'nvim-pack/nvim-spectre'
   "Plug 'tiagovla/tokyodark.nvim'
-  "" Plug 'huggingface/llm.nvim'
-  "" Plug 'wellle/context.vim'
-  Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'nvim-treesitter/nvim-treesitter-context'
-  Plug 'nvim-telescope/telescope-ui-select.nvim'
+  "Plug 'huggingface/llm.nvim'
+  "Plug 'wellle/context.vim'
   "Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
   "Plug 'hedyhli/outline.nvim'
   "Plug 'nomnivore/ollama.nvim'
@@ -120,34 +120,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "  \ 'do': 'yarn install --frozen-lockfile --production',
   "  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
   "Plug 'kwkarlwang/bufjump.nvim'
-  "" Avante
-  "" Deps
-  "" Plug 'nvim-lua/plenary.nvim'
+  "Plug 'nvim-lua/plenary.nvim'
   "Plug 'MunifTanjim/nui.nvim'
   "Plug 'MeanderingProgrammer/render-markdown.nvim'
-  "" Optional deps
-  "" Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-  "" Doesn't work well after pasting from clipboard in search
-  "" Plug 'HakonHarnes/img-clip.nvim'
+  "Plug 'HakonHarnes/img-clip.nvim'
   "Plug 'zbirenbaum/copilot.lua'
   "Plug 'stevearc/dressing.nvim' " for enhanced input UI
   "Plug 'folke/snacks.nvim' " for modern input UI
   "Plug 'rcarriga/nvim-notify'
   "Plug 'folke/noice.nvim'
-  Plug 'folke/which-key.nvim'
-  Plug 'folke/trouble.nvim'
-  "Plug 'olimorris/codecompanion.nvim'
   "Plug 'morhetz/gruvbox'
-  ""Plug 'sainnhe/everforest'
-  Plug 'philippkastws/everforest-nvim'
-  "Plug 'vague-theme/vague.nvim'
-  "Plug 'robitx/gp.nvim'
-  "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-  Plug 'vim-scripts/BufOnly.vim'
-  "Plug 'folke/todo-comments.nvim'
-  Plug 'rmagatti/auto-session'
-  Plug 'esmuellert/nvim-eslint'
-  Plug 'mikavilpas/yazi.nvim'
+  "Plug 'sainnhe/everforest'
 
 call plug#end()
 
