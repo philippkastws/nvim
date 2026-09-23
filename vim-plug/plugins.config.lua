@@ -1354,14 +1354,6 @@ pcall(function()
 end)
 
 pcall(function()
-  require('neoclip').setup({
-    history = 10000,
-    enable_persistent_history = true,
-    on_select = {
-      move_to_front = true,
-      close_telescope = true,
-    },
-  })
   local telescope = require('telescope')
   telescope.setup({
     extensions = {
@@ -1380,9 +1372,21 @@ pcall(function()
       }
     }
   })
-  telescope.load_extension('neoclip')
   telescope.load_extension("ui-select")
   telescope.load_extension("live_grep_args")
+end)
+
+pcall(function()
+  require('neoclip').setup({
+    history = 10000,
+    enable_persistent_history = true,
+    on_select = {
+      move_to_front = true,
+      close_telescope = true,
+    },
+  })
+  local telescope = require('telescope')
+  telescope.load_extension('neoclip')
 end)
 
 pcall(function()
