@@ -135,7 +135,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'rcarriga/nvim-notify'
   "Plug 'folke/noice.nvim'
   Plug 'folke/which-key.nvim'
-  "Plug 'folke/trouble.nvim'
+  Plug 'folke/trouble.nvim'
   "Plug 'olimorris/codecompanion.nvim'
   "Plug 'morhetz/gruvbox'
   ""Plug 'sainnhe/everforest'
