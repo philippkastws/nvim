@@ -91,7 +91,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'folke/zen-mode.nvim'
   "Plug 'kevinhwang91/nvim-hlslens'
   "Plug 'petertriho/nvim-scrollbar'
-  "Plug 'chentoast/marks.nvim'
+  Plug 'chentoast/marks.nvim'
   " Run on console
   " tabby serve --device metal --model StarCoder-1B
   " Including chat
