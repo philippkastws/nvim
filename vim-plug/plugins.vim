@@ -143,7 +143,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'vague-theme/vague.nvim'
   "Plug 'robitx/gp.nvim'
   "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-  "Plug 'vim-scripts/BufOnly.vim'
+  Plug 'vim-scripts/BufOnly.vim'
   "Plug 'folke/todo-comments.nvim'
   Plug 'rmagatti/auto-session'
   Plug 'esmuellert/nvim-eslint'
