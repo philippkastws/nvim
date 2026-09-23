@@ -75,7 +75,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'AckslD/nvim-neoclip.lua'
   "Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-sensible'
-  "Plug 'kevinhwang91/nvim-bqf'
+  Plug 'kevinhwang91/nvim-bqf' " Better quickfix window
   "Plug 'lukas-reineke/indent-blankline.nvim'
   "" Find helper, but is slow on some files
   "" Plug 'folke/flash.nvim'
