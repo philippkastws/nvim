@@ -87,7 +87,7 @@ highlight Normal ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 highlight NormalNC ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 highlight NormalFloat ctermfg=223 ctermbg=235 guifg=#d3c6aa guibg=NONE
 
-let g:airline_theme='bubblegum'
+let g:airline_theme='base16_ashes'
 
 set diffopt+=filler,iwhite,indent-heuristic,algorithm:histogram,inline:char
 " Try to aling lines better
