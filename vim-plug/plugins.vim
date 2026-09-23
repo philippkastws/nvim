@@ -146,7 +146,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'vim-scripts/BufOnly.vim'
   "Plug 'folke/todo-comments.nvim'
   Plug 'rmagatti/auto-session'
-  "Plug 'esmuellert/nvim-eslint'
+  Plug 'esmuellert/nvim-eslint'
   Plug 'mikavilpas/yazi.nvim'
 
 call plug#end()
