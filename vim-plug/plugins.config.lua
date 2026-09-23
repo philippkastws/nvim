@@ -206,360 +206,360 @@ pcall(function()
   require('nvim-eslint').setup({})
 end)
 
-pcall(function()
-  -- Gp.nvim (GPT prompt) Neovim AI plugin
-  -- GpChatNew
-  -- GpSelectAgent
-  local gpConf = {
-    -- For customization, refer to Install > Configuration in the Documentation/Readme
-    providers = {
-      ollama = {
-        disable = false,
-        endpoint = "http://localhost:11434/api/chat",
-      }
-    },
-    agents = {
-      {
-        provider = "ollama",
-        name = "OllamaLocalChatGemma4",
-        chat = true,
-        command = false,
-        -- string with model name or table with model name and parameters
-        model = {
-          model = "gemma4",
-          think = false, -- toggle thinking mode for Ollama's thinking models
-        },
-        -- system prompt (use this to specify the persona/role of the AI)
-        system_prompt = "You are a general AI assistant.",
-      },
-      {
-        provider = "ollama",
-        name = "OllamaLocalChatDevstral",
-        chat = true,
-        command = false,
-        -- string with model name or table with model name and parameters
-        model = {
-          model = "devstral",
-          think = false, -- toggle thinking mode for Ollama's thinking models
-        },
-        -- system prompt (use this to specify the persona/role of the AI)
-        system_prompt = "You are a general AI assistant.",
-        disable = false,
-      },
-      {
-        provider = "ollama",
-        name = "OllamaLocalChatGptOss",
-        chat = true,
-        command = false,
-        -- string with model name or table with model name and parameters
-        model = {
-          model = "gpt-oss",
-          think = false, -- toggle thinking mode for Ollama's thinking models
-        },
-        -- system prompt (use this to specify the persona/role of the AI)
-        system_prompt = "You are a general AI assistant.",
-      },
-      {
-        provider = "ollama",
-        name = "OllamaLocalChatDeepseekR1",
-        chat = true,
-        command = false,
-        -- string with model name or table with model name and parameters
-        model = {
-          model = "deepseek-r1",
-          think = true, -- toggle thinking mode for Ollama's thinking models
-        },
-        -- system prompt (use this to specify the persona/role of the AI)
-        system_prompt = "You are a general AI assistant.",
-      },
-      {
-        provider = "ollama",
-        name = "OllamaLocalChatPhi4",
-        chat = true,
-        command = false,
-        -- string with model name or table with model name and parameters
-        model = {
-          model = "phi4-reasoning",
-          think = true, -- toggle thinking mode for Ollama's thinking models
-        },
-        -- system prompt (use this to specify the persona/role of the AI)
-        system_prompt = "You are a general AI assistant.",
-      }
-    }
-  }
-  require("gp").setup(gpConf)
-end)
+-- pcall(function()
+--   -- Gp.nvim (GPT prompt) Neovim AI plugin
+--   -- GpChatNew
+--   -- GpSelectAgent
+--   local gpConf = {
+--     -- For customization, refer to Install > Configuration in the Documentation/Readme
+--     providers = {
+--       ollama = {
+--         disable = false,
+--         endpoint = "http://localhost:11434/api/chat",
+--       }
+--     },
+--     agents = {
+--       {
+--         provider = "ollama",
+--         name = "OllamaLocalChatGemma4",
+--         chat = true,
+--         command = false,
+--         -- string with model name or table with model name and parameters
+--         model = {
+--           model = "gemma4",
+--           think = false, -- toggle thinking mode for Ollama's thinking models
+--         },
+--         -- system prompt (use this to specify the persona/role of the AI)
+--         system_prompt = "You are a general AI assistant.",
+--       },
+--       {
+--         provider = "ollama",
+--         name = "OllamaLocalChatDevstral",
+--         chat = true,
+--         command = false,
+--         -- string with model name or table with model name and parameters
+--         model = {
+--           model = "devstral",
+--           think = false, -- toggle thinking mode for Ollama's thinking models
+--         },
+--         -- system prompt (use this to specify the persona/role of the AI)
+--         system_prompt = "You are a general AI assistant.",
+--         disable = false,
+--       },
+--       {
+--         provider = "ollama",
+--         name = "OllamaLocalChatGptOss",
+--         chat = true,
+--         command = false,
+--         -- string with model name or table with model name and parameters
+--         model = {
+--           model = "gpt-oss",
+--           think = false, -- toggle thinking mode for Ollama's thinking models
+--         },
+--         -- system prompt (use this to specify the persona/role of the AI)
+--         system_prompt = "You are a general AI assistant.",
+--       },
+--       {
+--         provider = "ollama",
+--         name = "OllamaLocalChatDeepseekR1",
+--         chat = true,
+--         command = false,
+--         -- string with model name or table with model name and parameters
+--         model = {
+--           model = "deepseek-r1",
+--           think = true, -- toggle thinking mode for Ollama's thinking models
+--         },
+--         -- system prompt (use this to specify the persona/role of the AI)
+--         system_prompt = "You are a general AI assistant.",
+--       },
+--       {
+--         provider = "ollama",
+--         name = "OllamaLocalChatPhi4",
+--         chat = true,
+--         command = false,
+--         -- string with model name or table with model name and parameters
+--         model = {
+--           model = "phi4-reasoning",
+--           think = true, -- toggle thinking mode for Ollama's thinking models
+--         },
+--         -- system prompt (use this to specify the persona/role of the AI)
+--         system_prompt = "You are a general AI assistant.",
+--       }
+--     }
+--   }
+--   require("gp").setup(gpConf)
+-- end)
 
-pcall(function()
-  require("snacks").setup({
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    bigfile = { enabled = false },
-    dashboard = { enabled = false },
-    explorer = { enabled = false },
-    indent = { enabled = false },
-    input = { enabled = true },
-    picker = { enabled = true },
-    notifier = { enabled = false },
-    quickfile = { enabled = true },
-    scope = { enabled = false },
-    scroll = { enabled = false },
-    statuscolumn = { enabled = false },
-    words = { enabled = false },
-  })
-  -- require("noice").setup({
-  --   -- cmdline = {enabled = false},
-  --   presets = {
-  --     bottom_search = true, -- use a classic bottom cmdline for search
-  --     command_palette = false, -- position the cmdline and popupmenu together
-  --     long_message_to_split = true, -- long messages will be sent to a split
-  --     inc_rename = false, -- enables an input dialog for inc-rename.nvim
-  --     lsp_doc_border = false, -- add a border to hover docs and signature help
-  --   },
-  --   cmdline = {
-  --     view = "cmdline",
-  --   },
-  --   messages = {
-  --     -- NOTE: If you enable messages, then the cmdline is enabled automatically.
-  --     -- This is a current Neovim limitation.
-  --     enabled = true, -- enables the Noice messages UI
-  --     view = "notify", -- default view for messages
-  --     view_error = "notify", -- view for errors
-  --     view_warn = "notify", -- view for warnings
-  --     view_history = "messages", -- view for :messages
-  --     view_search = false, --"virtualtext", -- view for search count messages. Set to `false` to disable
-  --   },
-  -- })
-  local notify = require("notify")
-  -- vim.notify = notify
-  -- print = function(...)
-  --     local print_safe_args = {}
-  --     local _ = { ... }
-  --     for i = 1, #_ do
-  --         table.insert(print_safe_args, tostring(_[i]))
-  --     end
-  --     notify(table.concat(print_safe_args, ' '), "info")
-  -- end
-  notify.setup({
-    -- stages = "fade_in_slide_out",
-    timeout = 500,
-    -- minimum_width = 50,
-    max_width = 50,
-    --render = "compact",
-  })
-end)
+--pcall(function()
+--  require("snacks").setup({
+--    -- your configuration comes here
+--    -- or leave it empty to use the default settings
+--    -- refer to the configuration section below
+--    bigfile = { enabled = false },
+--    dashboard = { enabled = false },
+--    explorer = { enabled = false },
+--    indent = { enabled = false },
+--    input = { enabled = true },
+--    picker = { enabled = true },
+--    notifier = { enabled = false },
+--    quickfile = { enabled = true },
+--    scope = { enabled = false },
+--    scroll = { enabled = false },
+--    statuscolumn = { enabled = false },
+--    words = { enabled = false },
+--  })
+--  -- require("noice").setup({
+--  --   -- cmdline = {enabled = false},
+--  --   presets = {
+--  --     bottom_search = true, -- use a classic bottom cmdline for search
+--  --     command_palette = false, -- position the cmdline and popupmenu together
+--  --     long_message_to_split = true, -- long messages will be sent to a split
+--  --     inc_rename = false, -- enables an input dialog for inc-rename.nvim
+--  --     lsp_doc_border = false, -- add a border to hover docs and signature help
+--  --   },
+--  --   cmdline = {
+--  --     view = "cmdline",
+--  --   },
+--  --   messages = {
+--  --     -- NOTE: If you enable messages, then the cmdline is enabled automatically.
+--  --     -- This is a current Neovim limitation.
+--  --     enabled = true, -- enables the Noice messages UI
+--  --     view = "notify", -- default view for messages
+--  --     view_error = "notify", -- view for errors
+--  --     view_warn = "notify", -- view for warnings
+--  --     view_history = "messages", -- view for :messages
+--  --     view_search = false, --"virtualtext", -- view for search count messages. Set to `false` to disable
+--  --   },
+--  -- })
+--  local notify = require("notify")
+--  -- vim.notify = notify
+--  -- print = function(...)
+--  --     local print_safe_args = {}
+--  --     local _ = { ... }
+--  --     for i = 1, #_ do
+--  --         table.insert(print_safe_args, tostring(_[i]))
+--  --     end
+--  --     notify(table.concat(print_safe_args, ' '), "info")
+--  -- end
+--  notify.setup({
+--    -- stages = "fade_in_slide_out",
+--    timeout = 500,
+--    -- minimum_width = 50,
+--    max_width = 50,
+--    --render = "compact",
+--  })
+--end)
 
-pcall(function()
-  require("codecompanion").setup({
-    adapters = {
-      http = {
-        local_gemma4 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "gemma4", -- Give this adapter a different name to differentiate it from the default ollama adapter
-            opts = {
-              vision = true,
-              stream = true,
-            },
-            schema = {
-              model = {
-                --default = "gemma4",
-                default = "gemma4:31b",
-                --default = "gpt-oss:120b-cloud",
-                --default = "minimax-m2:cloud",
-                --default = "gemma3:27b",
-                --default = "gpt-oss",
-                --default = "devstral:latest",
-                --default = "phi4-reasoning",
-                --default = 'qwen3-coder',
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
-        local_ministral_3 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
-            opts = {
-              vision = true,
-              stream = true,
-            },
-            schema = {
-              model = {
-                --default = "gemma3",
-                default = "ministral-3",
-                --default = "gpt-oss:120b-cloud",
-                --default = "minimax-m2:cloud",
-                --default = "gemma3:27b",
-                --default = "gpt-oss",
-                --default = "devstral:latest",
-                --default = "phi4-reasoning",
-                --default = 'qwen3-coder',
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
-        local_devstral_small_2 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
-            opts = {
-              vision = true,
-              stream = true,
-            },
-            schema = {
-              model = {
-                --default = "gemma3",
-                default = "devstral-small-2",
-                --default = "gpt-oss:120b-cloud",
-                --default = "minimax-m2:cloud",
-                --default = "gemma3:27b",
-                --default = "gpt-oss",
-                --default = "devstral:latest",
-                --default = "phi4-reasoning",
-                --default = 'qwen3-coder',
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
-        local_gptOss = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "gpt-oss", -- Give this adapter a different name to differentiate it from the default ollama adapter
-            opts = {
-              vision = true,
-              stream = true,
-            },
-            schema = {
-              model = {
-                default = "gpt-oss",
-                --default = "gpt-oss",
-                --default = "devstral:latest",
-                --default = "phi4-reasoning",
-                --default = 'qwen3-coder',
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
-      },
-    },
-  -- `adapters.<adapter_name>` and `adapters.opts` is deprecated, use `adapters.http.<adapter_name>` and `adapters.http.
-  -- opts` instead.
-  -- Feature will be removed in CodeCompanion v18.0.0
-      -- my_openai = function()
-      --   return require("codecompanion.adapters").extend("openai_compatible", {
-      --     env = {
-      --       url = "http://127.0.0.1:11434", -- optional: default value is ollama url http://127.0.0.1:11434
-      --       --api_key = "OpenAI_API_KEY", -- optional: if your endpoint is authenticated
-      --       chat_url = "/v1/chat/completions", -- optional: default value, override if different
-      --       models_endpoint = "/v1/models", -- optional: attaches to the end of the URL to form the endpoint to retrieve models
-      --     },
-      --     schema = {
-      --       model = {
-      --         default = "gemma3",  -- define llm model to be used
-      --         --default = "gpt-oss",
-      --         --default = "devstral:latest",
-      --         --default = "phi4-reasoning",
-      --       },
-      --       temperature = {
-      --         order = 2,
-      --         mapping = "parameters",
-      --         type = "number",
-      --         optional = true,
-      --         default = 0.8,
-      --         desc = "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
-      --         validate = function(n)
-      --           return n >= 0 and n <= 2, "Must be between 0 and 2"
-      --         end,
-      --       },
-      --       max_completion_tokens = {
-      --         order = 3,
-      --         mapping = "parameters",
-      --         type = "integer",
-      --         optional = true,
-      --         default = nil,
-      --         desc = "An upper bound for the number of tokens that can be generated for a completion.",
-      --         validate = function(n)
-      --           return n > 0, "Must be greater than 0"
-      --         end,
-      --       },
-      --       stop = {
-      --         order = 4,
-      --         mapping = "parameters",
-      --         type = "string",
-      --         optional = true,
-      --         default = nil,
-      --         desc = "Sets the stop sequences to use. When this pattern is encountered the LLM will stop generating text and return. Multiple stop patterns may be set by specifying multiple separate stop parameters in a modelfile.",
-      --         validate = function(s)
-      --           return s:len() > 0, "Cannot be an empty string"
-      --         end,
-      --       },
-      --       logit_bias = {
-      --         order = 5,
-      --         mapping = "parameters",
-      --         type = "map",
-      --         optional = true,
-      --         default = nil,
-      --         desc = "Modify the likelihood of specified tokens appearing in the completion. Maps tokens (specified by their token ID) to an associated bias value from -100 to 100. Use https://platform.openai.com/tokenizer to find token IDs.",
-      --         subtype_key = {
-      --           type = "integer",
-      --         },
-      --         subtype = {
-      --           type = "integer",
-      --           validate = function(n)
-      --             return n >= -100 and n <= 100, "Must be between -100 and 100"
-      --           end,
-      --         },
-      --       },
-      --     },
-      --   })
-      -- end,
-    strategies = {
-      chat = {
-        adapter = "local_ministral_3",
-      },
-      inline = {
-        adapter = "local_gemma4",
-      },
-      agent = {
-        adapter = "local_gemma4",
-      },
-    }
-  })
-end)
+--pcall(function()
+--  require("codecompanion").setup({
+--    adapters = {
+--      http = {
+--        local_gemma4 = function()
+--          return require("codecompanion.adapters").extend("ollama", {
+--            name = "gemma4", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--            opts = {
+--              vision = true,
+--              stream = true,
+--            },
+--            schema = {
+--              model = {
+--                --default = "gemma4",
+--                default = "gemma4:31b",
+--                --default = "gpt-oss:120b-cloud",
+--                --default = "minimax-m2:cloud",
+--                --default = "gemma3:27b",
+--                --default = "gpt-oss",
+--                --default = "devstral:latest",
+--                --default = "phi4-reasoning",
+--                --default = 'qwen3-coder',
+--              },
+--              num_ctx = {
+--                default = 16384,
+--              },
+--              think = {
+--                default = false,
+--              },
+--              keep_alive = {
+--                default = "5m",
+--              },
+--            },
+--          })
+--        end,
+--        local_ministral_3 = function()
+--          return require("codecompanion.adapters").extend("ollama", {
+--            name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--            opts = {
+--              vision = true,
+--              stream = true,
+--            },
+--            schema = {
+--              model = {
+--                --default = "gemma3",
+--                default = "ministral-3",
+--                --default = "gpt-oss:120b-cloud",
+--                --default = "minimax-m2:cloud",
+--                --default = "gemma3:27b",
+--                --default = "gpt-oss",
+--                --default = "devstral:latest",
+--                --default = "phi4-reasoning",
+--                --default = 'qwen3-coder',
+--              },
+--              num_ctx = {
+--                default = 16384,
+--              },
+--              think = {
+--                default = false,
+--              },
+--              keep_alive = {
+--                default = "5m",
+--              },
+--            },
+--          })
+--        end,
+--        local_devstral_small_2 = function()
+--          return require("codecompanion.adapters").extend("ollama", {
+--            name = "ministral-3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--            opts = {
+--              vision = true,
+--              stream = true,
+--            },
+--            schema = {
+--              model = {
+--                --default = "gemma3",
+--                default = "devstral-small-2",
+--                --default = "gpt-oss:120b-cloud",
+--                --default = "minimax-m2:cloud",
+--                --default = "gemma3:27b",
+--                --default = "gpt-oss",
+--                --default = "devstral:latest",
+--                --default = "phi4-reasoning",
+--                --default = 'qwen3-coder',
+--              },
+--              num_ctx = {
+--                default = 16384,
+--              },
+--              think = {
+--                default = false,
+--              },
+--              keep_alive = {
+--                default = "5m",
+--              },
+--            },
+--          })
+--        end,
+--        local_gptOss = function()
+--          return require("codecompanion.adapters").extend("ollama", {
+--            name = "gpt-oss", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--            opts = {
+--              vision = true,
+--              stream = true,
+--            },
+--            schema = {
+--              model = {
+--                default = "gpt-oss",
+--                --default = "gpt-oss",
+--                --default = "devstral:latest",
+--                --default = "phi4-reasoning",
+--                --default = 'qwen3-coder',
+--              },
+--              num_ctx = {
+--                default = 16384,
+--              },
+--              think = {
+--                default = false,
+--              },
+--              keep_alive = {
+--                default = "5m",
+--              },
+--            },
+--          })
+--        end,
+--      },
+--    },
+--  -- `adapters.<adapter_name>` and `adapters.opts` is deprecated, use `adapters.http.<adapter_name>` and `adapters.http.
+--  -- opts` instead.
+--  -- Feature will be removed in CodeCompanion v18.0.0
+--      -- my_openai = function()
+--      --   return require("codecompanion.adapters").extend("openai_compatible", {
+--      --     env = {
+--      --       url = "http://127.0.0.1:11434", -- optional: default value is ollama url http://127.0.0.1:11434
+--      --       --api_key = "OpenAI_API_KEY", -- optional: if your endpoint is authenticated
+--      --       chat_url = "/v1/chat/completions", -- optional: default value, override if different
+--      --       models_endpoint = "/v1/models", -- optional: attaches to the end of the URL to form the endpoint to retrieve models
+--      --     },
+--      --     schema = {
+--      --       model = {
+--      --         default = "gemma3",  -- define llm model to be used
+--      --         --default = "gpt-oss",
+--      --         --default = "devstral:latest",
+--      --         --default = "phi4-reasoning",
+--      --       },
+--      --       temperature = {
+--      --         order = 2,
+--      --         mapping = "parameters",
+--      --         type = "number",
+--      --         optional = true,
+--      --         default = 0.8,
+--      --         desc = "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
+--      --         validate = function(n)
+--      --           return n >= 0 and n <= 2, "Must be between 0 and 2"
+--      --         end,
+--      --       },
+--      --       max_completion_tokens = {
+--      --         order = 3,
+--      --         mapping = "parameters",
+--      --         type = "integer",
+--      --         optional = true,
+--      --         default = nil,
+--      --         desc = "An upper bound for the number of tokens that can be generated for a completion.",
+--      --         validate = function(n)
+--      --           return n > 0, "Must be greater than 0"
+--      --         end,
+--      --       },
+--      --       stop = {
+--      --         order = 4,
+--      --         mapping = "parameters",
+--      --         type = "string",
+--      --         optional = true,
+--      --         default = nil,
+--      --         desc = "Sets the stop sequences to use. When this pattern is encountered the LLM will stop generating text and return. Multiple stop patterns may be set by specifying multiple separate stop parameters in a modelfile.",
+--      --         validate = function(s)
+--      --           return s:len() > 0, "Cannot be an empty string"
+--      --         end,
+--      --       },
+--      --       logit_bias = {
+--      --         order = 5,
+--      --         mapping = "parameters",
+--      --         type = "map",
+--      --         optional = true,
+--      --         default = nil,
+--      --         desc = "Modify the likelihood of specified tokens appearing in the completion. Maps tokens (specified by their token ID) to an associated bias value from -100 to 100. Use https://platform.openai.com/tokenizer to find token IDs.",
+--      --         subtype_key = {
+--      --           type = "integer",
+--      --         },
+--      --         subtype = {
+--      --           type = "integer",
+--      --           validate = function(n)
+--      --             return n >= -100 and n <= 100, "Must be between -100 and 100"
+--      --           end,
+--      --         },
+--      --       },
+--      --     },
+--      --   })
+--      -- end,
+--    strategies = {
+--      chat = {
+--        adapter = "local_ministral_3",
+--      },
+--      inline = {
+--        adapter = "local_gemma4",
+--      },
+--      agent = {
+--        adapter = "local_gemma4",
+--      },
+--    }
+--  })
+--end)
 
 pcall(function()
   -- Jump to previous buffer
@@ -570,99 +570,99 @@ pcall(function()
   })
 end)
 
-pcall(function()
-  require("CopilotChat").setup {
-    -- See Configuration section for options
-  }
-  require('CopilotChat.config').providers.ollama = {
-    prepare_input = require('CopilotChat.config.providers').copilot.prepare_input,
-    prepare_output = require('CopilotChat.config.providers').copilot.prepare_output,
+-- pcall(function()
+--   require("CopilotChat").setup {
+--     -- See Configuration section for options
+--   }
+--   require('CopilotChat.config').providers.ollama = {
+--     prepare_input = require('CopilotChat.config.providers').copilot.prepare_input,
+--     prepare_output = require('CopilotChat.config.providers').copilot.prepare_output,
 
-    get_models = function(headers)
-      local response, err = require('CopilotChat.utils').curl_get('http://localhost:11434/v1/models', {
-        headers = headers,
-        json_response = true,
-      })
+--     get_models = function(headers)
+--       local response, err = require('CopilotChat.utils').curl_get('http://localhost:11434/v1/models', {
+--         headers = headers,
+--         json_response = true,
+--       })
 
-      if err then
-        error(err)
-      end
+--       if err then
+--         error(err)
+--       end
 
-      return vim.tbl_map(function(model)
-        return {
-          id = model.id,
-          name = model.id,
-        }
-      end, response.body.data)
-    end,
+--       return vim.tbl_map(function(model)
+--         return {
+--           id = model.id,
+--           name = model.id,
+--         }
+--       end, response.body.data)
+--     end,
 
-    get_url = function()
-      return 'http://localhost:11434/v1/chat/completions'
-    end,
-  }
-end)
+--     get_url = function()
+--       return 'http://localhost:11434/v1/chat/completions'
+--     end,
+--   }
+-- end)
 
-pcall(function()
-  require("better_escape").setup({
-    timeout = 200,
-    default_mappings = false,
-    mappings = {
-        i = {
-            j = {
-                -- These can all also be functions
-                k = "<Esc>`^",
-                j = "<Esc>",
-            },
-        },
-        c = {
-            j = {
-                k = "<Esc>",
-                j = "<Esc>",
-            },
-        },
-        t = {
-            j = {
-                k = "<C-\\><C-n>",
-            },
-        },
-        v = {
-            j = {
-                k = "<Esc>",
-            },
-        },
-        s = {
-            j = {
-                k = "<Esc>",
-            },
-        },
-    },
-})
-end)
+-- pcall(function()
+--   require("better_escape").setup({
+--     timeout = 200,
+--     default_mappings = false,
+--     mappings = {
+--         i = {
+--             j = {
+--                 -- These can all also be functions
+--                 k = "<Esc>`^",
+--                 j = "<Esc>",
+--             },
+--         },
+--         c = {
+--             j = {
+--                 k = "<Esc>",
+--                 j = "<Esc>",
+--             },
+--         },
+--         t = {
+--             j = {
+--                 k = "<C-\\><C-n>",
+--             },
+--         },
+--         v = {
+--             j = {
+--                 k = "<Esc>",
+--             },
+--         },
+--         s = {
+--             j = {
+--                 k = "<Esc>",
+--             },
+--         },
+--     },
+-- })
+-- end)
 
-pcall(function()
-  require('ollama').setup({
-    -- model = "qwen2.5-coder:latest",
-    model = "mistral:latest", -- default model
-    -- url = "http://127.0.0.1:11434",
-    -- serve = {
-    --   on_start = false,
-    --   command = "ollama",
-    --   args = { "serve" },
-    --   stop_command = "pkill",
-    --   stop_args = { "-SIGTERM", "ollama" },
-    -- },
-    -- View the actual default prompts in ./lua/ollama/prompts.lua
-    prompts = {
-      Review_Code = {
-        prompt = "Review and optimize the following $ftype code so that it is efficient and both easier to read and understand. "
-          .. "Respond EXACTLY in this format:\n```$ftype\n<your code>\n```"
-          .. "\n\n```$ftype\n$sel```",
-        --action = "replace",
-        --model = "qwen2.5-coder:latest",
-      },
-    }
-  })
-end)
+--pcall(function()
+--  require('ollama').setup({
+--    -- model = "qwen2.5-coder:latest",
+--    model = "mistral:latest", -- default model
+--    -- url = "http://127.0.0.1:11434",
+--    -- serve = {
+--    --   on_start = false,
+--    --   command = "ollama",
+--    --   args = { "serve" },
+--    --   stop_command = "pkill",
+--    --   stop_args = { "-SIGTERM", "ollama" },
+--    -- },
+--    -- View the actual default prompts in ./lua/ollama/prompts.lua
+--    prompts = {
+--      Review_Code = {
+--        prompt = "Review and optimize the following $ftype code so that it is efficient and both easier to read and understand. "
+--          .. "Respond EXACTLY in this format:\n```$ftype\n<your code>\n```"
+--          .. "\n\n```$ftype\n$sel```",
+--        --action = "replace",
+--        --model = "qwen2.5-coder:latest",
+--      },
+--    }
+--  })
+--end)
 
 pcall(function()
   require("oil").setup()
@@ -756,64 +756,64 @@ pcall(function()
   vim.lsp.enable(YOUR_LSP_SERVERS)
 end)
 
-pcall(function()
-  require("screenkey").setup({
-    win_opts = {
-        row = vim.o.lines - vim.o.cmdheight,
-        col = vim.o.columns,
-    --     relative = "editor",
-    --     anchor = "SE",
-        width = 30,
-        height = 1,
-        border = "none",
-    --     border = "single",
-    },
-    -- compress_after = 3,
-    clear_after = 30,
-    -- disable = {
-    --     filetypes = {},
-    --     buftypes = {},
-    -- },
-    -- show_leader = true,
-    -- group_mappings = false,
-    -- display_infront = {},
-    -- display_behind = {},
-    -- keys = {
-    --     ["<TAB>"] = "󰌒",
-    --     ["<CR>"] = "󰌑",
-    --     ["<ESC>"] = "Esc",
-    --     ["<SPACE>"] = "␣",
-    --     ["<BS>"] = "󰌥",
-    --     ["<DEL>"] = "Del",
-    --     ["<LEFT>"] = "",
-    --     ["<RIGHT>"] = "",
-    --     ["<UP>"] = "",
-    --     ["<DOWN>"] = "",
-    --     ["<HOME>"] = "Home",
-    --     ["<END>"] = "End",
-    --     ["<PAGEUP>"] = "PgUp",
-    --     ["<PAGEDOWN>"] = "PgDn",
-    --     ["<INSERT>"] = "Ins",
-    --     ["<F1>"] = "󱊫",
-    --     ["<F2>"] = "󱊬",
-    --     ["<F3>"] = "󱊭",
-    --     ["<F4>"] = "󱊮",
-    --     ["<F5>"] = "󱊯",
-    --     ["<F6>"] = "󱊰",
-    --     ["<F7>"] = "󱊱",
-    --     ["<F8>"] = "󱊲",
-    --     ["<F9>"] = "󱊳",
-    --     ["<F10>"] = "󱊴",
-    --     ["<F11>"] = "󱊵",
-    --     ["<F12>"] = "󱊶",
-    --     ["CTRL"] = "Ctrl",
-    --     ["ALT"] = "Alt",
-    --     ["SUPER"] = "󰘳",
-    --     ["<leader>"] = "<leader>",
-    --},
-  })
-  --require("screenkey").toggle()
-end)
+--pcall(function()
+--  require("screenkey").setup({
+--    win_opts = {
+--        row = vim.o.lines - vim.o.cmdheight,
+--        col = vim.o.columns,
+--    --     relative = "editor",
+--    --     anchor = "SE",
+--        width = 30,
+--        height = 1,
+--        border = "none",
+--    --     border = "single",
+--    },
+--    -- compress_after = 3,
+--    clear_after = 30,
+--    -- disable = {
+--    --     filetypes = {},
+--    --     buftypes = {},
+--    -- },
+--    -- show_leader = true,
+--    -- group_mappings = false,
+--    -- display_infront = {},
+--    -- display_behind = {},
+--    -- keys = {
+--    --     ["<TAB>"] = "󰌒",
+--    --     ["<CR>"] = "󰌑",
+--    --     ["<ESC>"] = "Esc",
+--    --     ["<SPACE>"] = "␣",
+--    --     ["<BS>"] = "󰌥",
+--    --     ["<DEL>"] = "Del",
+--    --     ["<LEFT>"] = "",
+--    --     ["<RIGHT>"] = "",
+--    --     ["<UP>"] = "",
+--    --     ["<DOWN>"] = "",
+--    --     ["<HOME>"] = "Home",
+--    --     ["<END>"] = "End",
+--    --     ["<PAGEUP>"] = "PgUp",
+--    --     ["<PAGEDOWN>"] = "PgDn",
+--    --     ["<INSERT>"] = "Ins",
+--    --     ["<F1>"] = "󱊫",
+--    --     ["<F2>"] = "󱊬",
+--    --     ["<F3>"] = "󱊭",
+--    --     ["<F4>"] = "󱊮",
+--    --     ["<F5>"] = "󱊯",
+--    --     ["<F6>"] = "󱊰",
+--    --     ["<F7>"] = "󱊱",
+--    --     ["<F8>"] = "󱊲",
+--    --     ["<F9>"] = "󱊳",
+--    --     ["<F10>"] = "󱊴",
+--    --     ["<F11>"] = "󱊵",
+--    --     ["<F12>"] = "󱊶",
+--    --     ["CTRL"] = "Ctrl",
+--    --     ["ALT"] = "Alt",
+--    --     ["SUPER"] = "󰘳",
+--    --     ["<leader>"] = "<leader>",
+--    --},
+--  })
+--  --require("screenkey").toggle()
+--end)
 
 pcall(function()
   require'treesitter-context'.setup{
@@ -1376,18 +1376,18 @@ pcall(function()
   telescope.load_extension("live_grep_args")
 end)
 
-pcall(function()
-  require('neoclip').setup({
-    history = 10000,
-    enable_persistent_history = true,
-    on_select = {
-      move_to_front = true,
-      close_telescope = true,
-    },
-  })
-  local telescope = require('telescope')
-  telescope.load_extension('neoclip')
-end)
+-- pcall(function()
+--   require('neoclip').setup({
+--     history = 10000,
+--     enable_persistent_history = true,
+--     on_select = {
+--       move_to_front = true,
+--       close_telescope = true,
+--     },
+--   })
+--   local telescope = require('telescope')
+--   telescope.load_extension('neoclip')
+-- end)
 
 pcall(function()
   -- indent-blankline.nvim
@@ -1742,182 +1742,182 @@ pcall(function()
   })
 end)
 
-pcall(function()
-  local gen = require('gen')
-  gen.setup({
-    model = "codellama:7b", -- The default model to use.
-    --model = "mistral", -- The default model to use.
-  })
-  gen.prompts['Enhance_Code_No_Replace'] = {
-    name = "Enhance_Code_No_Replace",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-  }
-  gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder'] = {
-    name = "Enhance_Code_No_Replace_DeepSeek_Coder",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "deepseek-coder:latest",
-  }
-  gen.prompts['Enhance_Code_No_Replace_CodeGemma'] = {
-    name = "Enhance_Code_No_Replace_CodeGemma",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "codegemma:7b",
-  }
-  gen.prompts['Enhance_Code_No_Replace_Mistral'] = {
-    name = "Enhance_Code_No_Replace_Mistral",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "mistral",
-  }
-  gen.prompts['Enhance_Code_No_Replace_Codestral'] = {
-    name = "Enhance_Code_No_Replace_Codestral",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "codestral",
-  }
-  gen.prompts['Enhance_Code_No_Replace_Gemma2'] = {
-    name = "Enhance_Code_No_Replace_Gemma2",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "gemma2",
-  }
-  gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder_V2'] = {
-    name = "Enhance_Code_No_Replace_DeepSeek_Coder_V2",
-    prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-    replace = false,
-    extract = "```$filetype\n(.-)```",
-    model = "deepseek-coder-v2",
-  }
-  gen.prompts['Chat_With_DeepSeek_Coder'] = {
-    prompt = "$input",
-    model = "deepseek-coder:latest",
-  }
-  gen.prompts['Chat_With_DeepSeek_Coder_V2'] = {
-    prompt = "$input",
-    model = "deepseek-coder-v2",
-  }
-  gen.prompts['Chat_With_Llama3'] = {
-    prompt = "$input",
-    model = "Llama3",
-  }
-  gen.prompts['Chat_With_Mistral'] = {
-    prompt = "$input",
-    model = "mistral",
-  }
-  gen.prompts['Chat_With_Codestral'] = {
-    prompt = "$input",
-    model = "codestral",
-  }
-  gen.prompts['Enhance_Grammar_Spelling_with_Mistral'] = {
-    prompt = "Modify the following text to improve grammar and spelling, just output the final text without additional quotes around it:\n$text",
-    replace = false,
-    model = "mistral",
-  }
-  gen.prompts['Enhance_Grammar_Spelling_with_Mistral_Deutsch'] = {
-    prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
-    replace = false,
-    model = "mistral",
-  }
-  gen.prompts['Enhance_Grammar_Spelling_with_Llama3_Deutsch'] = {
-    prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
-    replace = false,
-    model = "llama3",
-  }
-  gen.prompts['Translate_with_Llama3_Deutsch_German_to_Englisch'] = {
-    prompt = "Translate the following text to English:\n$text",
-    replace = false,
-    model = "llama3",
-  }
-  gen.prompts['Generate_Commit_Message_with_Llama3_For_Changes'] = {
-    prompt = "Generate a commit message for the following changes:\n$text",
-    replace = false,
-    model = "llama3",
-  }
-  gen.prompts['Generate_Commit_Message_with_Deep_Seek_Coder_For_Changes'] = {
-    prompt = "Generate a commit message for the following changes:\n$text",
-    replace = false,
-    model = "deepseek-coder-v2",
-  }
-  gen.prompts['Review_Code_DeepSeek_Coder_V2'] = {
-    name = "Review_Code_DeepSeek_Coder_V2",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "deepseek-coder-v2",
-  }
-  -- gen.prompts['Review_With_QWen-2.5:3b'] = {
-  --   name = "Review_With_QWen-2.5",
-  --   prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-  --   replace = false,
-  --   model = "qwen2.5-coder:3b",
-  -- }
-  gen.prompts['Review_With_QWen-2.5'] = {
-    name = "Review_With_QWen-2.5",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "qwen2.5-coder",
-  }
-  gen.prompts['Review_With_QWen-2.5:14b'] = {
-    name = "Review_With_QWen-2.5:14b",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "qwen2.5-coder:14b",
-  }
-  gen.prompts['Review_With_CodeGemma'] = {
-    name = "Review_With_CodeGemma",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "codegemma:7b",
-  }
-  gen.prompts['Review_With_Codellama'] = {
-    name = "Review_With_Codellama",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "codellama:7b",
-  }
-  gen.prompts['Review_With_Codestral'] = {
-    name = "Review_With_Codesral",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "codestral",
-  }
-  gen.prompts['Review_With_Gpt-Oss'] = {
-    name = "Review_With_Gpt-Oss",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "gpt-oss",
-  }
-  gen.prompts['Review_With_Qwen3-Coder'] = {
-    name = "Review_With_Qwen3-Coder",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "qwen3-coder",
-  }
-  gen.prompts['Review_With_Phi4-Reasoning'] = {
-    name = "Review_With_Phi4-Reasoning",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "phi4-reasoning",
-  }
-  gen.prompts['Review_With_Devstral'] = {
-    name = "Review_With_Devstral",
-    prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
-    replace = false,
-    model = "devstral",
-  }
-  gen.prompts['Ask_with_Llama3'] = {
-    name = "Ask_with_Llama3",
-    prompt = "Regarding the following text, $input:\n$text",
-    model = "llama3",
-  }
-end)
+-- pcall(function()
+--   local gen = require('gen')
+--   gen.setup({
+--     model = "codellama:7b", -- The default model to use.
+--     --model = "mistral", -- The default model to use.
+--   })
+--   gen.prompts['Enhance_Code_No_Replace'] = {
+--     name = "Enhance_Code_No_Replace",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder'] = {
+--     name = "Enhance_Code_No_Replace_DeepSeek_Coder",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "deepseek-coder:latest",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_CodeGemma'] = {
+--     name = "Enhance_Code_No_Replace_CodeGemma",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "codegemma:7b",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_Mistral'] = {
+--     name = "Enhance_Code_No_Replace_Mistral",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "mistral",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_Codestral'] = {
+--     name = "Enhance_Code_No_Replace_Codestral",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "codestral",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_Gemma2'] = {
+--     name = "Enhance_Code_No_Replace_Gemma2",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "gemma2",
+--   }
+--   gen.prompts['Enhance_Code_No_Replace_DeepSeek_Coder_V2'] = {
+--     name = "Enhance_Code_No_Replace_DeepSeek_Coder_V2",
+--     prompt = "Enhance the following code, only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+--     replace = false,
+--     extract = "```$filetype\n(.-)```",
+--     model = "deepseek-coder-v2",
+--   }
+--   gen.prompts['Chat_With_DeepSeek_Coder'] = {
+--     prompt = "$input",
+--     model = "deepseek-coder:latest",
+--   }
+--   gen.prompts['Chat_With_DeepSeek_Coder_V2'] = {
+--     prompt = "$input",
+--     model = "deepseek-coder-v2",
+--   }
+--   gen.prompts['Chat_With_Llama3'] = {
+--     prompt = "$input",
+--     model = "Llama3",
+--   }
+--   gen.prompts['Chat_With_Mistral'] = {
+--     prompt = "$input",
+--     model = "mistral",
+--   }
+--   gen.prompts['Chat_With_Codestral'] = {
+--     prompt = "$input",
+--     model = "codestral",
+--   }
+--   gen.prompts['Enhance_Grammar_Spelling_with_Mistral'] = {
+--     prompt = "Modify the following text to improve grammar and spelling, just output the final text without additional quotes around it:\n$text",
+--     replace = false,
+--     model = "mistral",
+--   }
+--   gen.prompts['Enhance_Grammar_Spelling_with_Mistral_Deutsch'] = {
+--     prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
+--     replace = false,
+--     model = "mistral",
+--   }
+--   gen.prompts['Enhance_Grammar_Spelling_with_Llama3_Deutsch'] = {
+--     prompt = "Korrigiere den folgenden Text und verbessere die Grammatik, gib einfach den end Text ohne die die Anführungszeichen:\n$text",
+--     replace = false,
+--     model = "llama3",
+--   }
+--   gen.prompts['Translate_with_Llama3_Deutsch_German_to_Englisch'] = {
+--     prompt = "Translate the following text to English:\n$text",
+--     replace = false,
+--     model = "llama3",
+--   }
+--   gen.prompts['Generate_Commit_Message_with_Llama3_For_Changes'] = {
+--     prompt = "Generate a commit message for the following changes:\n$text",
+--     replace = false,
+--     model = "llama3",
+--   }
+--   gen.prompts['Generate_Commit_Message_with_Deep_Seek_Coder_For_Changes'] = {
+--     prompt = "Generate a commit message for the following changes:\n$text",
+--     replace = false,
+--     model = "deepseek-coder-v2",
+--   }
+--   gen.prompts['Review_Code_DeepSeek_Coder_V2'] = {
+--     name = "Review_Code_DeepSeek_Coder_V2",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "deepseek-coder-v2",
+--   }
+--   -- gen.prompts['Review_With_QWen-2.5:3b'] = {
+--   --   name = "Review_With_QWen-2.5",
+--   --   prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--   --   replace = false,
+--   --   model = "qwen2.5-coder:3b",
+--   -- }
+--   gen.prompts['Review_With_QWen-2.5'] = {
+--     name = "Review_With_QWen-2.5",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "qwen2.5-coder",
+--   }
+--   gen.prompts['Review_With_QWen-2.5:14b'] = {
+--     name = "Review_With_QWen-2.5:14b",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "qwen2.5-coder:14b",
+--   }
+--   gen.prompts['Review_With_CodeGemma'] = {
+--     name = "Review_With_CodeGemma",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "codegemma:7b",
+--   }
+--   gen.prompts['Review_With_Codellama'] = {
+--     name = "Review_With_Codellama",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "codellama:7b",
+--   }
+--   gen.prompts['Review_With_Codestral'] = {
+--     name = "Review_With_Codesral",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "codestral",
+--   }
+--   gen.prompts['Review_With_Gpt-Oss'] = {
+--     name = "Review_With_Gpt-Oss",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "gpt-oss",
+--   }
+--   gen.prompts['Review_With_Qwen3-Coder'] = {
+--     name = "Review_With_Qwen3-Coder",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "qwen3-coder",
+--   }
+--   gen.prompts['Review_With_Phi4-Reasoning'] = {
+--     name = "Review_With_Phi4-Reasoning",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "phi4-reasoning",
+--   }
+--   gen.prompts['Review_With_Devstral'] = {
+--     name = "Review_With_Devstral",
+--     prompt =  "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
+--     replace = false,
+--     model = "devstral",
+--   }
+--   gen.prompts['Ask_with_Llama3'] = {
+--     name = "Ask_with_Llama3",
+--     prompt = "Regarding the following text, $input:\n$text",
+--     model = "llama3",
+--   }
+-- end)
 
 pcall(function()
   local bufferline = require("bufferline")
