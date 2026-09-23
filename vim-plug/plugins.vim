@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'peitalin/vim-jsx-typescript'
   "Plug 'preservim/nerdtree'
   "Plug 'will133/vim-dirdiff'
-  "Plug 'pechorin/any-jump.vim'
+  Plug 'pechorin/any-jump.vim'
   "Plug 'max397574/better-escape.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.0' }
@@ -37,18 +37,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'rmagatti/auto-session'
   "Plug 'rmagatti/session-lens'
   "Plug 'jreybert/vimagit'
-  "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   "Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   "Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   "Plug 'joshdick/onedark.vim'
   "Plug 'rebelot/kanagawa.nvim'
   "Plug 'sudormrfbin/cheatsheet.nvim'
   "Plug 'echasnovski/mini.icons'
-  "Plug 'nvim-mini/mini.nvim', { 'version': '*' }
-  "Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
-  " Plug 'ryanoasis/vim-devicons' Icons without colours
-  "Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-  "Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
+  Plug 'nvim-mini/mini.nvim', { 'version': '*' }
+  Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
   "Plug 'tiagovla/scope.nvim'
   "" Completion
   "Plug 'neovim/nvim-lspconfig'
@@ -75,14 +74,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'kkharji/sqlite.lua'
   "Plug 'AckslD/nvim-neoclip.lua'
   "Plug 'tpope/vim-unimpaired'
-  "Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-sensible'
   "Plug 'kevinhwang91/nvim-bqf'
   "Plug 'lukas-reineke/indent-blankline.nvim'
   "" Find helper, but is slow on some files
   "" Plug 'folke/flash.nvim'
   "Plug 'windwp/nvim-autopairs'
   "Plug 'tpope/vim-sleuth'
-  "Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   "Plug 'projekt0n/github-nvim-theme'
   "Plug 'EdenEast/nightfox.nvim'
   "Plug 'rose-pine/neovim'
