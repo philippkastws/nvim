@@ -99,7 +99,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
   " you define in the local http server
   " Plug 'TabbyML/vim-tabby'
-  "Plug 'github/copilot.vim'
+  Plug 'github/copilot.vim'
   "Plug 'romgrk/doom-one.vim'
   "Plug 'David-Kunz/gen.nvim'
   "Plug 'nvim-pack/nvim-spectre'
