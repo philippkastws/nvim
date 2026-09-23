@@ -51,11 +51,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'tiagovla/scope.nvim'
   "" Completion
   Plug 'neovim/nvim-lspconfig'
-  "Plug 'hrsh7th/cmp-nvim-lsp'
-  "Plug 'hrsh7th/cmp-buffer'
-  "Plug 'hrsh7th/cmp-path'
-  "Plug 'hrsh7th/cmp-cmdline'
-  "Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'github/copilot.vim' " tab completion over cmp!?
   "" LSP Support
   "Plug 'neovim/nvim-lspconfig'             " Required
   Plug 'williamboman/mason.nvim'           " Optional
@@ -99,7 +100,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " nvim /Users/kast/.tabby-client/agent/config.toml and add the user token
   " you define in the local http server
   " Plug 'TabbyML/vim-tabby'
-  Plug 'github/copilot.vim'
   "Plug 'romgrk/doom-one.vim'
   "Plug 'David-Kunz/gen.nvim'
   "Plug 'nvim-pack/nvim-spectre'
