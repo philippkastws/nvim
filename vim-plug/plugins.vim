@@ -71,7 +71,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'justinmk/vim-sneak'
   "Plug 'RRethy/vim-illuminate'
   Plug 'sindrets/diffview.nvim'
-  "Plug 'kdheepak/lazygit.nvim'
+  Plug 'kdheepak/lazygit.nvim'
   "Plug 'kkharji/sqlite.lua'
   "Plug 'AckslD/nvim-neoclip.lua'
   "Plug 'tpope/vim-unimpaired'

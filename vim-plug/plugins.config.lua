@@ -2288,7 +2288,8 @@ end, desc = "Toggle NvimTree and find current file", mode = "n" },
     { "<leader>x", "<cmd>:Gitsigns next_hunk<cr>", desc = "Next Hunk", mode = "n" },
     { "<leader>y", "<cmd>:Gitsigns prev_hunk<cr>", desc = "Prev Hunk", mode = "n" },
     { "<leader>X", "<cmd>:Gitsigns reset_hunk<cr>", desc = "Reset Hunk", mode = "n" },
-    { "<leader>L", "<cmd>lua Snacks.lazygit()<cr>", desc = "LazyGit", mode = "n" },
+    -- { "<leader>L", "<cmd>lua Snacks.lazygit()<cr>", desc = "LazyGit", mode = "n" },
+    { "<leader>L", "<cmd>:LazyGit<cr>", desc = "LazyGit", mode = "n" },
     { "<leader>B", "<cmd>:Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer Fuzzy Find", mode = "n" },
     { "<leader>b", "<cmd>:Telescope buffers<cr>", desc = "Show buffers", mode = "n" },
     { "<leader>C", "<C-w>c", desc = "Close window (ctrl-w c)", mode = "n" },
@@ -2320,7 +2321,6 @@ end, desc = "Toggle NvimTree and find current file", mode = "n" },
     --" { "<leader>U'] = [ ':Gedit HEAD', 'Git walk history (:Gedit HEAD)' ]
     --" { "<leader>l'] = [ ':Telescope', 'Telescope' ]
     --" { "<leader>M'] = [ ':Magit', 'Magit' ]
-    --" { "<leader>L'] = [ ':LazyGit', 'Lazy git' ]
     --" { "<leader>PP'] = [ ':Gitsigns preview_hunk', 'Previgitsigns.preview_hunkew hunk (<leader>hp)' ]
     --" { "<leader>nn'] = [ '<S-L>', 'Next buffer (Shift-L)' ]
     --" { "<leader>ff'] = [ ':BLines', 'Filter buffer (:BLines)' ]
