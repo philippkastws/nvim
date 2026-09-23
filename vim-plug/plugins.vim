@@ -50,7 +50,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'akinsho/bufferline.nvim', { 'branch': 'main' }
   "Plug 'tiagovla/scope.nvim'
   "" Completion
-  "Plug 'neovim/nvim-lspconfig'
+  Plug 'neovim/nvim-lspconfig'
   "Plug 'hrsh7th/cmp-nvim-lsp'
   "Plug 'hrsh7th/cmp-buffer'
   "Plug 'hrsh7th/cmp-path'
@@ -58,8 +58,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'hrsh7th/nvim-cmp'
   "" LSP Support
   "Plug 'neovim/nvim-lspconfig'             " Required
-  "Plug 'williamboman/mason.nvim'           " Optional
-  "Plug 'williamboman/mason-lspconfig.nvim' " Optional
+  Plug 'williamboman/mason.nvim'           " Optional
+  Plug 'williamboman/mason-lspconfig.nvim' " Optional
   "  Snippets
   " Plug 'L3MON4D3/LuaSnip'             " Required
   "Plug 'rafamadriz/friendly-snippets' " Optional
@@ -106,6 +106,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'tiagovla/tokyodark.nvim'
   "" Plug 'huggingface/llm.nvim'
   "" Plug 'wellle/context.vim'
+  Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'nvim-telescope/telescope-ui-select.nvim'
   "Plug 'NStefan002/screenkey.nvim', { 'tag': '*' }
@@ -121,7 +122,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'kwkarlwang/bufjump.nvim'
   "" Avante
   "" Deps
-  "" Plug 'nvim-treesitter/nvim-treesitter'
   "" Plug 'nvim-lua/plenary.nvim'
   "Plug 'MunifTanjim/nui.nvim'
   "Plug 'MeanderingProgrammer/render-markdown.nvim'
