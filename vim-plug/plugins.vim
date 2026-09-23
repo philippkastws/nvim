@@ -69,7 +69,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'mfussenegger/nvim-treehopper'
   Plug 'nvim-tree/nvim-tree.lua'
   "Plug 'justinmk/vim-sneak'
-  "Plug 'RRethy/vim-illuminate'
+  Plug 'RRethy/vim-illuminate'
   Plug 'sindrets/diffview.nvim'
   Plug 'kdheepak/lazygit.nvim'
   "Plug 'kkharji/sqlite.lua'
