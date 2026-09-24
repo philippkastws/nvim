@@ -40,6 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp' " completion plugin
   Plug 'github/copilot.vim' " tab completion over cmp!?
+  Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
   Plug 'nvim-tree/nvim-tree.lua'
@@ -115,7 +116,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'mbbill/undotree'
   "Plug 'stevearc/oil.nvim'
   "Plug 'dyng/ctrlsf.vim'
-  "Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
   "Plug 'prettier/vim-prettier', {
   "  \ 'do': 'yarn install --frozen-lockfile --production',
   "  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
