@@ -904,7 +904,7 @@ pcall(function()
   local animate = require('mini.animate')
   animate.setup({
     cursor = {
-      enable = true,
+      enable = false,
     },
     scroll = {
       enable = false,
