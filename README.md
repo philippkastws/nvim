@@ -48,17 +48,17 @@ Most important keybindings:
 - <space>C: Close window
 - <space>q: Quit
 - <space>o: Open recent files
-- <space>O: Start page
+- <space>O: Start browser
 - <space>n: Clear find highlighting
 - <space>h: Show command history
 - <space>b: Show open files
 - <space>B: Fuzzy find current buffer
-- <space>s: Easy motion, type character and jump
+- <space>s: Save file
 - <space>j: Any jump, jump to definition or reference of element under cursor
 - <space>D: Open diff view
 - <space>dc: Close diff view
 - <space>Ww: Toggle wrap lines
-- <space>ac: Copy current line path to clipboard
+- <space>ac: Copy current line path to clipboard, e.g. nvim/README.md:61
 - <space>.: Telescope continue
 
 
