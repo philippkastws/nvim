@@ -61,6 +61,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'rmagatti/auto-session'
   Plug 'esmuellert/nvim-eslint'
   Plug 'mikavilpas/yazi.nvim'
+  Plug 'MeanderingProgrammer/render-markdown.nvim'
   "Plug 'folke/todo-comments.nvim'
   "Plug 'vague-theme/vague.nvim'
   "Plug 'robitx/gp.nvim'
@@ -122,7 +123,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "Plug 'kwkarlwang/bufjump.nvim'
   "Plug 'nvim-lua/plenary.nvim'
   "Plug 'MunifTanjim/nui.nvim'
-  "Plug 'MeanderingProgrammer/render-markdown.nvim'
   "Plug 'HakonHarnes/img-clip.nvim'
   "Plug 'zbirenbaum/copilot.lua'
   "Plug 'stevearc/dressing.nvim' " for enhanced input UI
