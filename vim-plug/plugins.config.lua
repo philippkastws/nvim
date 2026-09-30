@@ -570,10 +570,10 @@ pcall(function()
   })
 end)
 
--- pcall(function()
---   require("CopilotChat").setup {
---     -- See Configuration section for options
---   }
+pcall(function()
+  require("CopilotChat").setup() -- {
+    -- See Configuration section for options
+  --}
 --   require('CopilotChat.config').providers.ollama = {
 --     prepare_input = require('CopilotChat.config.providers').copilot.prepare_input,
 --     prepare_output = require('CopilotChat.config.providers').copilot.prepare_output,
@@ -600,7 +600,7 @@ end)
 --       return 'http://localhost:11434/v1/chat/completions'
 --     end,
 --   }
--- end)
+end)
 
 -- pcall(function()
 --   require("better_escape").setup({
