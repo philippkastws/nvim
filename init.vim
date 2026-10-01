@@ -101,6 +101,7 @@ set diffopt+=linematch:60
 :highlight CursorLine ctermbg=11 guibg=#222222
 " Set selected line number color
 :hi CursorLineNr ctermfg=11 guifg=Yellow
+:hi Visual ctermbg=11 guibg=#5B670F
 
 " Map the jump sequences
 nmap <buffer> <C-¨> <C-]>
