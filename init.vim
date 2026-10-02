@@ -69,6 +69,9 @@ highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordReturn Purple
 highlight! link typescriptEndColons Blue
+" set @lsp.type.function.typescript to highlight blue
+high! link @lsp.type.function.typescript Blue
+high! link @lsp.typemod.function.readonly.typescript Blue
 hi markdownH1 guifg=LightBlue gui=bold
 
 " hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
