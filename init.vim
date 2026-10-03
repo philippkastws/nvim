@@ -20,6 +20,8 @@ source $HOME/.config/nvim/lua/autocmds.lua
 
 " Spell-check Git Commit Messages
 autocmd FileType gitcommit setlocal spell
+" Spell-check Markdown files
+autocmd FileType markdown setlocal spell
 
 set clipboard+=unnamedplus
 
