@@ -20,6 +20,8 @@ source $HOME/.config/nvim/lua/autocmds.lua
 
 " Spell-check Git Commit Messages
 autocmd FileType gitcommit setlocal spell
+" Spell-check Markdown files
+autocmd FileType markdown setlocal spell
 
 set clipboard+=unnamedplus
 
@@ -73,6 +75,8 @@ highlight! link typescriptEndColons Blue
 high! link @lsp.type.function.typescript Blue
 high! link @lsp.typemod.function.readonly.typescript Blue
 hi markdownH1 guifg=LightBlue gui=bold
+highlight! link @lsp.type.function.typescriptreact Blue
+highlight! link @lsp.typemod.function.readonly.typescriptreact Blue
 
 " hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
 " hi DiffChange   gui=none    guifg=NONE          guibg=#00ff00
@@ -104,6 +108,7 @@ set diffopt+=linematch:60
 :highlight CursorLine ctermbg=11 guibg=#222222
 " Set selected line number color
 :hi CursorLineNr ctermfg=11 guifg=Yellow
+:hi Visual ctermbg=11 guibg=#5B670F
 
 " Map the jump sequences
 nmap <buffer> <C-¨> <C-]>
