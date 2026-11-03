@@ -1,11 +1,15 @@
+" Resolve the config directory from init.vim's location (works on macOS/Linux
+" and Windows, where the config lives in ~/AppData/Local/nvim)
+let s:config_dir = fnamemodify($MYVIMRC, ':p:h')
+
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob(s:config_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo ' . shellescape(s:config_dir . '/autoload/plug.vim')
+    \ . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+call plug#begin(s:config_dir . '/autoload/plugged')
 
   Plug 'tpope/vim-fugitive' " https://github.com/tpope/vim-fugitive/pull/2218
   Plug 'tpope/vim-commentary'
@@ -134,7 +138,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
-source $HOME/.config/nvim/vim-plug/plugins.config.lua
+execute 'source ' . fnameescape(s:config_dir . '/vim-plug/plugins.config.lua')
 
 "let g:any_jump_disable_default_keybindings = 1
 " Optionally do not ignore ignored directories for any jump

@@ -5,18 +5,22 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
-source $HOME/.config/nvim/init.config.lua
-source $HOME/.config/nvim/vim-plug/plugins.vim
+" Resolve the config directory from this file's location, so it works on
+" macOS/Linux (~/.config/nvim) and Windows (~/AppData/Local/nvim) alike.
+let g:nvim_config_dir = fnamemodify($MYVIMRC, ':p:h')
 
-source $HOME/.config/nvim/themes/airline.vim
+execute 'source ' . fnameescape(g:nvim_config_dir . '/init.config.lua')
+execute 'source ' . fnameescape(g:nvim_config_dir . '/vim-plug/plugins.vim')
 
-source $HOME/.config/nvim/plug-config/fzf.vim
-source $HOME/.config/nvim/plug-config/start-screen.vim
-source $HOME/.config/nvim/plug-config/floaterm.vim
-source $HOME/.config/nvim/plug-config/ranger.vim
+execute 'source ' . fnameescape(g:nvim_config_dir . '/themes/airline.vim')
 
-source $HOME/.config/nvim/lua/config.lua
-source $HOME/.config/nvim/lua/autocmds.lua
+execute 'source ' . fnameescape(g:nvim_config_dir . '/plug-config/fzf.vim')
+execute 'source ' . fnameescape(g:nvim_config_dir . '/plug-config/start-screen.vim')
+execute 'source ' . fnameescape(g:nvim_config_dir . '/plug-config/floaterm.vim')
+execute 'source ' . fnameescape(g:nvim_config_dir . '/plug-config/ranger.vim')
+
+execute 'source ' . fnameescape(g:nvim_config_dir . '/lua/config.lua')
+execute 'source ' . fnameescape(g:nvim_config_dir . '/lua/autocmds.lua')
 
 " Spell-check Git Commit Messages
 autocmd FileType gitcommit setlocal spell
